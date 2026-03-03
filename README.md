@@ -10,4 +10,4 @@ In this repository, we provide a collection of encodings that can be used to sol
   * 📁 `pathfinding` files that contain logic for finding paths within a given Flatland environment
 * 📁 `envs`
   * 📁 `benchmarks` official benchmark environments from the Flatland challenge
-* 📝 `main-*.lp` a clingo encoding that organizes various subprograms into a single file
+* 📝 `setting-*.lp` a clingo encoding that organizes various subprograms into a single file
