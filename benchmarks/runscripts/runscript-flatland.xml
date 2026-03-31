@@ -1,0 +1,24 @@
+<runscript output="output">
+
+    <machine name="local" cpu="1xApple" memory="16GB"/>
+
+    <config name="seq-generic" template="templates/seq-generic.sh"/>
+
+    <system name="clingo" version="latest" measures="clasp" config="seq-generic">
+        <setting name="base" cmdline="--stats">
+            <encoding file="../move2drive/move-subnodes-two.lp"/>
+        </setting>
+    </system>
+
+    <seqjob name="seq" timeout="600" runs="1" parallel="1"
+            template_options="--single"/>
+
+    <benchmark name="flatland-instances">
+        <folder path="toy-env"/>
+    </benchmark>
+
+    <project name="test-run" job="seq">
+        <runtag machine="local" benchmark="flatland-instances"/>
+    </project>
+
+</runscript>
