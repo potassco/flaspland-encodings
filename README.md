@@ -1,4 +1,4 @@
-# `aspire` encodings
+# `flaspland` encodings
 
 Our tool `aspire` is a framework that acts as an interface between Flatland-RL code written in Python and Answer Set Programming in clingo.
 Users can write ASP encodings in clingo that solve the Flatland problem and use `aspire` to translate their output into Flatland actions to interact with the environment.
