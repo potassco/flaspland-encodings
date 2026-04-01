@@ -4,6 +4,7 @@ Our tool `flaspland` is a framework that acts as an interface between Flatland-R
 Users can write ASP encodings in clingo that solve the Flatland problem and use `flaspland` to translate their output into Flatland actions to interact with the environment.
 
 In this repository, we provide a collection of encodings that can be used to solve various degrees of the Flatland problem. The repository adheres to the following structure:
+* 📁 `benchmarking`
 * 📁 `encodings`
   * 📁 `aux` files that describe the physics of Flatland environments
   * 📁 `graph-translations` files that convert a given Flatland environment into an alternative graph representation

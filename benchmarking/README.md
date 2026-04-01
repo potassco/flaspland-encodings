@@ -29,6 +29,7 @@ Follow these steps to run the benchmarks:
 
 ## Modify the runscript
 
+### Encodings
 ```
 <system name="clingo" version="latest" measures="clasp" config="seq-generic">       
     <setting name="base" cmdline="--stats">
@@ -37,6 +38,7 @@ Follow these steps to run the benchmarks:
 </system>
 ```
 
+### Instances
 The `<encoding file=""/>` can be edited to consider different encodings.
 Furthermore, additional lines can be added to consider additional encodings.
 
