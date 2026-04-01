@@ -31,8 +31,8 @@ Follow these steps to run the benchmarks:
 
 ### Encodings
 ```
-<system name="clingo" version="latest" measures="clasp" config="seq-generic">       
-    <setting name="base" cmdline="--stats">
+<system name="clasp" version="3.4.0" measures="clasp" config="seq-generic">       
+    <setting name="base" cmdline="--stats" tag="basic">
         <encoding file="../move2drive/move-subnodes-two.lp"/>
     </setting>
 </system>
