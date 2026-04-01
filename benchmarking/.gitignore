@@ -1,0 +1,6 @@
+output/*
+programs/*
+runscripts/*
+templates/*
+*.err
+*.xlsx#
