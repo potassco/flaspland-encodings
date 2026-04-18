@@ -1,0 +1,11 @@
+instance,status,min_horizon,wall_time_at_min_s,clingo_total_s,clingo_solve_s,n_probes,message
+envs/Test_08/Level_0.lp,FOUND,219,79.9409,78.8420,16.6370,10,
+envs/Test_08/Level_1.lp,FOUND,198,59.2547,58.5320,9.6400,9,
+envs/Test_08/Level_2.lp,FOUND,225,58.0349,57.1250,9.0250,10,
+envs/Test_08/Level_3.lp,FOUND,216,40.9697,40.4010,6.1320,9,
+envs/Test_08/Level_4.lp,FOUND,235,59.8283,58.8810,11.2380,9,
+envs/Test_08/Level_5.lp,NO_SAT_UP_TO_HMAX,,,,,3,UNSAT at h_max=360
+envs/Test_08/Level_6.lp,NO_SAT_UP_TO_HMAX,,,,,3,UNSAT at h_max=360
+envs/Test_08/Level_7.lp,FOUND,209,40.1700,39.6430,8.9530,9,
+envs/Test_08/Level_8.lp,ERROR,,,,,2,probe at h=300 returned TIMEOUT
+envs/Test_08/Level_9.lp,ERROR,,,,,2,probe at h=300 returned TIMEOUT

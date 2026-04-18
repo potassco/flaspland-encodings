@@ -1,19 +1,25 @@
 
-global(191).
+global(148).
 
-train(0). start(0,(6,10),25,e). end(0,(14,21),116). speed(0,3).
+train(0). start(0,(6,10),54,e). end(0,(14,21),92). speed(0,1).
 
-train(1). start(1,(13,21),8,e). end(1,(7,10),176). speed(1,4).
+train(1). start(1,(13,21),10,e). end(1,(7,10),100). speed(1,2).
 
-train(2). start(2,(11,21),109,e). end(2,(7,10),160). speed(2,1).
+train(2). start(2,(11,21),16,e). end(2,(7,10),106). speed(2,2).
 
-train(3). start(3,(6,10),95,e). end(3,(12,21),178). speed(3,3).
+train(3). start(3,(6,10),35,e). end(3,(12,21),118). speed(3,3).
 
-train(4). start(4,(6,10),57,w). end(4,(14,21),147). speed(4,2).
+train(4). start(4,(6,10),2,w). end(4,(14,21),132). speed(4,3).
 
-train(5). start(5,(13,21),31,e). end(5,(7,10),121). speed(5,2).
+train(5). start(5,(13,21),18,e). end(5,(7,10),69). speed(5,1).
 
-train(6). start(6,(6,10),89,w). end(6,(12,21),138). speed(6,1).
+train(6). start(6,(6,10),24,w). end(6,(12,21),73). speed(6,1).
+
+train(7). start(7,(11,21),14,w). end(7,(7,10),130). speed(7,4).
+
+train(8). start(8,(6,10),8,e). end(8,(12,21),114). speed(8,4).
+
+train(9). start(9,(11,21),9,e). end(9,(7,10),139). speed(9,3).
 
 cell((0,0), 0).
 cell((0,1), 0).
