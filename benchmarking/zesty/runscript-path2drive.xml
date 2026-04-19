@@ -1,0 +1,106 @@
+<runscript output="output-p2d">
+
+	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
+
+	<config name="seq-generic" template="templates/seq-generic.sh"/>
+
+	<system name="clingo" version="5.8.0" measures="clasp" config="seq-generic" cmdline="--stats" cmdline_post="--configuration=auto">
+		<setting name="default"  tag="seq" cmdline="-q" cmdline_post="1"/>
+	</system>
+
+	<seqjob name="seq-generic" timeout="3000" runs="1" memout="20000" parallel="8"/>
+
+	<benchmark name="p2d-suite">
+		<files path="envs">
+		    <add file="Test_00/Level_0.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_1.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_2.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_3.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_4.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_5.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_6.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_7.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_8.lp" cmdline="-c h=40"/>
+		    <add file="Test_00/Level_9.lp" cmdline="-c h=40"/>
+		    <add file="Test_01/Level_0.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_1.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_2.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_3.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_4.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_5.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_6.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_7.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_8.lp" cmdline="-c h=61"/>
+		    <add file="Test_01/Level_9.lp" cmdline="-c h=61"/>
+		    <add file="Test_02/Level_0.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_1.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_2.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_3.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_4.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_5.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_6.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_7.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_8.lp" cmdline="-c h=102"/>
+		    <add file="Test_02/Level_9.lp" cmdline="-c h=102"/>
+		    <add file="Test_03/Level_0.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_1.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_2.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_3.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_4.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_5.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_6.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_7.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_8.lp" cmdline="-c h=89"/>
+		    <add file="Test_03/Level_9.lp" cmdline="-c h=89"/>
+		    <add file="Test_04/Level_0.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_1.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_2.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_3.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_4.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_5.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_6.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_7.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_8.lp" cmdline="-c h=105"/>
+		    <add file="Test_04/Level_9.lp" cmdline="-c h=105"/>
+		    <add file="Test_05/Level_0.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_1.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_2.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_3.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_4.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_5.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_6.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_7.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_8.lp" cmdline="-c h=130"/>
+		    <add file="Test_05/Level_9.lp" cmdline="-c h=130"/>
+		    <add file="Test_06/Level_0.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_1.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_2.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_3.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_4.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_5.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_6.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_7.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_8.lp" cmdline="-c h=279"/>
+		    <add file="Test_06/Level_9.lp" cmdline="-c h=279"/>
+		    <add file="Test_07/Level_0.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_1.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_2.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_3.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_4.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_5.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_6.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_7.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_8.lp" cmdline="-c h=202"/>
+		    <add file="Test_07/Level_9.lp" cmdline="-c h=202"/>
+		<encoding file="./exp-path2drive.lp"/>
+		</files>
+		
+	</benchmark>
+
+
+	<project name="clasp-seq" job="seq-generic">
+		<runtag machine="local" benchmark="p2d-suite" tag="seq"/>
+	</project>
+
+
+</runscript>
