@@ -1,0 +1,40 @@
+<runscript output="output-p2d">
+
+	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<!-- <machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/> -->
+
+	<config name="seq-generic" template="templates/seq-generic.sh"/>
+
+	<system name="clingo" version="5.8.0" measures="clasp" config="seq-generic" cmdline="--stats" cmdline_post="--configuration=auto">
+		<setting name="default"  tag="seq" cmdline="-q" cmdline_post="1"/>
+	</system>
+
+	<seqjob name="seq-generic" timeout="120s" runs="1" memout="1000" parallel="8"/>
+
+	<benchmark name="p2d-suite">
+		<!-- <folder path="benchmarks/clasp" group="true" cmdline="- -restarts=no">
+			<ignore prefix="pigeons"/>
+			<encoding file="encodings/folder_enc.lp"/>
+		</folder> -->
+		<files path="envs/Test_00">
+			<add file="Level_0.lp" cmdline="-c h=40"/>
+            <add file="Level_1.lp" cmdline="-c h=40"/>
+            <add file="Level_2.lp" cmdline="-c h=40"/>
+            <add file="Level_3.lp" cmdline="-c h=40"/>
+            <add file="Level_4.lp" cmdline="-c h=40"/>
+            <add file="Level_5.lp" cmdline="-c h=40"/>
+            <add file="Level_6.lp" cmdline="-c h=40"/>
+            <add file="Level_7.lp" cmdline="-c h=40"/>
+            <add file="Level_8.lp" cmdline="-c h=40"/>
+            <add file="Level_9.lp" cmdline="-c h=40"/>
+			<encoding file="./exp-path2drive.lp"/>
+		</files>
+	</benchmark>
+
+
+	<project name="clasp-seq" job="seq-generic">
+		<runtag machine="local" benchmark="p2d-suite" tag="seq"/>
+	</project>
+
+
+</runscript>
