@@ -4,3 +4,5 @@ runscripts/*
 templates/*
 *.err
 *.xlsx#
+output*/*
+runlim/
