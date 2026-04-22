@@ -8,12 +8,12 @@
 		<setting name="default"  tag="seq" cmdline="-q" cmdline_post="1"/>
 	</system>
 
-	<seqjob name="seq-generic" timeout="200s" runs="1" memout="10000" parallel="8"/>
+	<seqjob name="seq-generic" timeout="30s" runs="1" memout="1000" parallel="8"/>
 
 	<benchmark name="p2d-suite">
 		<files path="envs">
 		    <add file="Test_00/Level_0.lp" cmdline="-c h=100"/>
-		    <add file="Test_00/Level_1.lp" cmdline="-c h=100"/>
+		    <!-- <add file="Test_00/Level_1.lp" cmdline="-c h=100"/>
 		    <add file="Test_00/Level_2.lp" cmdline="-c h=100"/>
 		    <add file="Test_00/Level_3.lp" cmdline="-c h=100"/>
 		    <add file="Test_00/Level_4.lp" cmdline="-c h=100"/>
@@ -21,7 +21,7 @@
 		    <add file="Test_00/Level_6.lp" cmdline="-c h=100"/>
 		    <add file="Test_00/Level_7.lp" cmdline="-c h=100"/>
 		    <add file="Test_00/Level_8.lp" cmdline="-c h=100"/>
-		    <add file="Test_00/Level_9.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_9.lp" cmdline="-c h=100"/> -->
 
 		    <!-- <add file="Test_01/Level_0.lp" cmdline="-c h=61"/>
 		    <add file="Test_01/Level_1.lp" cmdline="-c h=61"/>

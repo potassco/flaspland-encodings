@@ -1,0 +1,11 @@
+instance,status,min_horizon,wall_time_at_min_s,clingo_total_s,clingo_solve_s,n_probes,message
+envs/Test_04/Level_0.lp,FOUND,79,1.3118,1.2840,0.0310,8,
+envs/Test_04/Level_1.lp,FOUND,69,1.4276,1.3970,0.0120,8,
+envs/Test_04/Level_2.lp,FOUND,105,2.4247,2.3780,0.2460,8,
+envs/Test_04/Level_3.lp,FOUND,80,2.4225,2.3760,0.1910,8,
+envs/Test_04/Level_4.lp,FOUND,82,2.5171,2.4670,0.4740,7,
+envs/Test_04/Level_5.lp,FOUND,104,2.4411,2.3960,0.2970,8,
+envs/Test_04/Level_6.lp,FOUND,78,1.1862,1.1630,0.0890,7,
+envs/Test_04/Level_7.lp,FOUND,68,1.3752,1.3020,0.1470,7,
+envs/Test_04/Level_8.lp,FOUND,42,0.8439,0.8220,0.0080,2,
+envs/Test_04/Level_9.lp,FOUND,96,4.3571,4.2780,0.5320,7,
