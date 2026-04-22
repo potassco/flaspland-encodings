@@ -9,7 +9,7 @@
 
 	</system>
 
-	<distjob name="dist-generic" timeout="200s" runs="1" memout="3000" template_options="--single" script_mode="timeout" walltime="59m" cpt="4" partition="short"/>
+	<distjob name="dist-generic" timeout="300s" runs="1" memout="10000" template_options="--single" script_mode="timeout" walltime="59m" cpt="4" partition="short"/>
 
 	<benchmark name="p2d-suite">
 		<files path="envs">
