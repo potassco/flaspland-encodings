@@ -9,20 +9,20 @@ The original constraints come from Amadé's encoding `path2drive/drive-collision
 The alternative constraints come from Torsten's encoding `move2drive/move-collisions.lp`. 
 
 In `drive-collisions-0.lp`:
-* Amadé's `path2drive/drive-collisions.lp **vertex constraint**
-* Amadé's `path2drive/drive-collisions.lp **edge constraint**
+* Amadé's `path2drive/drive-collisions.lp` **vertex constraint**
+* Amadé's `path2drive/drive-collisions.lp` **edge constraint**
 
 In `drive-collisions-1.lp`:
-* Amadé's `path2drive/drive-collisions.lp **vertex constraint**
-* Torsten's `move2drive/drive-collisions.lp **edge constraint**
+* Amadé's `path2drive/drive-collisions.lp` **vertex constraint**
+* Torsten's `move2drive/drive-collisions.lp` **edge constraint**
 
 In `drive-collisions-2.lp`:
-* Torsten's `move2drive/drive-collisions.lp **vertex constraint**
-* Amadé's `path2drive/drive-collisions.lp **edge constraint**
+* Torsten's `move2drive/drive-collisions.lp` **vertex constraint**
+* Amadé's `path2drive/drive-collisions.lp `**edge constraint**
 
 In `drive-collisions-2.lp`:
-* Torsten's `move2drive/drive-collisions.lp **vertex constraint**
-* Torsten's `move2drive/drive-collisions.lp **edge constraint**
+* Torsten's `move2drive/drive-collisions.lp` **vertex constraint**
+* Torsten's `move2drive/drive-collisions.lp` **edge constraint**
 
 ---
 
