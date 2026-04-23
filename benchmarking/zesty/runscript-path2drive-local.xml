@@ -8,27 +8,21 @@
 		<setting name="default"  tag="seq" cmdline="-q" cmdline_post="1"/>
 	</system>
 
-	<config name="dist-generic" template="templates/seq-generic.sh"/>
-	<system name="clingo" version="5.8.0" measures="clasp" config="dist-generic">
-		<setting name="one-as" tag="one-as" cmdline="--stats 1" dist_template="templates/single.dist" dist_options="#SBATCH --hint=compute_bound"/>
-		<setting name="all-as" tag="all-as" cmdline="--stats -q 0"/>
-	</system>
-
-	<seqjob name="seq-generic" timeout="300s" runs="1" memout="10000" parallel="8"/>
-	<distjob name="dist-generic" timeout="120s" runs="1" memout="1000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="short"/>
+	<seqjob name="seq-generic" timeout="30s" runs="1" memout="1000" parallel="8"/>
 
 	<benchmark name="p2d-suite">
 		<files path="envs">
-		    <add file="Test_00/Level_0.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_1.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_2.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_3.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_4.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_5.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_6.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_7.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_8.lp" cmdline="-c h=150"/>
-		    <add file="Test_00/Level_9.lp" cmdline="-c h=150"/>
+		    <add file="Test_00/Level_0.lp" cmdline="-c h=100"/>
+		    <!-- <add file="Test_00/Level_1.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_2.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_3.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_4.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_5.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_6.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_7.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_8.lp" cmdline="-c h=100"/>
+		    <add file="Test_00/Level_9.lp" cmdline="-c h=100"/> -->
+
 		    <!-- <add file="Test_01/Level_0.lp" cmdline="-c h=61"/>
 		    <add file="Test_01/Level_1.lp" cmdline="-c h=61"/>
 		    <add file="Test_01/Level_2.lp" cmdline="-c h=61"/>
@@ -38,8 +32,8 @@
 		    <add file="Test_01/Level_6.lp" cmdline="-c h=61"/>
 		    <add file="Test_01/Level_7.lp" cmdline="-c h=61"/>
 		    <add file="Test_01/Level_8.lp" cmdline="-c h=61"/>
-		    <add file="Test_01/Level_9.lp" cmdline="-c h=61"/> -->
-		    <!-- <add file="Test_02/Level_0.lp" cmdline="-c h=102"/>
+		    <add file="Test_01/Level_9.lp" cmdline="-c h=61"/>
+		    <add file="Test_02/Level_0.lp" cmdline="-c h=102"/>
 		    <add file="Test_02/Level_1.lp" cmdline="-c h=102"/>
 		    <add file="Test_02/Level_2.lp" cmdline="-c h=102"/>
 		    <add file="Test_02/Level_3.lp" cmdline="-c h=102"/>
@@ -48,8 +42,8 @@
 		    <add file="Test_02/Level_6.lp" cmdline="-c h=102"/>
 		    <add file="Test_02/Level_7.lp" cmdline="-c h=102"/>
 		    <add file="Test_02/Level_8.lp" cmdline="-c h=102"/>
-		    <add file="Test_02/Level_9.lp" cmdline="-c h=102"/> -->
-		    <!-- <add file="Test_03/Level_0.lp" cmdline="-c h=89"/>
+		    <add file="Test_02/Level_9.lp" cmdline="-c h=102"/>
+		    <add file="Test_03/Level_0.lp" cmdline="-c h=89"/>
 		    <add file="Test_03/Level_1.lp" cmdline="-c h=89"/>
 		    <add file="Test_03/Level_2.lp" cmdline="-c h=89"/>
 		    <add file="Test_03/Level_3.lp" cmdline="-c h=89"/>
@@ -108,10 +102,5 @@
 	<project name="clasp-seq" job="seq-generic">
 		<runtag machine="local" benchmark="p2d-suite" tag="seq"/>
 	</project>
-
-	<project name="clingo-one-as" job="dist-generic">
-		<runspec machine="hpc" benchmark="dist-suite" system="clingo" version="5.8.0" setting="one-as"/>
-	</project>
-
 
 </runscript>
