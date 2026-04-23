@@ -1,34 +1,49 @@
 #include "../directions.lp".
 #include "../grid-functions.lp".
 #include "../tracks.lp".
+#include "../hypergraph.lp".
 
 #const h=30.
 
-{ departure(Z,Dep) : Dep = E..h } = 1 :- start(Z,_,E,_).
-{ arrival(Z,Arr) : Arr = E..h } = 1 :- start(Z,_,E,_).
-:- departure(Z,Dep), arrival(Z,Arr), Arr <= Dep.
+#const original_end=0.
+%
+_end(A,U,T) :- end(A,U,T), T<=h, original_end  = 1.
+_end(A,U,h) :- end(A,U,T), T> h, original_end  = 1.
+%
+_end(A,U,h) :- end(A,U,T),       original_end != 1.
+%
+:- start(A,_,E,_), _end(A,_,T), T < E.
 
-{ move(Z,U,V,T): connected(U,_,V) } <= 1 :- departure(Z,Dep), arrival(Z,Arr), T=Dep..Arr.
+{ departure(A,T) : T = E..End } = 1 :- start(A,_,E,_), _end(A,_,End).
+
+{ move(A,U,V,T): connected(U,_,V), not end(A,U,_) } 1 :- start(A,_,E,_), _end(A,_,End), T=E+1..End.
+
+at(A,U,T) :- start(A,U,_,_), departure(A,T).
+at(A,V,T) :- move(A,U,V,T).
+at(A,U,T) :-   at(A,U,T-1), not move(A,U,_,T), not end(A,U,_), start(A,_,E,_), _end(A,_,End), T=E+1..End.
+
+:- move(A,U,_,T), not at(A,U,T-1).
+:- _end(A,U,T), at(A,V,T), U != V.
+
+:- { at(A,U,T) } > 1, cell(U,_), T=0..h.
+:- move(_,U,V,T), move(_,V,U,T). 
+
+:- 2 { at(A,U,T) }, start(A,_,_,_), T=0..h.
+
+% Check hyper edges
+moved(U,V,T) :- start(A,V,_,D), departure(A,T), connected(U,D,V).
+moved(U,V,T) :-  move(A,U,V,T), not _end(A,V,_).
+moved(U,V,T) :- moved(U,V,T-1), not move(_,V,_,T), T<=h. 
+             :- moved(W,U,T-1), move(_,U,V,T), not hyperedge(W,U,V).
+
+% Additional constraints (do not seem to be useful)
+% :- move(A,_,_,T), departure(A,TT), T<=TT.
+% :- move(A,_,_,T), not at(A,_,T-1).
 
 
-at(Z,U,D,Dep)   :-  departure(Z,Dep), start(Z,U,_,D).
-at(Z,V,D,T)     :-  move(Z,U,V,T), connected(U,D,V),
-                    departure(Z,Dep), arrival(Z,Arr), T = Dep+1..Arr.
-at(Z,U,D,T)     :-  at(Z,U,D,T-1), not move(Z,U,_,T), 
-                    departure(Z,Dep), arrival(Z,Arr), T=Dep+1..Arr.
-
-:- arrival(Z,Arr), end(Z,Goal,_), not at(Z,Goal,_,Arr).
-
-:- move(Z,U,V,_), at(Z,V,D,_), not connected(U,D,V).
-% :- start(Z,U,_,D), move(Z,U,V,_), not connected(U,D,V).                                       % doesn't work, but do we need it?
-% :- at(Z,U,D,T-1), move(Z,U,V,T), at(Z,V,D',T), cell(U,Track), not transition(Track,(D,D')).   % doesn't work, but do we need it?
-
-:- move(Z,U,_,T), not at(Z,U,_,T-1).
-% :- end(Z,V,_), not at(Z,V,_,_).
-% :- end(Z,U,_), move(Z,U,V,_), V>U.
-
-#show at/4.
-#show departure/2.
-#show arrival/2.
-#show move/4.
-% #show transition/2.
+#show.
+#show at/3.
+%#show drive(A,B,C) : at(A,B,C).
+%#show departure/2.
+%#show arrival/2.
+%#show move/4.
