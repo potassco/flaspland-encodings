@@ -33,7 +33,7 @@ at(A,U,T) :-   at(A,U,T-1), not move(A,U,_,T), not end(A,U,_), start(A,_,E,_), _
 % Check hyper edges
 moved(U,V,T) :- start(A,V,_,D), departure(A,T), connected(U,D,V).
 moved(U,V,T) :-  move(A,U,V,T), not _end(A,V,_).
-moved(U,V,T) :- moved(U,V,T-1), not move(_,V,_,T), T<=h. 
+moved(U,V,T) :- moved(U,V,T-1), not move(_,V,_,T), T<h. 
              :- moved(W,U,T-1), move(_,U,V,T), not hyperedge(W,U,V).
 
 % Additional constraints (do not seem to be useful)
