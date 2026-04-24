@@ -1,7 +1,7 @@
 import clingo
 import os
 
-DIR = "Test_01/"
+DIR = "Test_00/"
 INSTANCE = "Level_0"
 TRAIN_IDS = list(range(7))
 
@@ -23,7 +23,7 @@ os.makedirs(f"{DIR}/{INSTANCE}", exist_ok=True)
 def on_model(model):
     atoms = model.symbols(shown=True)
     bits = model_to_bits(atoms)
-    filename = f"{INSTANCE}/{bits.count('1')}-{bits}.lp"
+    filename = f"{DIR}/{INSTANCE}/{bits.count('1')}-{bits}.lp"
     with open(filename, "w") as f:
         for sym in sorted(atoms, key=str):
             f.write(f"{sym}.\n")
