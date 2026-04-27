@@ -2,7 +2,7 @@
 #include "../tracks.lp".
 #include "../grid-functions.lp".
 
-#const h = 3.
+% #const h = 3.
 
 #const allow_repetitions = 1.
 
