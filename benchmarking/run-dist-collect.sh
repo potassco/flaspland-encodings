@@ -9,7 +9,7 @@ if squeue -u "$USER" -h | grep -q .; then
     exit 1
 fi
 
-btool eval ./runscripts/runscript-path2drive-dist.xml | \
+btool eval ./runscripts/runscript-$1-dist.xml | \
     btool conv -m all -o results-dist.xlsx
 
 echo "Results saved to results-dist.xlsx"

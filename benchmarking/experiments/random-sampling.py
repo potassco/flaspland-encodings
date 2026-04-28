@@ -12,6 +12,10 @@ trains = {2: [3,5,6,9,10,12,17,18,20,24,33,34,36,40,48,65,66,68,72,80,96],
 		5: [31,47,55,59,61,62,79,87,91,93,94,103,107,109,110,115,117,118,121,122,124]}
 
 for level in levels:
+	print(f"Level_{level}:\n")
+	
 	for train in trains:
 		chosen = sorted(random.sample(trains[train], k=SAMPLE_SIZE))
-		print(f"Level_{level} ({train} trains):", [f"Level_{level}/{train}-" + str(format(x, '#009b')[2:]) + ".lp" for x in chosen])
+		[print(f"Level_{level}/{train}-" + str(format(x, '#009b')[2:]) + ".lp") for x in chosen]
+		print("\n")
+	print("\n")
