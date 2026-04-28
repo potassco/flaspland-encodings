@@ -1,7 +1,7 @@
 import re
 import os
 
-directory = "Test_00"
+directory = "Test_01"
 
 for level in os.listdir(directory):
     level_dir = os.path.join(directory, level)

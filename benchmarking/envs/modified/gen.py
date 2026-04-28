@@ -1,9 +1,9 @@
 import clingo
 import os
 
-DIR = "Test_00/"
-INSTANCE = "Level_0"
-TRAIN_IDS = list(range(7))
+DIR = "Test_02/"
+INSTANCE = "Level_1"
+TRAIN_IDS = list(range(20))
 
 def model_to_bits(atoms):
     selected = {
