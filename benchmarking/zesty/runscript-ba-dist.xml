@@ -9,7 +9,7 @@
 
 	</system>
 
-	<distjob name="dist-generic" timeout="1500s" runs="1" memout="15000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="kr"/>
+	<distjob name="dist-generic" timeout="1500s" runs="1" memout="15000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4"/>
 
 	<benchmark name="ba-0">
 		<files path="envs/modified/Test_00">
