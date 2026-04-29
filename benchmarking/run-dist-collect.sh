@@ -10,6 +10,6 @@ if squeue -u "$USER" -h | grep -q .; then
 fi
 
 btool eval ./runscripts/runscript-$1-dist.xml | \
-    btool conv -m all -o results-dist.xlsx
+    btool conv -m all -o results-dist-$1.xlsx
 
-echo "Results saved to results-dist.xlsx"
+echo "Results saved to results-dist-$1.xlsx"
