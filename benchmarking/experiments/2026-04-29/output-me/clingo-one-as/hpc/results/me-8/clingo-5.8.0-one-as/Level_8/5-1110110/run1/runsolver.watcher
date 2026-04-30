@@ -1,0 +1,44 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			hpc-node14
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1500 seconds
+[runlim] space limit:		15000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/clingo-5.8.0
+[runlim] argv[1]:		--stats
+[runlim] argv[2]:		1
+[runlim] argv[3]:		../../../../../../../../../envs/modified/Test_00/Level_8/5-1110110.lp
+[runlim] argv[4]:		../../../../../../../../../envs/modified/Test_00/Level_8/cells.lp
+[runlim] argv[5]:		../../../../../../../../../experiments/exp-me.lp
+[runlim] start:			Wed Apr 29 13:39:25 2026
+[runlim] child:			29687
+[runlim] sample:		9.98 time, 10.01 real, 681 MB, 6.01 load
+[runlim] sample:		19.98 time, 20.01 real, 1199 MB, 6.00 load
+[runlim] sample:		29.97 time, 30.01 real, 1681 MB, 6.00 load
+[runlim] sample:		39.94 time, 40.01 real, 2188 MB, 6.00 load
+[runlim] sample:		49.93 time, 50.01 real, 2710 MB, 6.00 load
+[runlim] sample:		59.92 time, 60.01 real, 3303 MB, 6.00 load
+[runlim] sample:		69.91 time, 70.01 real, 3690 MB, 6.00 load
+[runlim] sample:		79.89 time, 80.01 real, 3834 MB, 6.08 load
+[runlim] sample:		89.88 time, 90.01 real, 3882 MB, 6.07 load
+[runlim] sample:		99.88 time, 100.01 real, 3882 MB, 6.06 load
+[runlim] sample:		109.86 time, 110.01 real, 4458 MB, 6.05 load
+[runlim] sample:		119.85 time, 120.01 real, 5154 MB, 6.04 load
+[runlim] sample:		129.84 time, 130.01 real, 5830 MB, 6.03 load
+[runlim] sample:		139.83 time, 140.01 real, 5282 MB, 6.03 load
+[runlim] sample:		149.82 time, 150.01 real, 5282 MB, 6.02 load
+[runlim] sample:		159.80 time, 160.01 real, 5282 MB, 6.02 load
+[runlim] sample:		169.79 time, 170.01 real, 5282 MB, 6.02 load
+[runlim] sample:		179.78 time, 180.01 real, 5282 MB, 6.01 load
+[runlim] sample:		189.77 time, 190.01 real, 5282 MB, 6.01 load
+[runlim] sample:		199.76 time, 200.01 real, 5282 MB, 6.01 load
+[runlim] sample:		209.74 time, 210.01 real, 5282 MB, 6.01 load
+[runlim] end:			Wed Apr 29 13:43:00 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			214.68 seconds
+[runlim] time:			214.34 seconds
+[runlim] space:			5832 MB
+[runlim] load:			6.09 maximum
+[runlim] samples:		2147

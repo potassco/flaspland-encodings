@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_4/2-0010010.lp ...
+Solving...
+Answer: 1 (Time: 31.525s)
+drive(2,(24,6),21) drive(5,(24,6),38) drive(5,(24,6),145) drive(2,(25,6),22) drive(5,(25,6),39) drive(5,(25,6),144) drive(2,(26,6),23) drive(5,(26,6),40) drive(5,(26,6),143) drive(2,(26,7),24) drive(2,(27,6),26) drive(5,(27,6),41) drive(5,(27,6),142) drive(2,(27,7),25) drive(2,(28,6),27) drive(5,(28,6),42) drive(5,(28,6),141) drive(2,(29,6),28) drive(5,(29,6),43) drive(5,(29,6),140) drive(2,(29,7),29) drive(5,(29,7),44) drive(5,(29,7),139) drive(2,(29,8),30) drive(5,(29,8),45) drive(5,(29,8),138) drive(2,(29,9),31) drive(5,(29,9),46) drive(5,(29,9),137) drive(2,(29,10),32) drive(5,(23,6),146) drive(5,(29,10),47) drive(5,(29,10),136) drive(2,(29,11),33) drive(5,(22,6),147) drive(5,(29,11),48) drive(5,(29,11),135) drive(2,(28,11),34) drive(5,(21,6),148) drive(5,(28,11),49) drive(5,(28,11),129) drive(5,(28,11),130) drive(5,(28,11),131) drive(5,(28,11),132) drive(5,(28,11),133) drive(5,(28,11),134) drive(2,(27,11),35) drive(5,(20,6),149) drive(5,(27,11),50) drive(5,(27,11),128) drive(2,(26,11),36) drive(5,(19,6),150) drive(5,(26,11),51) drive(5,(26,11),127) drive(2,(25,11),37) drive(5,(18,6),151) drive(5,(25,11),52) drive(5,(25,11),126) drive(2,(24,11),38) drive(5,(17,6),152) drive(5,(24,11),53) drive(5,(24,11),125) drive(2,(23,11),39) drive(5,(16,6),153) drive(5,(23,11),54) drive(5,(23,11),124) drive(2,(22,11),40) drive(5,(15,6),154) drive(5,(22,11),55) drive(5,(22,11),123) drive(2,(21,11),41) drive(5,(14,6),155) drive(5,(21,11),56) drive(5,(21,11),122) drive(2,(20,11),42) drive(5,(13,6),156) drive(5,(20,11),57) drive(5,(20,11),121) drive(2,(19,11),43) drive(5,(12,6),157) drive(5,(19,11),58) drive(5,(19,11),120) drive(2,(11,6),62) drive(2,(19,10),44) drive(5,(11,6),71) drive(5,(11,6),101) drive(5,(11,6),158) drive(5,(19,10),59) drive(5,(19,10),119) drive(2,(10,6),63) drive(2,(19,9),45) drive(5,(10,6),100) drive(5,(11,5),72) drive(5,(11,5),159) drive(5,(19,9),60) drive(5,(19,9),118) drive(2,(9,6),64) drive(2,(9,6),65) drive(2,(9,6),66) drive(2,(9,6),67) drive(2,(9,6),68) drive(2,(9,6),69) drive(2,(9,6),70) drive(2,(9,6),71) drive(2,(9,6),72) drive(2,(9,6),73) drive(2,(9,6),74) drive(2,(9,6),75) drive(2,(9,6),76) drive(2,(9,6),77) drive(2,(9,6),78) drive(2,(19,8),46) drive(5,(9,6),99) drive(5,(11,4),73) drive(5,(11,4),160) drive(5,(19,8),61) drive(5,(19,8),117) drive(2,(8,6),79) drive(2,(11,7),61) drive(2,(19,7),47) drive(5,(8,6),98) drive(5,(11,3),74) drive(5,(11,3),161) drive(5,(11,7),70) drive(5,(11,7),102) drive(5,(11,7),103) drive(5,(19,7),62) drive(5,(19,7),116) drive(2,(7,6),80) drive(2,(12,7),60) drive(2,(18,7),48) drive(5,(7,6),97) drive(5,(11,2),75) drive(5,(11,2),162) drive(5,(12,7),69) drive(5,(12,7),104) drive(5,(12,7),105) drive(5,(12,7),106) drive(5,(12,7),107) drive(5,(12,7),108) drive(5,(12,7),109) drive(5,(18,7),63) drive(5,(18,7),115) drive(2,(6,6),81) drive(2,(13,7),59) drive(2,(17,7),49) drive(5,(6,6),96) drive(5,(11,1),76) drive(5,(11,1),163) drive(5,(13,7),68) drive(5,(13,7),110) drive(5,(17,7),64) drive(5,(17,7),114) drive(2,(14,7),52) drive(2,(14,7),53) drive(2,(14,7),54) drive(2,(14,7),55) drive(2,(14,7),56) drive(2,(14,7),57) drive(2,(14,7),58) drive(2,(16,7),50) drive(5,(5,6),95) drive(5,(10,1),77) drive(5,(10,1),164) drive(5,(14,7),67) drive(5,(14,7),111) drive(5,(16,7),65) drive(5,(16,7),113) drive(2,(15,7),51) drive(5,(4,6),94) drive(5,(5,7),195) drive(5,(6,8),197) drive(5,(9,1),78) drive(5,(9,1),165) drive(5,(15,7),66) drive(5,(15,7),112) drive(5,(3,6),93) drive(5,(3,6),192) drive(5,(4,7),194) drive(5,(5,8),196) drive(5,(8,1),79) drive(5,(8,1),166) drive(5,(2,6),92) drive(5,(2,6),191) drive(5,(3,7),193) drive(5,(7,1),80) drive(5,(7,1),167) drive(5,(1,6),91) drive(5,(1,6),190) drive(5,(6,1),81) drive(5,(6,1),168) drive(5,(1,5),90) drive(5,(1,5),189) drive(5,(5,1),82) drive(5,(5,1),169) drive(5,(1,4),89) drive(5,(1,4),176) drive(5,(1,4),177) drive(5,(1,4),178) drive(5,(1,4),179) drive(5,(1,4),180) drive(5,(1,4),181) drive(5,(1,4),182) drive(5,(1,4),183) drive(5,(1,4),184) drive(5,(1,4),185) drive(5,(1,4),186) drive(5,(1,4),187) drive(5,(1,4),188) drive(5,(4,1),83) drive(5,(4,1),170) drive(5,(1,3),88) drive(5,(1,3),175) drive(5,(3,1),84) drive(5,(3,1),171) drive(5,(1,2),87) drive(5,(1,2),174) drive(5,(2,1),85) drive(5,(2,1),172) drive(5,(1,1),86) drive(5,(1,1),173)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 31.525s (Solving: 15.00s 1st Model: 15.00s Unsat: 0.00s)
+CPU Time     : 31.523s
+
+Choices      : 34236   
+Conflicts    : 3293     (Analyzed: 3293)
+Restarts     : 15       (Average: 219.53 Last: 122 Blocked: 0)
+Model-Level  : 1355.0  
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 3293     (Deleted: 787)
+  Binary     : 212      (Ratio:   6.44%)
+  Ternary    : 382      (Ratio:  11.60%)
+  Conflict   : 3293     (Average Length:   49.6 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 3293     (Average:  9.47 Max: 789 Sum:  31176)
+  Executed   : 3293     (Average:  9.47 Max: 789 Sum:  31176 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 4000587  (Original: 3997057)
+  Choice     : 65245   
+Atoms        : 878064  
+Bodies       : 3218304  (Original: 3221834)
+  Count      : 0        (Original: 3530)
+Equivalences : 331000   (Atom=Atom: 467 Body=Body: 155 Other: 330378)
+Tight        : Yes
+Variables    : 1207991  (Eliminated:    0 Frozen:    0)
+Constraints  : 6509609  (Binary:  58.4% Ternary:  21.9% Other:  19.7%)
+
