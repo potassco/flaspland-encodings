@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_5/2-1010000.lp ...
+Solving...
+Answer: 1 (Time: 10.984s)
+drive(0,(24,14),4) drive(0,(23,14),5) drive(0,(22,14),6) drive(0,(21,14),7) drive(0,(20,14),8) drive(0,(19,14),9) drive(0,(19,15),10) drive(0,(19,16),11) drive(0,(19,17),12) drive(0,(18,17),13) drive(0,(18,18),14) drive(0,(18,19),15) drive(0,(17,19),16) drive(0,(17,19),17) drive(0,(17,20),18) drive(0,(16,20),19) drive(0,(15,20),20) drive(0,(14,20),21) drive(0,(13,20),22) drive(0,(12,20),23) drive(0,(11,20),24) drive(2,(24,14),13) drive(2,(23,14),14) drive(2,(22,14),15) drive(2,(21,14),16) drive(2,(20,14),17) drive(2,(19,14),18) drive(2,(19,15),19) drive(2,(19,16),20) drive(2,(19,17),21) drive(2,(19,18),22) drive(2,(19,19),23) drive(2,(19,20),24) drive(2,(18,20),25) drive(2,(17,20),26) drive(2,(16,20),27) drive(2,(15,20),28) drive(2,(14,20),29) drive(2,(13,20),30) drive(2,(12,20),31) drive(2,(11,20),32)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 10.984s (Solving: 0.16s 1st Model: 0.16s Unsat: 0.00s)
+CPU Time     : 10.983s
+
+Choices      : 233     
+Conflicts    : 5        (Analyzed: 5)
+Restarts     : 0       
+Model-Level  : 222.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 5        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 3        (Ratio:  60.00%)
+  Conflict   : 5        (Average Length:   42.0 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 5        (Average:  2.20 Max:   4 Sum:     11)
+  Executed   : 5        (Average:  2.20 Max:   4 Sum:     11 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 2735596  (Original: 2555791)
+  Choice     : 9174    
+Atoms        : 109190  
+Bodies       : 2557375  (Original: 2539840)
+  Sum        : 194     
+  Count      : 4114     (Original: 8832)
+Equivalences : 126518   (Atom=Atom: 6499 Body=Body: 13703 Other: 106316)
+Tight        : Yes
+Variables    : 744077   (Eliminated:    0 Frozen: 26935)
+Constraints  : 4644351  (Binary:  47.8% Ternary:  14.5% Other:  37.7%)
+

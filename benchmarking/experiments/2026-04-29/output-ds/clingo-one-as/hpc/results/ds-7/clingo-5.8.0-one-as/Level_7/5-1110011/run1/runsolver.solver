@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_7/5-1110011.lp ...
+Solving...
+Answer: 1 (Time: 36.547s)
+drive(0,(18,6),47) drive(0,(18,7),48) drive(0,(18,8),49) drive(0,(18,9),50) drive(0,(18,10),51) drive(0,(18,10),52) drive(0,(18,11),53) drive(0,(17,11),54) drive(0,(16,11),55) drive(0,(15,11),56) drive(0,(14,11),57) drive(0,(13,11),58) drive(0,(13,12),59) drive(0,(13,13),60) drive(0,(13,14),61) drive(0,(13,15),62) drive(0,(13,16),63) drive(0,(13,17),64) drive(0,(13,18),65) drive(1,(12,18),28) drive(1,(12,17),29) drive(1,(13,17),30) drive(1,(13,16),31) drive(1,(13,15),32) drive(1,(13,14),33) drive(1,(13,13),34) drive(1,(13,12),35) drive(1,(13,11),36) drive(1,(14,11),37) drive(1,(15,11),38) drive(1,(16,11),39) drive(1,(16,11),40) drive(1,(17,11),41) drive(1,(18,11),42) drive(1,(18,10),43) drive(1,(18,9),44) drive(1,(19,9),45) drive(1,(19,8),46) drive(1,(19,7),47) drive(1,(19,6),48) drive(2,(18,6),10) drive(2,(18,7),11) drive(2,(18,8),12) drive(2,(18,9),13) drive(2,(18,10),14) drive(2,(18,11),15) drive(2,(17,11),16) drive(2,(16,11),17) drive(2,(15,11),18) drive(2,(14,11),19) drive(2,(13,11),20) drive(2,(13,11),21) drive(2,(13,12),22) drive(2,(13,13),23) drive(2,(13,14),24) drive(2,(13,15),25) drive(2,(13,16),26) drive(2,(13,17),27) drive(2,(13,18),28) drive(5,(14,18),30) drive(5,(14,19),31) drive(5,(14,20),32) drive(5,(14,21),33) drive(5,(13,21),34) drive(5,(13,22),35) drive(5,(13,23),36) drive(5,(14,23),37) drive(5,(15,23),38) drive(5,(16,23),39) drive(5,(17,23),40) drive(5,(18,23),41) drive(5,(18,22),42) drive(5,(18,21),43) drive(5,(18,20),44) drive(5,(18,19),45) drive(5,(18,18),46) drive(5,(18,17),47) drive(5,(18,16),48) drive(5,(18,15),49) drive(5,(18,14),50) drive(5,(18,13),51) drive(5,(18,12),52) drive(5,(18,12),53) drive(5,(18,11),54) drive(5,(18,10),55) drive(5,(18,9),56) drive(5,(19,9),57) drive(5,(19,8),58) drive(5,(19,8),59) drive(5,(19,7),60) drive(5,(19,6),61) drive(6,(18,6),25) drive(6,(18,5),26) drive(6,(18,4),27) drive(6,(18,3),28) drive(6,(18,2),29) drive(6,(18,1),30) drive(6,(17,1),31) drive(6,(16,1),32) drive(6,(15,1),33) drive(6,(14,1),34) drive(6,(13,1),35) drive(6,(13,2),36) drive(6,(13,3),37) drive(6,(13,4),38) drive(6,(13,5),39) drive(6,(13,6),40) drive(6,(13,7),41) drive(6,(13,8),42) drive(6,(13,9),43) drive(6,(13,10),44) drive(6,(13,11),45) drive(6,(13,12),46) drive(6,(13,13),47) drive(6,(13,14),48) drive(6,(13,15),49) drive(6,(14,15),50) drive(6,(14,16),51) drive(6,(14,17),52) drive(6,(15,17),53) drive(6,(15,18),54)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 36.548s (Solving: 0.30s 1st Model: 0.30s Unsat: 0.00s)
+CPU Time     : 36.544s
+
+Choices      : 471     
+Conflicts    : 27       (Analyzed: 27)
+Restarts     : 0       
+Model-Level  : 387.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 27       (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 3        (Ratio:  11.11%)
+  Conflict   : 27       (Average Length:  169.2 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 27       (Average:  3.11 Max:  15 Sum:     84)
+  Executed   : 27       (Average:  3.11 Max:  15 Sum:     84 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 8257772  (Original: 8010586)
+  Choice     : 14785   
+Atoms        : 172095  
+Bodies       : 8066491  (Original: 7994663)
+  Sum        : 473     
+  Count      : 5160     (Original: 18249)
+Equivalences : 297797   (Atom=Atom: 12053 Body=Body: 23421 Other: 262323)
+Tight        : Yes
+Variables    : 1064486  (Eliminated:    0 Frozen: 47513)
+Constraints  : 10815308 (Binary:  28.7% Ternary:   8.8% Other:  62.5%)
+

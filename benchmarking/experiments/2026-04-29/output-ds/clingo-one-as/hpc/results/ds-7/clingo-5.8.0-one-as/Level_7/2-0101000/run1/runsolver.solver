@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_7/2-0101000.lp ...
+Solving...
+Answer: 1 (Time: 7.556s)
+drive(1,(12,18),28) drive(1,(12,17),29) drive(1,(13,17),30) drive(1,(13,16),31) drive(1,(13,15),32) drive(1,(13,14),33) drive(1,(13,13),34) drive(1,(13,12),35) drive(1,(13,11),36) drive(1,(14,11),37) drive(1,(15,11),38) drive(1,(16,11),39) drive(1,(17,11),40) drive(1,(18,11),41) drive(1,(18,10),42) drive(1,(18,9),43) drive(1,(19,9),44) drive(1,(19,8),45) drive(1,(19,7),46) drive(1,(19,6),47) drive(3,(14,18),5) drive(3,(14,17),6) drive(3,(14,16),7) drive(3,(14,15),8) drive(3,(13,15),9) drive(3,(13,14),10) drive(3,(13,13),11) drive(3,(14,13),12) drive(3,(15,13),13) drive(3,(16,13),14) drive(3,(17,13),15) drive(3,(17,12),16) drive(3,(18,12),17) drive(3,(18,11),18) drive(3,(18,10),19) drive(3,(18,9),20) drive(3,(19,9),21) drive(3,(19,8),22) drive(3,(19,7),23) drive(3,(19,6),24)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 7.556s (Solving: 0.13s 1st Model: 0.13s Unsat: 0.00s)
+CPU Time     : 7.554s
+
+Choices      : 202     
+Conflicts    : 1        (Analyzed: 1)
+Restarts     : 0       
+Model-Level  : 194.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 1        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 1        (Ratio: 100.00%)
+  Conflict   : 1        (Average Length:    3.0 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1        (Average:  8.00 Max:   8 Sum:      8)
+  Executed   : 1        (Average:  8.00 Max:   8 Sum:      8 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 1725086  (Original: 1613208)
+  Choice     : 7283    
+Atoms        : 89042   
+Bodies       : 1618246  (Original: 1600028)
+  Sum        : 188     
+  Count      : 2904     (Original: 6850)
+Equivalences : 112609   (Atom=Atom: 6012 Body=Body: 12260 Other: 94337)
+Tight        : Yes
+Variables    : 614883   (Eliminated:    0 Frozen: 23783)
+Constraints  : 3398923  (Binary:  52.8% Ternary:  16.5% Other:  30.7%)
+

@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_2/4-0101101.lp ...
+Solving...
+Answer: 1 (Time: 106.088s)
+drive(1,(18,20),1) drive(1,(17,20),2) drive(1,(17,21),3) drive(1,(16,21),4) drive(1,(15,21),7) drive(1,(16,22),5) drive(1,(14,21),8) drive(1,(15,22),6) drive(1,(13,21),9) drive(1,(13,22),10) drive(1,(13,23),11) drive(1,(13,24),12) drive(1,(12,24),13) drive(1,(11,24),14) drive(1,(10,24),15) drive(1,(10,25),16) drive(1,(9,25),17) drive(1,(8,25),18) drive(1,(7,25),19) drive(3,(18,22),13) drive(3,(17,22),14) drive(3,(16,22),15) drive(3,(15,22),16) drive(3,(15,21),17) drive(3,(14,21),18) drive(3,(13,21),19) drive(3,(13,22),20) drive(3,(13,23),21) drive(3,(13,24),22) drive(3,(12,24),23) drive(3,(11,24),24) drive(3,(10,24),25) drive(3,(10,25),26) drive(3,(9,25),27) drive(3,(8,25),28) drive(3,(7,25),29) drive(4,(7,24),14) drive(4,(6,24),15) drive(4,(5,24),16) drive(4,(4,24),17) drive(4,(3,24),18) drive(4,(2,24),19) drive(4,(2,23),20) drive(4,(2,22),21) drive(4,(2,21),22) drive(4,(2,20),23) drive(4,(2,19),24) drive(4,(3,19),25) drive(4,(4,19),26) drive(4,(5,19),27) drive(4,(6,19),28) drive(4,(7,19),29) drive(4,(8,19),30) drive(4,(9,19),31) drive(4,(10,19),32) drive(4,(11,19),33) drive(4,(12,19),34) drive(4,(12,20),35) drive(4,(12,21),36) drive(4,(13,21),37) drive(4,(14,21),38) drive(4,(15,21),39) drive(4,(15,22),40) drive(4,(16,22),41) drive(4,(17,22),42) drive(4,(17,23),43) drive(4,(18,23),44) drive(6,(7,24),8) drive(6,(6,24),9) drive(6,(5,24),10) drive(6,(4,24),11) drive(6,(3,24),12) drive(6,(2,24),13) drive(6,(2,23),14) drive(6,(2,22),15) drive(6,(2,21),16) drive(6,(2,20),17) drive(6,(2,19),18) drive(6,(3,19),19) drive(6,(4,19),20) drive(6,(5,19),21) drive(6,(6,19),22) drive(6,(7,19),23) drive(6,(8,19),24) drive(6,(9,19),25) drive(6,(10,19),26) drive(6,(11,19),27) drive(6,(12,19),28) drive(6,(12,20),29) drive(6,(12,21),30) drive(6,(13,21),31) drive(6,(14,21),32) drive(6,(15,21),33) drive(6,(15,22),34) drive(6,(16,22),35) drive(6,(17,22),36) drive(6,(17,23),37) drive(6,(18,23),38)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 106.088s (Solving: 2.19s 1st Model: 2.19s Unsat: 0.00s)
+CPU Time     : 106.085s
+
+Choices      : 969     
+Conflicts    : 3        (Analyzed: 3)
+Restarts     : 0       
+Model-Level  : 880.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 3        (Deleted: 0)
+  Binary     : 2        (Ratio:  66.67%)
+  Ternary    : 1        (Ratio:  33.33%)
+  Conflict   : 3        (Average Length:    2.3 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 3        (Average: 29.67 Max:  46 Sum:     89)
+  Executed   : 3        (Average: 29.67 Max:  46 Sum:     89 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 25504708 (Original: 21975320)
+  Choice     : 100135  
+Atoms        : 602997  
+Bodies       : 22078194 (Original: 21948759)
+  Sum        : 744     
+  Count      : 48059    (Original: 120164)
+Equivalences : 1534161  (Atom=Atom: 34837 Body=Body: 125368 Other: 1373956)
+Tight        : Yes
+Variables    : 8292952  (Eliminated:    0 Frozen: 164743)
+Constraints  : 49070973 (Binary:  55.8% Ternary:  16.1% Other:  28.1%)
+

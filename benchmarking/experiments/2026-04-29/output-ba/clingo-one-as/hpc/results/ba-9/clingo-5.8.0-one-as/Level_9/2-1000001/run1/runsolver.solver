@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_9/2-1000001.lp ...
+Solving...
+Answer: 1 (Time: 12.626s)
+at(0,(24,22),167) at(6,(24,24),179) at(0,(23,22),168) at(0,(23,23),169) at(0,(22,23),170) at(0,(22,23),171) at(0,(21,23),172) at(0,(20,23),173) at(0,(19,23),174) at(0,(18,23),175) at(0,(17,23),176) at(0,(16,23),177) at(0,(15,23),178) at(0,(14,23),179) at(0,(13,23),180) at(0,(13,23),181) at(0,(12,23),182) at(0,(12,23),183) at(0,(11,23),184) at(0,(10,23),185) at(0,(9,23),186) at(0,(9,23),187) at(0,(8,23),188) at(0,(7,23),189) at(6,(25,24),180) at(6,(26,24),181) at(6,(27,24),182) at(6,(27,23),183) at(6,(28,23),184) at(6,(29,23),185) at(6,(29,22),186) at(6,(29,21),187) at(6,(29,20),188) at(6,(29,19),189) at(6,(29,18),190) at(6,(28,18),191) at(6,(27,18),192) at(6,(26,18),193) at(6,(25,18),194) at(6,(24,18),195) at(6,(24,18),196) at(6,(23,18),197) at(6,(23,18),198) at(6,(22,18),199) at(6,(21,18),200) at(6,(21,18),201) at(6,(20,18),202) at(6,(20,18),203) at(6,(20,18),204) at(6,(20,18),205) at(6,(20,18),206) at(6,(20,18),207) at(6,(20,18),208) at(6,(20,18),209) at(6,(20,18),210) at(6,(19,18),211) at(6,(19,19),212) at(6,(19,19),213) at(6,(19,19),214) at(6,(19,20),215) at(6,(19,21),216) at(6,(18,21),217) at(6,(18,21),218) at(6,(17,21),219) at(6,(16,21),220) at(6,(15,21),221) at(6,(14,21),222) at(6,(13,21),223) at(6,(12,21),224) at(6,(12,22),225) at(6,(12,23),226) at(6,(11,23),227) at(6,(10,23),228) at(6,(9,23),229) at(6,(8,23),230) at(6,(7,23),231)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 12.626s (Solving: 10.52s 1st Model: 10.52s Unsat: 0.00s)
+CPU Time     : 12.623s
+
+Choices      : 349122  
+Conflicts    : 17872    (Analyzed: 17872)
+Restarts     : 62       (Average: 288.26 Last: 2062 Blocked: 0)
+Model-Level  : 508.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 17872    (Deleted: 11402)
+  Binary     : 199      (Ratio:   1.11%)
+  Ternary    : 1887     (Ratio:  10.56%)
+  Conflict   : 17872    (Average Length:   62.6 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 17872    (Average: 18.84 Max: 3213 Sum: 336781)
+  Executed   : 17872    (Average: 18.84 Max: 3213 Sum: 336781 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 534402   (Original: 504582)
+  Choice     : 240     
+Atoms        : 245872   (Original: 231116 Auxiliary: 14756)
+Bodies       : 255869   (Original: 233636)
+  Count      : 409      (Original: 480)
+Equivalences : 178884   (Atom=Atom: 27557 Body=Body: 238 Other: 151089)
+Tight        : Yes
+Variables    : 267447   (Eliminated:    0 Frozen: 76013)
+Constraints  : 678486   (Binary:  75.6% Ternary:  18.4% Other:   6.0%)
+
