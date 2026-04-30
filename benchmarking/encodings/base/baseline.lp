@@ -3,7 +3,7 @@
 #include "../tracks.lp".
 #include "../hypergraph.lp".
 
-#const h=30.
+% #const h=30.
 
 #const original_end=0.
 %
