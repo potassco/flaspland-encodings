@@ -6,3 +6,4 @@ templates/*
 *.xlsx#
 output*/*
 runlim/
+.DS_Store
