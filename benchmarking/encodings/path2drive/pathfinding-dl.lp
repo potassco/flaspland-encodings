@@ -14,5 +14,6 @@
 &diff{   0 - (Z,0) } <= -D      :- start(Z,_,D,_),         edge != 1.
 %
 :- resolve((Z,T),(Z',T')), Z < Z', % (Z,T+1) <= (Z',T')
-   resolve((Z',T'-1),(Z,T+1)).     % (Z',T') <= (Z,T+1)
-                                   % (Z,T+1)  = (Z',T')
+   resolve((Z',T'-1),(Z,T+1)),     % (Z',T') <= (Z,T+1)
+   edge != 1.                      % (Z,T+1)  = (Z',T')   
+                                   
