@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_6/2-0110000.lp ...
+Solving...
+Answer: 1 (Time: 7.811s)
+drive(1,(9,22),119) drive(1,(9,23),120) drive(2,(6,5),151) drive(1,(10,23),121) drive(1,(10,23),122) drive(2,(6,6),152) drive(2,(6,7),153) drive(1,(10,23),123) drive(1,(10,23),124) drive(2,(6,8),154) drive(2,(5,8),155) drive(1,(10,23),125) drive(1,(10,24),126) drive(2,(5,8),156) drive(2,(5,8),157) drive(1,(11,24),127) drive(1,(11,24),128) drive(2,(5,9),158) drive(2,(5,10),159) drive(1,(11,24),129) drive(1,(11,24),130) drive(2,(6,10),160) drive(2,(7,10),161) drive(1,(11,24),131) drive(1,(11,25),132) drive(2,(8,10),162) drive(2,(9,10),163) drive(1,(10,25),133) drive(1,(10,26),134) drive(2,(9,11),164) drive(2,(9,12),165) drive(1,(10,27),135) drive(1,(9,27),136) drive(2,(9,13),166) drive(2,(9,14),167) drive(1,(8,27),137) drive(1,(7,27),138) drive(2,(9,15),168) drive(2,(9,16),169) drive(1,(6,27),139) drive(1,(5,27),140) drive(2,(10,16),170) drive(2,(10,17),171) drive(1,(5,26),141) drive(1,(5,26),142) drive(2,(10,18),172) drive(2,(10,19),173) drive(1,(5,26),143) drive(1,(5,25),144) drive(2,(10,20),174) drive(2,(10,21),175) drive(1,(5,25),145) drive(1,(5,24),146) drive(2,(10,22),176) drive(1,(5,23),147) drive(1,(5,22),148) drive(1,(5,21),149) drive(1,(5,20),150) drive(1,(5,19),151) drive(1,(5,18),152) drive(1,(5,17),153) drive(1,(5,16),154) drive(1,(5,15),155) drive(1,(5,14),156) drive(1,(5,13),157) drive(1,(5,12),158) drive(1,(5,12),159) drive(1,(5,12),160) drive(1,(5,12),161) drive(1,(5,12),162) drive(1,(5,11),163) drive(1,(5,10),164) drive(1,(5,9),165) drive(1,(5,8),166) drive(1,(6,8),167) drive(1,(6,8),168) drive(1,(6,8),169) drive(1,(6,7),170) drive(1,(6,7),171) drive(1,(6,7),172) drive(1,(6,7),173) drive(1,(6,7),174) drive(1,(6,7),175) drive(1,(6,7),176) drive(1,(6,7),177) drive(1,(6,7),178) drive(1,(6,7),179) drive(1,(6,7),180) drive(1,(6,7),181) drive(1,(6,7),182) drive(1,(6,7),183) drive(1,(6,7),184) drive(1,(6,7),185) drive(1,(6,7),186) drive(1,(6,7),187) drive(1,(6,7),188) drive(1,(6,7),189) drive(1,(6,6),190) drive(1,(7,6),191) drive(1,(7,6),192) drive(1,(7,5),193)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 7.811s (Solving: 0.61s 1st Model: 0.61s Unsat: 0.00s)
+CPU Time     : 7.809s
+
+Choices      : 4408    
+Conflicts    : 574      (Analyzed: 574)
+Restarts     : 5        (Average: 114.80 Last: 77 Blocked: 0)
+Model-Level  : 106.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 574      (Deleted: 0)
+  Binary     : 64       (Ratio:  11.15%)
+  Ternary    : 167      (Ratio:  29.09%)
+  Conflict   : 574      (Average Length:   12.6 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 574      (Average:  6.84 Max: 268 Sum:   3926)
+  Executed   : 574      (Average:  6.84 Max: 268 Sum:   3926 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 2653195  (Original: 2621569)
+  Choice     : 22527   
+Atoms        : 118524  
+Bodies       : 2595650  (Original: 2606888)
+  Count      : 0        (Original: 22966)
+Equivalences : 78288    (Atom=Atom: 3079 Body=Body: 7661 Other: 67548)
+Tight        : Yes
+Variables    : 162606   (Eliminated:    0 Frozen:    0)
+Constraints  : 1204980  (Binary:  32.6% Ternary:  45.8% Other:  21.6%)
+

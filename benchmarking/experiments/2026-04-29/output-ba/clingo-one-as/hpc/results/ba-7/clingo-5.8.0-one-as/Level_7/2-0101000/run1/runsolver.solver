@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_7/2-0101000.lp ...
+Solving...
+Answer: 1 (Time: 1.561s)
+at(1,(12,18),61) at(3,(14,18),12) at(1,(12,17),62) at(1,(13,17),63) at(1,(13,16),64) at(1,(13,15),65) at(1,(13,14),66) at(1,(13,13),67) at(1,(13,12),68) at(1,(13,11),69) at(1,(14,11),70) at(1,(15,11),71) at(1,(16,11),72) at(1,(17,11),73) at(1,(18,11),74) at(1,(18,10),75) at(1,(18,9),76) at(1,(19,9),77) at(1,(19,9),78) at(1,(19,9),79) at(1,(19,9),80) at(1,(19,9),81) at(1,(19,9),82) at(1,(19,9),83) at(1,(19,9),84) at(1,(19,9),85) at(1,(19,9),86) at(1,(19,9),87) at(1,(19,9),88) at(1,(19,9),89) at(1,(19,9),90) at(1,(19,9),91) at(1,(19,9),92) at(1,(19,9),93) at(1,(19,9),94) at(1,(19,9),95) at(1,(19,9),96) at(1,(19,9),97) at(1,(19,9),98) at(1,(19,9),99) at(1,(19,9),100) at(1,(19,9),101) at(1,(19,9),102) at(1,(19,9),103) at(1,(19,9),104) at(1,(19,9),105) at(1,(19,9),106) at(1,(19,9),107) at(1,(19,9),108) at(1,(19,9),109) at(1,(19,9),110) at(1,(19,9),111) at(1,(19,9),112) at(1,(19,9),113) at(1,(19,9),114) at(1,(19,9),115) at(1,(19,9),116) at(1,(19,9),117) at(1,(19,8),118) at(1,(19,7),119) at(1,(19,6),120) at(3,(14,17),13) at(3,(14,16),14) at(3,(14,15),15) at(3,(13,15),16) at(3,(13,14),17) at(3,(13,13),18) at(3,(14,13),19) at(3,(15,13),20) at(3,(16,13),21) at(3,(17,13),22) at(3,(17,12),23) at(3,(18,12),24) at(3,(18,11),25) at(3,(18,10),26) at(3,(18,9),27) at(3,(19,9),28) at(3,(19,8),29) at(3,(19,7),30) at(3,(19,6),31)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 1.561s (Solving: 0.04s 1st Model: 0.04s Unsat: 0.00s)
+CPU Time     : 1.560s
+
+Choices      : 2192    
+Conflicts    : 3        (Analyzed: 3)
+Restarts     : 0       
+Model-Level  : 2060.0  
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 3        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 1        (Ratio:  33.33%)
+  Conflict   : 3        (Average Length:   76.0 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 3        (Average: 44.00 Max: 130 Sum:    132)
+  Executed   : 3        (Average: 44.00 Max: 130 Sum:    132 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 344902   (Original: 314975)
+  Choice     : 209     
+Atoms        : 154300   (Original: 139488 Auxiliary: 14812)
+Bodies       : 158879   (Original: 136527)
+  Count      : 322      (Original: 418)
+Equivalences : 92475    (Atom=Atom: 4636 Body=Body: 207 Other: 87632)
+Tight        : Yes
+Variables    : 168977   (Eliminated:    0 Frozen: 46612)
+Constraints  : 426614   (Binary:  76.8% Ternary:  15.1% Other:   8.1%)
+
