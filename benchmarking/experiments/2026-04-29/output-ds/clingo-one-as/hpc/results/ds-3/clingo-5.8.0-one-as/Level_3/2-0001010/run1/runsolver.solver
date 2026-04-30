@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_3/2-0001010.lp ...
+Solving...
+Answer: 1 (Time: 21.639s)
+drive(3,(11,17),58) drive(3,(12,17),59) drive(3,(13,17),60) drive(3,(14,17),61) drive(3,(15,17),62) drive(3,(16,17),63) drive(3,(17,17),64) drive(3,(17,18),65) drive(3,(17,19),66) drive(3,(17,20),67) drive(3,(17,21),68) drive(3,(18,21),69) drive(3,(19,21),70) drive(3,(20,21),71) drive(3,(21,21),72) drive(3,(21,22),73) drive(3,(22,22),74) drive(5,(22,19),6) drive(5,(21,19),7) drive(5,(21,20),8) drive(5,(20,20),9) drive(5,(20,21),10) drive(5,(19,21),11) drive(5,(17,20),14) drive(5,(18,21),12) drive(5,(17,21),13) drive(5,(17,19),15) drive(5,(17,18),16) drive(5,(17,17),17) drive(5,(16,17),18) drive(5,(15,17),19) drive(5,(14,17),20) drive(5,(13,17),21) drive(5,(13,16),22) drive(5,(12,16),23) drive(5,(11,16),24)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 21.639s (Solving: 0.54s 1st Model: 0.54s Unsat: 0.00s)
+CPU Time     : 21.634s
+
+Choices      : 321     
+Conflicts    : 1        (Analyzed: 1)
+Restarts     : 0       
+Model-Level  : 319.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 1        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 1        (Ratio: 100.00%)
+  Conflict   : 1        (Average Length:    3.0 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1        (Average:  2.00 Max:   2 Sum:      2)
+  Executed   : 1        (Average:  2.00 Max:   2 Sum:      2 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 5791710  (Original: 4914469)
+  Choice     : 39667   
+Atoms        : 242522  
+Bodies       : 4913224  (Original: 4892789)
+  Sum        : 320     
+  Count      : 14904    (Original: 35489)
+Equivalences : 570493   (Atom=Atom: 18908 Body=Body: 54104 Other: 497481)
+Tight        : Yes
+Variables    : 2847763  (Eliminated:    0 Frozen: 51836)
+Constraints  : 13805665 (Binary:  65.3% Ternary:  19.6% Other:  15.1%)
+

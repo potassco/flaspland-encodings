@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_0/2-0001001.lp ...
+Solving...
+Answer: 1 (Time: 25.374s)
+drive(3,(10,7),6) drive(3,(9,7),7) drive(3,(8,7),8) drive(3,(7,7),11) drive(3,(8,8),9) drive(3,(6,7),12) drive(3,(7,8),10) drive(3,(5,7),13) drive(3,(5,8),14) drive(3,(5,9),15) drive(3,(5,10),16) drive(3,(5,11),17) drive(3,(5,12),18) drive(3,(6,12),19) drive(3,(7,12),20) drive(3,(8,12),21) drive(3,(18,12),31) drive(3,(9,12),22) drive(3,(19,12),32) drive(3,(17,12),30) drive(3,(10,12),23) drive(3,(20,12),33) drive(3,(16,12),29) drive(3,(11,12),24) drive(3,(21,12),34) drive(3,(15,12),28) drive(3,(12,12),25) drive(3,(21,13),35) drive(3,(14,12),27) drive(3,(13,12),26) drive(3,(22,13),36) drive(3,(23,13),37) drive(3,(23,13),38) drive(3,(23,13),39) drive(3,(23,13),40) drive(3,(23,13),41) drive(3,(23,13),42) drive(3,(23,13),43) drive(3,(23,13),44) drive(3,(23,13),45) drive(3,(23,13),46) drive(3,(23,13),47) drive(3,(23,13),48) drive(3,(23,13),49) drive(3,(23,13),50) drive(3,(23,13),51) drive(3,(23,13),52) drive(3,(23,13),53) drive(3,(23,13),54) drive(3,(23,13),55) drive(3,(23,13),56) drive(3,(23,13),57) drive(3,(23,13),58) drive(3,(23,13),59) drive(3,(23,13),60) drive(3,(23,13),61) drive(3,(23,13),62) drive(3,(24,13),63) drive(6,(10,7),30) drive(6,(9,7),31) drive(6,(8,7),32) drive(6,(7,7),35) drive(6,(8,8),33) drive(6,(6,7),36) drive(6,(7,8),34) drive(6,(5,7),37) drive(6,(5,8),38) drive(6,(5,9),39) drive(6,(5,10),40) drive(6,(5,11),41) drive(6,(5,12),42) drive(6,(6,12),43) drive(6,(7,12),44) drive(6,(8,12),45) drive(6,(18,12),56) drive(6,(9,12),46) drive(6,(19,12),57) drive(6,(19,12),58) drive(6,(17,12),54) drive(6,(17,12),55) drive(6,(10,12),47) drive(6,(20,12),59) drive(6,(20,12),60) drive(6,(16,12),53) drive(6,(11,12),48) drive(6,(21,12),61) drive(6,(15,12),52) drive(6,(12,12),49) drive(6,(21,13),62) drive(6,(21,13),63) drive(6,(14,12),51) drive(6,(13,12),50) drive(6,(22,13),64) drive(6,(23,13),65) drive(6,(23,13),66) drive(6,(23,13),67) drive(6,(23,13),68) drive(6,(23,13),69) drive(6,(23,13),70) drive(6,(23,13),71) drive(6,(23,13),72) drive(6,(23,13),73) drive(6,(23,13),74) drive(6,(23,13),75) drive(6,(23,13),76) drive(6,(23,13),77) drive(6,(23,13),78) drive(6,(23,13),79) drive(6,(23,13),80) drive(6,(23,13),81) drive(6,(23,13),82) drive(6,(23,13),83) drive(6,(23,13),84) drive(6,(23,13),85) drive(6,(23,13),86) drive(6,(23,13),87) drive(6,(23,13),88) drive(6,(23,13),89) drive(6,(23,13),90) drive(6,(23,13),91) drive(6,(23,13),92) drive(6,(23,13),93) drive(6,(23,13),94) drive(6,(23,13),95) drive(6,(23,13),96) drive(6,(23,13),97) drive(6,(23,13),98) drive(6,(23,13),99) drive(6,(23,13),100) drive(6,(23,13),101) drive(6,(23,13),102) drive(6,(23,13),103) drive(6,(23,13),104) drive(6,(23,13),105) drive(6,(23,13),106) drive(6,(23,13),107) drive(6,(23,13),108) drive(6,(23,13),109) drive(6,(23,13),110) drive(6,(23,13),111) drive(6,(23,13),112) drive(6,(23,13),113) drive(6,(23,13),114) drive(6,(23,13),115) drive(6,(23,13),116) drive(6,(23,13),117) drive(6,(23,13),118) drive(6,(23,13),119) drive(6,(23,13),120) drive(6,(23,13),121) drive(6,(23,13),122) drive(6,(23,13),123) drive(6,(23,13),124) drive(6,(24,13),125)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 25.374s (Solving: 5.87s 1st Model: 5.87s Unsat: 0.00s)
+CPU Time     : 25.372s
+
+Choices      : 4873    
+Conflicts    : 1191     (Analyzed: 1191)
+Restarts     : 9        (Average: 132.33 Last: 20 Blocked: 0)
+Model-Level  : 245.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 1191     (Deleted: 0)
+  Binary     : 87       (Ratio:   7.30%)
+  Ternary    : 131      (Ratio:  11.00%)
+  Conflict   : 1191     (Average Length:   68.6 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1191     (Average:  3.52 Max: 316 Sum:   4191)
+  Executed   : 1191     (Average:  3.52 Max: 316 Sum:   4191 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 5304166  (Original: 4770236)
+  Choice     : 22048   
+Atoms        : 177441  
+Bodies       : 4758996  (Original: 4751984)
+  Sum        : 252     
+  Count      : 10668    (Original: 35480)
+Equivalences : 250738   (Atom=Atom: 7477 Body=Body: 24999 Other: 218262)
+Tight        : Yes
+Variables    : 1936470  (Eliminated:    0 Frozen: 32002)
+Constraints  : 10229611 (Binary:  57.3% Ternary:  27.2% Other:  15.5%)
+

@@ -1,0 +1,73 @@
+#!/bin/bash
+#SBATCH --output=out.%j
+#SBATCH --error=err.%j
+#SBATCH --time=00-23:59:59        # walltime
+#SBATCH --cpus-per-task=4    # number of processor cores (i.e. tasks)
+#SBATCH --partition=long
+#SBATCH --hint=compute_bound
+                  # additional dist options (specified via runscript setting)
+
+# Good Idea to stop operation on first error.
+set -e
+
+# Load environment modules for your application here.
+source ~/.bashrc
+
+# Run jobs
+jobs="results/me-3/clingo-5.8.0-one-as/Level_3/4-0111100/run1/start.sh
+results/me-3/clingo-5.8.0-one-as/Level_3/2-0110000/run1/start.sh
+results/me-3/clingo-5.8.0-one-as/Level_3/5-1001111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-1110111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-0111101/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-1101111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-0010010/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-1111110/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-0000101/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/7-1111111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-1011111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-1000100/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-1010001/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-0100100/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-0111001/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-0110010/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-1011001/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-1011110/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-0011000/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-1111011/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-1010100/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-0001010/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-1100110/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/2-1000001/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-1010110/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-1100101/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-1010111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-1111010/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-1001100/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-0110111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-0111110/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-1111101/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-0100011/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/6-0111111/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-1101001/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/5-1111100/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/4-1001101/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-1101000/run1/start.sh
+results/me-4/clingo-5.8.0-one-as/Level_4/3-0010011/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/6-1110111/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/5-1101011/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/3-1001001/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/4-1101100/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/6-1101111/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/2-0010010/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/2-1010000/run1/start.sh
+results/me-5/clingo-5.8.0-one-as/Level_5/5-0111011/run1/start.sh
+"
+echo running jobs@$(hostname)...
+echo ""
+echo "jobs:" $jobs
+echo ""
+for i in $jobs
+do
+    echo "running " $i
+    $i
+done
