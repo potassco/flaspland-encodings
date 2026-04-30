@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_7/2-0100001.lp ...
+Solving...
+Answer: 1 (Time: 9.828s)
+at(1,start(1),0) at(6,start(6),0) at(6,start(6),1) at(1,start(1),1) at(1,start(1),2) at(6,start(6),2) at(6,start(6),3) at(1,start(1),3) at(1,start(1),4) at(6,start(6),4) at(6,start(6),5) at(1,start(1),5) at(1,start(1),6) at(6,start(6),6) at(6,start(6),7) at(1,start(1),7) at(1,start(1),8) at(6,start(6),8) at(6,start(6),9) at(1,start(1),9) at(1,start(1),10) at(6,start(6),10) at(6,start(6),11) at(1,start(1),11) at(1,start(1),12) at(6,start(6),12) at(6,start(6),13) at(1,start(1),13) at(1,start(1),14) at(6,start(6),14) at(6,start(6),15) at(1,start(1),15) at(1,start(1),16) at(6,start(6),16) at(6,start(6),17) at(1,start(1),17) at(1,start(1),18) at(6,start(6),18) at(6,start(6),19) at(1,start(1),19) at(1,start(1),20) at(6,start(6),20) at(6,start(6),21) at(1,start(1),21) at(1,start(1),22) at(6,start(6),22) at(6,start(6),23) at(1,start(1),23) at(1,start(1),24) at(6,start(6),24) at(6,start(6),25) at(1,start(1),25) at(1,start(1),26) at(1,start(1),27) at(1,start(1),28) at(6,(18,6),26) at(6,(18,6),27) at(6,(18,6),28) at(6,(18,6),29) at(6,(18,6),30) at(6,(18,6),31) at(6,(18,5),32) at(6,(18,5),33) at(6,(18,4),34) at(6,(18,4),35) at(6,(18,4),36) at(6,(19,4),37) at(6,(19,3),38) at(6,(19,3),39) at(6,(19,3),40) at(6,(18,3),41) at(6,(18,3),42) at(6,(18,2),43) at(6,(18,2),44) at(6,(18,2),45) at(6,(18,2),46) at(6,(18,1),47) at(6,(18,1),48) at(6,(18,1),49) at(6,(18,1),50) at(6,(18,1),51) at(6,(17,1),52) at(6,(17,1),53) at(6,(17,1),54) at(6,(17,1),55) at(6,(16,1),56) at(6,(16,1),57) at(6,(16,1),58) at(6,(16,1),59) at(6,(16,1),60) at(6,(16,1),61) at(6,(16,1),62) at(6,(16,1),63) at(6,(16,1),64) at(6,(16,1),65) at(6,(15,1),66) at(6,(14,1),67) at(6,(13,1),68) at(6,(13,2),69) at(6,(13,3),70) at(6,(13,3),71) at(6,(13,3),72) at(6,(13,3),73) at(6,(13,3),74) at(6,(13,3),75) at(6,(13,3),76) at(6,(13,3),77) at(6,(13,3),78) at(6,(13,4),79) at(6,(13,5),80) at(6,(13,6),81) at(6,(13,7),82) at(6,(13,8),83) at(6,(13,9),84) at(6,(13,9),85) at(6,(13,9),86) at(6,(13,9),87) at(6,(13,9),88) at(1,(12,18),89) at(6,(13,9),89) at(1,(12,17),90) at(6,(13,9),90) at(1,(13,17),91) at(6,(13,9),91) at(1,(13,16),92) at(6,(13,9),92) at(1,(13,16),93) at(6,(13,9),93) at(1,(13,15),94) at(6,(13,9),94) at(1,(13,15),95) at(6,(13,10),95) at(1,(13,15),96) at(6,(13,10),96) at(1,(13,14),97) at(6,(13,10),97) at(1,(13,14),98) at(6,(13,10),98) at(1,(13,13),99) at(6,(13,10),99) at(1,(13,12),100) at(6,(13,10),100) at(1,(13,11),101) at(6,(13,10),101) at(1,(13,11),102) at(6,(13,10),102) at(1,(14,11),103) at(6,(13,10),103) at(1,(15,11),104) at(6,(13,10),104) at(1,(16,11),105) at(6,(13,10),105) at(1,(16,11),106) at(6,(13,11),106) at(1,(17,11),107) at(6,(13,12),107) at(1,(18,11),108) at(6,(13,13),108) at(1,(18,11),109) at(6,(13,14),109) at(1,(18,10),110) at(6,(13,15),110) at(1,(18,9),111) at(6,(14,15),111) at(1,(19,9),112) at(6,(14,16),112) at(1,(19,8),113) at(6,(14,17),113) at(1,(19,7),114) at(6,(15,17),114) at(1,(19,6),115) at(6,(15,18),115) at(1,goal(1),116) at(6,goal(6),116) at(1,start(1),29) at(1,start(1),30) at(1,start(1),31) at(1,start(1),32) at(1,start(1),33) at(1,start(1),34) at(1,start(1),35) at(1,start(1),36) at(1,start(1),37) at(1,start(1),38) at(1,start(1),39) at(1,start(1),40) at(1,start(1),41) at(1,start(1),42) at(1,start(1),43) at(1,start(1),44) at(1,start(1),45) at(1,start(1),46) at(1,start(1),47) at(1,start(1),48) at(1,start(1),49) at(1,start(1),50) at(1,start(1),51) at(1,start(1),52) at(1,start(1),53) at(1,start(1),54) at(1,start(1),55) at(1,start(1),56) at(1,start(1),57) at(1,start(1),58) at(1,start(1),59) at(1,start(1),60) at(1,start(1),61) at(1,start(1),62) at(1,start(1),63) at(1,start(1),64) at(1,start(1),65) at(1,start(1),66) at(1,start(1),67) at(1,start(1),68) at(1,start(1),69) at(1,start(1),70) at(1,start(1),71) at(1,start(1),72) at(1,start(1),73) at(1,start(1),74) at(1,start(1),75) at(1,start(1),76) at(1,start(1),77) at(1,start(1),78) at(1,start(1),79) at(1,start(1),80) at(1,start(1),81) at(1,start(1),82) at(1,start(1),83) at(1,start(1),84) at(1,start(1),85) at(1,start(1),86) at(1,start(1),87) at(1,start(1),88)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 9.828s (Solving: 8.10s 1st Model: 8.10s Unsat: 0.00s)
+CPU Time     : 9.825s
+
+Choices      : 210262  
+Conflicts    : 20709    (Analyzed: 20709)
+Restarts     : 77       (Average: 268.95 Last: 170 Blocked: 0)
+Model-Level  : 477.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 20709    (Deleted: 14710)
+  Binary     : 135      (Ratio:   0.65%)
+  Ternary    : 1562     (Ratio:   7.54%)
+  Conflict   : 20709    (Average Length:   85.3 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 20709    (Average:  9.36 Max: 798 Sum: 193804)
+  Executed   : 20709    (Average:  9.36 Max: 798 Sum: 193804 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 448105   (Original: 398570)
+  Choice     : 232     
+Atoms        : 189528   (Original: 174665 Auxiliary: 14863)
+Bodies       : 227880   (Original: 193757)
+  Count      : 375      (Original: 696)
+Equivalences : 167458   (Atom=Atom: 2519 Body=Body: 1603 Other: 163336)
+Tight        : Yes
+Variables    : 165517   (Eliminated:    0 Frozen: 41571)
+Constraints  : 394336   (Binary:  76.6% Ternary:  20.5% Other:   2.9%)
+

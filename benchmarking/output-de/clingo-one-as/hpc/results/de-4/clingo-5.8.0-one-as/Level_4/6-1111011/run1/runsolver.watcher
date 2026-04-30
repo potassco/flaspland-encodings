@@ -1,0 +1,49 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			hpc-node9
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1500 seconds
+[runlim] space limit:		15000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/clingo-5.8.0
+[runlim] argv[1]:		--stats
+[runlim] argv[2]:		1
+[runlim] argv[3]:		../../../../../../../../../envs/modified/Test_00/Level_4/6-1111011.lp
+[runlim] argv[4]:		../../../../../../../../../envs/modified/Test_00/Level_4/cells.lp
+[runlim] argv[5]:		../../../../../../../../../experiments/exp-de.lp
+[runlim] start:			Wed Apr 29 15:29:00 2026
+[runlim] child:			533
+[runlim] sample:		10.00 time, 10.01 real, 1362 MB, 5.04 load
+[runlim] sample:		19.99 time, 20.01 real, 2010 MB, 5.03 load
+[runlim] sample:		29.99 time, 30.01 real, 2784 MB, 5.03 load
+[runlim] sample:		39.99 time, 40.01 real, 3434 MB, 5.02 load
+[runlim] sample:		49.99 time, 50.01 real, 3935 MB, 5.02 load
+[runlim] sample:		59.99 time, 60.01 real, 4192 MB, 5.02 load
+[runlim] sample:		69.95 time, 70.01 real, 4746 MB, 5.01 load
+[runlim] sample:		79.95 time, 80.01 real, 4917 MB, 5.08 load
+[runlim] sample:		89.95 time, 90.01 real, 5515 MB, 5.07 load
+[runlim] sample:		99.95 time, 100.01 real, 6148 MB, 5.06 load
+[runlim] sample:		109.95 time, 110.01 real, 6744 MB, 5.05 load
+[runlim] sample:		119.95 time, 120.01 real, 7985 MB, 5.04 load
+[runlim] sample:		129.95 time, 130.01 real, 8071 MB, 5.04 load
+[runlim] sample:		139.95 time, 140.01 real, 8701 MB, 5.03 load
+[runlim] sample:		149.95 time, 150.01 real, 9329 MB, 5.02 load
+[runlim] sample:		159.95 time, 160.01 real, 10015 MB, 5.02 load
+[runlim] sample:		169.95 time, 170.01 real, 10646 MB, 5.02 load
+[runlim] sample:		179.95 time, 180.01 real, 11374 MB, 5.01 load
+[runlim] sample:		189.95 time, 190.01 real, 11480 MB, 5.01 load
+[runlim] sample:		199.95 time, 200.01 real, 11581 MB, 5.01 load
+[runlim] sample:		209.94 time, 210.01 real, 11631 MB, 5.01 load
+[runlim] sample:		219.94 time, 220.01 real, 11773 MB, 5.01 load
+[runlim] sample:		229.95 time, 230.01 real, 11887 MB, 5.00 load
+[runlim] sample:		239.94 time, 240.01 real, 11931 MB, 5.00 load
+[runlim] sample:		249.95 time, 250.01 real, 11931 MB, 5.00 load
+[runlim] sample:		259.95 time, 260.01 real, 11147 MB, 5.00 load
+[runlim] end:			Wed Apr 29 15:33:30 2026
+[runlim] status:		out of memory
+[runlim] result:		3
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			270.23 seconds
+[runlim] time:			269.14 seconds
+[runlim] space:			15097 MB
+[runlim] load:			5.09 maximum
+[runlim] samples:		2692

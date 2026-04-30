@@ -1,0 +1,42 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			hpc-node14
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1500 seconds
+[runlim] space limit:		15000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/clingo-5.8.0
+[runlim] argv[1]:		--stats
+[runlim] argv[2]:		1
+[runlim] argv[3]:		../../../../../../../../../envs/modified/Test_00/Level_1/5-1011110.lp
+[runlim] argv[4]:		../../../../../../../../../envs/modified/Test_00/Level_1/cells.lp
+[runlim] argv[5]:		../../../../../../../../../experiments/exp-mh.lp
+[runlim] start:			Wed Apr 29 13:10:28 2026
+[runlim] child:			29043
+[runlim] sample:		10.00 time, 10.01 real, 1675 MB, 5.57 load
+[runlim] sample:		20.00 time, 20.01 real, 2280 MB, 5.63 load
+[runlim] sample:		30.00 time, 30.01 real, 2877 MB, 5.69 load
+[runlim] sample:		39.99 time, 40.01 real, 3197 MB, 5.74 load
+[runlim] sample:		49.99 time, 50.01 real, 3649 MB, 5.78 load
+[runlim] sample:		60.00 time, 60.01 real, 4059 MB, 5.81 load
+[runlim] sample:		70.00 time, 70.01 real, 4236 MB, 5.84 load
+[runlim] sample:		79.99 time, 80.01 real, 4325 MB, 5.87 load
+[runlim] sample:		89.99 time, 90.01 real, 4349 MB, 5.89 load
+[runlim] sample:		99.99 time, 100.01 real, 4828 MB, 5.91 load
+[runlim] sample:		109.99 time, 110.01 real, 5339 MB, 5.92 load
+[runlim] sample:		120.00 time, 120.01 real, 5955 MB, 5.93 load
+[runlim] sample:		129.99 time, 130.01 real, 5071 MB, 5.94 load
+[runlim] sample:		140.00 time, 140.01 real, 5071 MB, 5.95 load
+[runlim] sample:		149.99 time, 150.01 real, 5071 MB, 5.96 load
+[runlim] sample:		159.99 time, 160.01 real, 5071 MB, 5.97 load
+[runlim] sample:		169.99 time, 170.01 real, 5071 MB, 5.97 load
+[runlim] sample:		179.99 time, 180.01 real, 5071 MB, 5.98 load
+[runlim] sample:		189.99 time, 190.01 real, 5071 MB, 5.98 load
+[runlim] end:			Wed Apr 29 13:13:42 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			194.51 seconds
+[runlim] time:			194.49 seconds
+[runlim] space:			5955 MB
+[runlim] load:			5.98 maximum
+[runlim] samples:		1946

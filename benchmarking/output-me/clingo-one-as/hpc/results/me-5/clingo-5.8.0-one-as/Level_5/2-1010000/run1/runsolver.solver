@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_5/2-1010000.lp ...
+Solving...
+Answer: 1 (Time: 10.924s)
+drive(0,(24,14),4) drive(0,(24,14),69) drive(2,(24,14),13) drive(0,(23,14),5) drive(0,(23,14),70) drive(2,(23,14),14) drive(0,(25,14),68) drive(0,(22,14),6) drive(0,(22,14),71) drive(2,(22,14),15) drive(0,(26,14),67) drive(0,(21,14),74) drive(0,(22,15),7) drive(0,(22,15),72) drive(2,(22,15),16) drive(2,(22,15),62) drive(0,(26,15),66) drive(0,(27,14),64) drive(2,(26,15),67) drive(2,(27,14),69) drive(0,(20,14),75) drive(0,(21,15),8) drive(0,(21,15),73) drive(2,(21,15),17) drive(2,(21,15),61) drive(2,(23,15),63) drive(0,(27,15),65) drive(0,(28,14),63) drive(2,(27,15),68) drive(2,(25,15),65) drive(2,(25,15),66) drive(2,(28,14),70) drive(0,(19,14),76) drive(0,(20,15),9) drive(2,(20,15),18) drive(2,(20,15),60) drive(2,(24,15),64) drive(0,(29,14),62) drive(2,(29,14),71) drive(0,(19,15),10) drive(0,(19,15),77) drive(2,(19,15),19) drive(2,(19,15),59) drive(0,(29,15),61) drive(2,(29,15),72) drive(0,(18,15),11) drive(0,(19,16),78) drive(2,(18,15),58) drive(2,(19,16),20) drive(0,(29,16),60) drive(2,(29,16),73) drive(0,(17,15),12) drive(0,(18,16),79) drive(2,(17,15),57) drive(2,(18,16),21) drive(0,(29,17),59) drive(2,(29,17),74) drive(0,(16,15),13) drive(0,(17,16),80) drive(2,(16,15),56) drive(2,(17,16),22) drive(0,(29,18),58) drive(2,(29,18),75) drive(0,(15,15),14) drive(0,(16,16),81) drive(2,(15,15),55) drive(2,(16,16),23) drive(0,(29,19),57) drive(2,(29,19),76) drive(0,(14,15),15) drive(0,(16,17),82) drive(0,(19,20),46) drive(2,(14,15),54) drive(2,(16,17),24) drive(2,(19,20),87) drive(0,(28,19),56) drive(2,(29,20),77) drive(0,(13,15),16) drive(0,(16,18),83) drive(0,(20,20),47) drive(0,(18,20),45) drive(2,(13,15),53) drive(2,(16,18),25) drive(2,(20,20),86) drive(2,(18,20),88) drive(0,(27,19),55) drive(2,(28,20),78) drive(0,(12,15),17) drive(0,(16,19),84) drive(0,(17,20),44) drive(0,(20,19),48) drive(2,(12,15),52) drive(2,(16,19),26) drive(2,(17,20),89) drive(2,(21,20),85) drive(0,(26,19),54) drive(2,(27,20),79) drive(0,(11,15),18) drive(0,(16,20),43) drive(0,(16,20),85) drive(0,(21,19),49) drive(2,(11,15),51) drive(2,(16,20),27) drive(2,(16,20),90) drive(2,(22,20),84) drive(0,(25,19),53) drive(2,(26,20),80) drive(0,(10,15),19) drive(0,(15,20),42) drive(0,(15,20),86) drive(0,(22,19),50) drive(2,(10,15),50) drive(2,(15,20),28) drive(2,(15,20),91) drive(2,(23,20),83) drive(0,(24,19),52) drive(2,(25,20),81) drive(0,(9,15),20) drive(0,(14,20),41) drive(0,(14,20),87) drive(0,(23,19),51) drive(2,(9,15),49) drive(2,(14,20),29) drive(2,(14,20),92) drive(2,(24,20),82) drive(0,(8,15),21) drive(0,(13,20),88) drive(0,(14,21),40) drive(2,(8,15),48) drive(2,(13,20),32) drive(2,(13,20),95) drive(2,(14,21),30) drive(2,(14,21),93) drive(0,(7,15),22) drive(0,(12,20),89) drive(0,(13,21),39) drive(2,(7,15),47) drive(2,(12,20),33) drive(2,(12,20),96) drive(2,(13,21),31) drive(2,(13,21),94) drive(0,(6,15),23) drive(0,(11,20),90) drive(0,(12,21),37) drive(0,(12,21),38) drive(2,(6,15),46) drive(2,(11,20),97) drive(2,(12,19),34) drive(0,(6,16),24) drive(0,(12,22),36) drive(2,(6,16),45) drive(2,(10,20),37) drive(2,(11,19),35) drive(0,(6,17),25) drive(0,(10,21),33) drive(0,(11,22),35) drive(2,(6,17),44) drive(2,(9,20),38) drive(2,(10,19),36) drive(0,(6,18),26) drive(0,(8,20),30) drive(0,(9,21),32) drive(0,(10,22),34) drive(2,(6,18),43) drive(2,(8,20),39) drive(0,(6,19),27) drive(0,(7,20),29) drive(0,(8,21),31) drive(2,(6,19),42) drive(2,(7,20),40) drive(0,(6,20),28) drive(2,(6,20),41)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 10.925s (Solving: 2.32s 1st Model: 2.32s Unsat: 0.00s)
+CPU Time     : 10.923s
+
+Choices      : 8787    
+Conflicts    : 1782     (Analyzed: 1782)
+Restarts     : 12       (Average: 148.50 Last: 64 Blocked: 0)
+Model-Level  : 113.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 1782     (Deleted: 0)
+  Binary     : 203      (Ratio:  11.39%)
+  Ternary    : 524      (Ratio:  29.41%)
+  Conflict   : 1782     (Average Length:   10.4 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1782     (Average:  4.17 Max: 191 Sum:   7430)
+  Executed   : 1782     (Average:  4.17 Max: 191 Sum:   7430 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 2897128  (Original: 2876700)
+  Choice     : 23929   
+Atoms        : 107561  
+Bodies       : 2844749  (Original: 2850519)
+  Count      : 0        (Original: 14080)
+Equivalences : 181208   (Atom=Atom: 5511 Body=Body: 15628 Other: 160069)
+Tight        : Yes
+Variables    : 622791   (Eliminated:    0 Frozen:    0)
+Constraints  : 4444068  (Binary:  39.3% Ternary:  38.2% Other:  22.6%)
+

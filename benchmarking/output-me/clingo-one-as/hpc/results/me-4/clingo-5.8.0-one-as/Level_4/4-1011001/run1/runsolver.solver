@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_4/4-1011001.lp ...
+Solving...
+Answer: 1 (Time: 110.150s)
+drive(0,(24,6),0) drive(2,(24,6),21) drive(3,(6,7),130) drive(6,(24,6),6) drive(0,(25,6),1) drive(2,(25,6),22) drive(2,(25,6),23) drive(3,(7,7),131) drive(6,(25,6),7) drive(6,(25,6),8) drive(0,(26,6),2) drive(2,(26,6),24) drive(3,(8,7),132) drive(3,(8,7),217) drive(6,(26,6),9) drive(3,(4,7),209) drive(0,(27,6),3) drive(2,(26,7),25) drive(2,(27,6),27) drive(3,(9,7),133) drive(3,(9,7),218) drive(3,(8,6),216) drive(6,(27,6),10) drive(3,(3,7),208) drive(3,(4,6),210) drive(0,(28,6),4) drive(2,(27,7),26) drive(2,(28,6),28) drive(3,(9,6),134) drive(3,(9,6),219) drive(3,(7,6),215) drive(6,(28,6),11) drive(3,(3,6),207) drive(3,(5,6),211) drive(0,(29,6),5) drive(2,(29,6),29) drive(3,(10,6),135) drive(3,(10,6),220) drive(3,(7,5),214) drive(6,(29,6),12) drive(3,(2,6),206) drive(3,(5,5),212) drive(0,(29,7),6) drive(2,(29,7),30) drive(3,(11,6),136) drive(3,(11,6),184) drive(3,(11,6),221) drive(3,(6,5),213) drive(6,(29,7),13) drive(3,(1,6),205) drive(0,(29,8),7) drive(2,(29,8),31) drive(3,(11,7),183) drive(3,(11,5),185) drive(3,(12,6),137) drive(3,(12,6),222) drive(6,(29,8),14) drive(3,(1,5),204) drive(0,(29,9),8) drive(2,(29,9),32) drive(3,(12,7),182) drive(3,(11,4),186) drive(3,(13,6),138) drive(3,(13,6),223) drive(6,(29,9),15) drive(3,(1,4),203) drive(0,(29,10),9) drive(0,(29,10),10) drive(0,(29,10),11) drive(2,(29,10),33) drive(3,(13,7),181) drive(3,(11,3),187) drive(3,(14,6),139) drive(3,(14,6),224) drive(6,(29,10),16) drive(3,(1,3),202) drive(0,(29,11),12) drive(2,(29,11),34) drive(3,(14,7),180) drive(3,(11,2),188) drive(3,(15,6),140) drive(3,(15,6),225) drive(6,(29,11),17) drive(3,(1,2),201) drive(0,(28,11),13) drive(0,(28,11),14) drive(0,(28,11),15) drive(0,(28,11),16) drive(0,(28,11),17) drive(2,(28,11),35) drive(3,(15,7),179) drive(3,(11,1),189) drive(3,(16,6),141) drive(3,(16,6),226) drive(6,(28,11),18) drive(3,(1,1),200) drive(0,(27,11),18) drive(2,(27,11),36) drive(3,(16,7),178) drive(3,(10,1),190) drive(3,(17,6),142) drive(3,(17,6),227) drive(6,(27,11),19) drive(3,(2,1),199) drive(0,(26,11),19) drive(2,(26,11),37) drive(3,(17,7),177) drive(3,(9,1),191) drive(3,(18,6),143) drive(3,(18,6),228) drive(6,(26,11),20) drive(0,(11,6),39) drive(2,(11,6),58) drive(3,(3,1),198) drive(6,(11,6),40) drive(0,(25,11),20) drive(2,(25,11),38) drive(3,(18,7),176) drive(3,(8,1),192) drive(3,(19,6),144) drive(3,(19,6),229) drive(6,(25,11),21) drive(0,(10,6),40) drive(0,(11,7),38) drive(2,(10,6),59) drive(2,(11,7),57) drive(3,(4,1),197) drive(6,(10,6),41) drive(6,(11,7),39) drive(0,(24,11),21) drive(2,(24,11),39) drive(3,(19,7),175) drive(3,(7,1),193) drive(3,(7,1),194) drive(3,(20,6),145) drive(3,(20,6),230) drive(6,(24,11),22) drive(0,(9,6),41) drive(0,(12,7),37) drive(2,(9,6),60) drive(2,(12,7),56) drive(3,(5,1),196) drive(6,(9,6),42) drive(6,(12,7),38) drive(0,(23,11),22) drive(2,(23,11),40) drive(3,(19,8),174) drive(3,(6,1),195) drive(3,(21,6),146) drive(3,(21,6),231) drive(6,(23,11),23) drive(0,(8,6),44) drive(0,(9,7),42) drive(0,(13,7),36) drive(2,(8,6),63) drive(2,(8,6),64) drive(2,(8,6),65) drive(2,(8,6),66) drive(2,(9,7),61) drive(2,(13,7),55) drive(6,(8,6),43) drive(6,(13,7),37) drive(0,(22,11),23) drive(2,(22,11),41) drive(3,(19,9),173) drive(3,(21,7),232) drive(3,(22,6),147) drive(6,(22,11),24) drive(0,(7,6),45) drive(0,(7,6),46) drive(0,(8,7),43) drive(0,(14,7),35) drive(2,(7,6),67) drive(2,(8,7),62) drive(2,(14,7),54) drive(6,(7,6),44) drive(6,(14,7),36) drive(0,(21,11),24) drive(2,(21,11),42) drive(3,(19,10),172) drive(3,(22,7),233) drive(3,(23,6),148) drive(6,(21,11),25) drive(0,(6,6),47) drive(0,(15,7),34) drive(2,(6,6),68) drive(2,(15,7),53) drive(6,(6,6),45) drive(6,(15,7),35) drive(0,(20,11),25) drive(2,(20,11),43) drive(3,(19,11),171) drive(3,(23,7),234) drive(3,(24,6),149) drive(6,(20,11),26) drive(0,(16,7),33) drive(2,(16,7),52) drive(6,(16,7),34) drive(0,(19,11),26) drive(2,(19,11),44) drive(2,(19,11),45) drive(3,(20,11),170) drive(3,(24,7),235) drive(3,(25,6),150) drive(6,(19,11),27) drive(0,(17,7),32) drive(2,(17,7),51) drive(6,(17,7),33) drive(0,(19,10),27) drive(2,(19,10),46) drive(3,(21,11),169) drive(3,(26,6),151) drive(6,(19,10),28) drive(0,(18,7),31) drive(2,(18,7),50) drive(6,(18,7),32) drive(0,(19,9),28) drive(2,(19,9),47) drive(3,(22,11),168) drive(3,(26,7),152) drive(3,(27,6),154) drive(6,(19,9),29) drive(0,(19,7),30) drive(2,(19,7),49) drive(6,(19,7),31) drive(0,(19,8),29) drive(2,(19,8),48) drive(3,(23,11),167) drive(3,(27,7),153) drive(3,(28,6),155) drive(6,(19,8),30) drive(3,(24,11),166) drive(3,(29,6),156) drive(3,(25,11),165) drive(3,(29,7),157) drive(3,(26,11),164) drive(3,(29,8),158) drive(3,(27,11),163) drive(3,(29,9),159) drive(3,(28,11),162) drive(3,(29,10),160) drive(3,(29,11),161)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 110.151s (Solving: 49.93s 1st Model: 49.93s Unsat: 0.00s)
+CPU Time     : 110.146s
+
+Choices      : 221264  
+Conflicts    : 20584    (Analyzed: 20584)
+Restarts     : 72       (Average: 285.89 Last: 47 Blocked: 0)
+Model-Level  : 31682.0 
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 20584    (Deleted: 11510)
+  Binary     : 765      (Ratio:   3.72%)
+  Ternary    : 1383     (Ratio:   6.72%)
+  Conflict   : 20584    (Average Length:   28.9 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 20584    (Average:  8.04 Max: 8513 Sum: 165446)
+  Executed   : 20584    (Average:  8.04 Max: 8513 Sum: 165446 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 16261420 (Original: 16130267)
+  Choice     : 126368  
+Atoms        : 396160  
+Bodies       : 16086704 (Original: 16050509)
+  Count      : 0        (Original: 68629)
+Equivalences : 741355   (Atom=Atom: 18189 Body=Body: 53284 Other: 669882)
+Tight        : Yes
+Variables    : 3848515  (Eliminated:    0 Frozen:    0)
+Constraints  : 25760571 (Binary:  42.6% Ternary:  27.1% Other:  30.3%)
+
