@@ -12,18 +12,20 @@ _start(A,start(A)) :- start(A,_,_,_).
         _vertex(U) :- _edge(U,V).
         _vertex(V) :- _edge(U,V).
 
+#const edge=0.
 
 % no movement before earliest departure
-% :- start(A,_,E,_), move(A,_,_,T), T<=E.
+&diff{0 - (A,U)} <= -D :- start(A,U,D,_), edge!=1. % not possible with #edge
+                                                   % unless we add D nodes per Agent
 
 % if A is at its _goal U then move to _goal(A) in the next step
-% :- end(A,U,_), at(A,U,T), not move(A,U,goal(A),T+1), T<h+2.
+% not needed  
 
 % Check hyperedges
 :- move(A,U,V), move(A,V,W), not hyperedge(U,V,W), 
    not _start(_,U), not _goal(_,W).
 
-% Not needed
+% For performance?
 % :- move(A,U,_), _start(B,U), A != B.
 % :- move(A,_,U),  _goal(B,U), A != B.
 
@@ -51,8 +53,12 @@ resolve(A,B,U) :-  _goal(B,U), move(A,_,U), A!=B. % never fires
 % discard invalid orders
 :- resolve(A,B,U), resolve(B,A,U). % not needed?
 
-#edge ((A,U),(A,V)) : move(A,U,V).
-#edge ((A,V),(B,U)) : resolve(A,B,U), move(A,U,V).
+#edge ((A,U),(A,V)) : move(A,U,V),                 edge = 1. 
+#edge ((A,V),(B,U)) : resolve(A,B,U), move(A,U,V), edge = 1.
+%
+&diff{(A,U) + 1} <= (A,V) :- move(A,U,V),                    edge != 1. 
+&diff{(A,V) + 0} <= (B,U) :- resolve(A,B,U), move(A,U,V),    edge != 1.
+:- move(A,U,V), move(B,V,U), resolve(A,B,U), resolve(B,A,V), edge != 1.
 
 #show.
 #show move/3.
