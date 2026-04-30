@@ -1,0 +1,33 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			hpc-node8
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1500 seconds
+[runlim] space limit:		15000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/clingo-5.8.0
+[runlim] argv[1]:		--stats
+[runlim] argv[2]:		1
+[runlim] argv[3]:		../../../../../../../../../envs/modified/Test_00/Level_2/4-1100101.lp
+[runlim] argv[4]:		../../../../../../../../../envs/modified/Test_00/Level_2/cells.lp
+[runlim] argv[5]:		../../../../../../../../../experiments/exp-ds.lp
+[runlim] start:			Wed Apr 29 14:01:08 2026
+[runlim] child:			28302
+[runlim] sample:		10.00 time, 10.01 real, 909 MB, 4.06 load
+[runlim] sample:		20.00 time, 20.01 real, 1485 MB, 4.12 load
+[runlim] sample:		30.00 time, 30.01 real, 1894 MB, 4.10 load
+[runlim] sample:		39.99 time, 40.01 real, 2569 MB, 4.09 load
+[runlim] sample:		49.99 time, 50.01 real, 3237 MB, 4.07 load
+[runlim] sample:		60.00 time, 60.01 real, 3464 MB, 4.06 load
+[runlim] sample:		69.99 time, 70.01 real, 3584 MB, 4.05 load
+[runlim] sample:		79.99 time, 80.01 real, 3584 MB, 4.04 load
+[runlim] sample:		89.99 time, 90.01 real, 5138 MB, 4.04 load
+[runlim] sample:		99.99 time, 100.01 real, 6175 MB, 4.03 load
+[runlim] end:			Wed Apr 29 14:02:56 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			108.71 seconds
+[runlim] time:			108.69 seconds
+[runlim] space:			6277 MB
+[runlim] load:			4.13 maximum
+[runlim] samples:		1088

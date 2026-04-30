@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_5/2-0010100.lp ...
+Solving...
+Answer: 1 (Time: 11.311s)
+drive(4,(24,14),46) drive(2,(24,14),13) drive(2,(23,14),14) drive(4,(23,14),47) drive(4,(22,14),48) drive(2,(22,14),15) drive(2,(22,15),16) drive(4,(22,15),49) drive(4,(21,15),50) drive(2,(21,15),17) drive(2,(20,15),18) drive(4,(20,15),51) drive(4,(19,15),52) drive(2,(19,15),19) drive(2,(18,15),20) drive(4,(18,15),53) drive(4,(17,15),54) drive(2,(17,15),21) drive(2,(16,15),22) drive(4,(16,15),55) drive(4,(15,15),56) drive(2,(15,15),23) drive(2,(14,15),24) drive(4,(14,15),57) drive(4,(13,15),58) drive(2,(13,15),25) drive(2,(12,15),26) drive(4,(12,15),59) drive(4,(11,15),60) drive(2,(11,15),27) drive(2,(10,15),28) drive(4,(10,15),61) drive(4,(9,15),62) drive(2,(9,15),29) drive(2,(9,15),30) drive(4,(8,15),63) drive(4,(7,15),64) drive(2,(8,15),31) drive(2,(7,15),32) drive(4,(6,15),65) drive(4,(6,16),66) drive(2,(7,15),33) drive(2,(6,15),34) drive(4,(6,17),67) drive(4,(6,18),68) drive(2,(6,16),35) drive(2,(6,17),36) drive(4,(6,19),69) drive(4,(6,20),70) drive(2,(6,18),37) drive(2,(6,19),38) drive(4,(7,20),71) drive(4,(8,20),72) drive(2,(6,20),39) drive(2,(7,20),40) drive(4,(8,21),73) drive(4,(9,21),74) drive(2,(8,20),41) drive(2,(8,21),42) drive(4,(10,21),75) drive(4,(10,22),76) drive(2,(9,21),43) drive(2,(10,21),44) drive(4,(11,22),77) drive(2,(10,22),45) drive(2,(11,22),46) drive(2,(12,22),47) drive(2,(12,21),48) drive(2,(13,21),49) drive(2,(14,21),50) drive(2,(14,20),51) drive(2,(15,20),52) drive(2,(16,20),53) drive(2,(16,19),54) drive(2,(16,18),55) drive(2,(16,17),56) drive(2,(16,17),57) drive(2,(16,17),58) drive(2,(16,17),59) drive(2,(16,17),60) drive(2,(16,17),61) drive(2,(16,17),62) drive(2,(16,17),63) drive(2,(16,17),64) drive(2,(16,17),65) drive(2,(16,16),66) drive(2,(17,16),67) drive(2,(18,16),68) drive(2,(19,16),69) drive(2,(19,15),70) drive(2,(20,15),71) drive(2,(21,15),72) drive(2,(22,15),73) drive(2,(23,15),74) drive(2,(24,15),75) drive(2,(25,15),76) drive(2,(26,15),77) drive(2,(27,15),78) drive(2,(28,15),79) drive(2,(29,15),80) drive(2,(29,16),81) drive(2,(29,17),82) drive(2,(29,18),83) drive(2,(29,19),84) drive(2,(29,19),85) drive(2,(29,19),86) drive(2,(28,19),87) drive(2,(28,19),88) drive(2,(27,19),89) drive(2,(26,19),90) drive(2,(25,19),91) drive(2,(24,19),92) drive(2,(23,19),93) drive(2,(22,19),94) drive(2,(22,19),95) drive(2,(21,19),96) drive(2,(20,19),97) drive(2,(20,20),98) drive(2,(19,20),99) drive(2,(18,20),100) drive(2,(17,20),101) drive(2,(16,20),102) drive(2,(16,20),103) drive(2,(16,20),104) drive(2,(16,20),105) drive(2,(16,20),106) drive(2,(16,20),107) drive(2,(15,20),108) drive(2,(14,20),109) drive(2,(14,20),110) drive(2,(14,21),111) drive(2,(13,21),112) drive(2,(13,20),113) drive(2,(12,20),114) drive(2,(11,20),115)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 11.311s (Solving: 4.14s 1st Model: 4.14s Unsat: 0.00s)
+CPU Time     : 11.309s
+
+Choices      : 16235   
+Conflicts    : 6219     (Analyzed: 6219)
+Restarts     : 29       (Average: 214.45 Last: 345 Blocked: 0)
+Model-Level  : 246.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 6219     (Deleted: 982)
+  Binary     : 808      (Ratio:  12.99%)
+  Ternary    : 1458     (Ratio:  23.44%)
+  Conflict   : 6219     (Average Length:   14.1 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 6219     (Average:  2.38 Max: 222 Sum:  14790)
+  Executed   : 6219     (Average:  2.38 Max: 222 Sum:  14790 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 2185082  (Original: 2165578)
+  Choice     : 18463   
+Atoms        : 90632   
+Bodies       : 2140778  (Original: 2146262)
+  Count      : 0        (Original: 13432)
+Equivalences : 129501   (Atom=Atom: 4229 Body=Body: 11700 Other: 113572)
+Tight        : Yes
+Variables    : 371143   (Eliminated:    0 Frozen:    0)
+Constraints  : 2764297  (Binary:  37.1% Ternary:  41.7% Other:  21.3%)
+

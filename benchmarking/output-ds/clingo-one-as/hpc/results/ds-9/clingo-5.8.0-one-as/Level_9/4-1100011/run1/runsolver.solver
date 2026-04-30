@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_9/4-1100011.lp ...
+Solving...
+Answer: 1 (Time: 147.161s)
+drive(0,(24,22),167) drive(0,(23,22),168) drive(0,(23,23),169) drive(0,(22,23),170) drive(0,(21,23),171) drive(0,(20,23),172) drive(0,(19,23),173) drive(0,(18,23),174) drive(0,(17,23),175) drive(0,(16,23),176) drive(0,(15,23),177) drive(0,(14,23),178) drive(0,(13,23),179) drive(0,(12,23),180) drive(0,(11,23),181) drive(0,(10,23),182) drive(0,(9,23),183) drive(0,(8,23),184) drive(0,(7,23),185) drive(1,(7,22),10) drive(1,(6,22),11) drive(1,(5,22),12) drive(1,(4,22),13) drive(1,(3,22),14) drive(1,(2,22),15) drive(1,(2,23),16) drive(1,(2,24),17) drive(1,(2,25),18) drive(1,(2,26),19) drive(1,(2,27),20) drive(1,(3,27),21) drive(1,(4,27),22) drive(1,(5,27),23) drive(1,(6,27),24) drive(1,(7,27),25) drive(1,(8,27),26) drive(1,(9,27),27) drive(1,(10,27),28) drive(1,(11,27),29) drive(1,(12,27),30) drive(1,(12,26),31) drive(1,(12,25),32) drive(1,(12,24),33) drive(1,(12,23),34) drive(1,(13,23),35) drive(1,(14,23),36) drive(1,(15,23),37) drive(1,(16,23),38) drive(1,(17,23),39) drive(1,(18,23),40) drive(1,(19,23),41) drive(1,(20,23),42) drive(1,(21,23),43) drive(1,(21,24),44) drive(1,(22,24),45) drive(1,(23,24),46) drive(1,(23,25),47) drive(1,(24,25),48) drive(5,(7,22),11) drive(5,(6,22),12) drive(5,(5,22),13) drive(5,(4,22),14) drive(5,(3,22),15) drive(5,(2,22),16) drive(5,(2,23),17) drive(5,(2,24),18) drive(5,(2,25),19) drive(5,(2,26),20) drive(5,(2,27),21) drive(5,(3,27),22) drive(5,(4,27),23) drive(5,(5,27),24) drive(5,(6,27),25) drive(5,(7,27),26) drive(5,(8,27),27) drive(5,(9,27),28) drive(5,(10,27),29) drive(5,(11,27),30) drive(5,(12,27),31) drive(5,(12,26),32) drive(5,(12,25),33) drive(5,(12,24),34) drive(5,(12,23),35) drive(5,(13,23),36) drive(5,(14,23),37) drive(5,(15,23),38) drive(5,(16,23),39) drive(5,(17,23),40) drive(5,(18,23),41) drive(5,(19,23),42) drive(5,(20,23),43) drive(5,(21,23),44) drive(5,(21,24),45) drive(5,(22,24),46) drive(5,(23,24),47) drive(5,(23,25),48) drive(5,(24,25),49) drive(6,(24,24),57) drive(6,(25,24),58) drive(6,(26,24),59) drive(6,(27,24),60) drive(6,(27,23),61) drive(6,(28,23),62) drive(6,(29,23),63) drive(6,(29,22),64) drive(6,(29,21),65) drive(6,(29,20),66) drive(6,(29,19),67) drive(6,(29,18),68) drive(6,(28,18),69) drive(6,(27,18),70) drive(6,(26,18),71) drive(6,(25,18),72) drive(6,(24,18),73) drive(6,(23,18),74) drive(6,(22,18),75) drive(6,(21,18),76) drive(6,(20,18),77) drive(6,(19,18),78) drive(6,(19,19),79) drive(6,(19,20),80) drive(6,(19,21),81) drive(6,(18,21),82) drive(6,(17,21),83) drive(6,(16,21),84) drive(6,(15,21),85) drive(6,(14,21),86) drive(6,(13,21),87) drive(6,(12,21),88) drive(6,(12,22),89) drive(6,(12,23),90) drive(6,(11,23),91) drive(6,(10,23),92) drive(6,(9,23),93) drive(6,(8,23),94) drive(6,(7,23),95)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 147.161s (Solving: 2.34s 1st Model: 2.34s Unsat: 0.00s)
+CPU Time     : 147.150s
+
+Choices      : 746     
+Conflicts    : 0        (Analyzed: 0)
+Restarts     : 0       
+Model-Level  : 746.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 0        (Deleted: 0)
+  Binary     : 0        (Ratio:   0.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 0        (Average:  0.00 Max:   0 Sum:      0)
+  Executed   : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio: 100.00%)
+
+Rules        : 34329887 (Original: 31193325)
+  Choice     : 109256  
+Atoms        : 713593  
+Bodies       : 31264255 (Original: 31133550)
+  Sum        : 936     
+  Count      : 43945    (Original: 114254)
+Equivalences : 1617452  (Atom=Atom: 55687 Body=Body: 146672 Other: 1415093)
+Tight        : Yes
+Variables    : 10015397 (Eliminated:    0 Frozen: 177186)
+Constraints  : 61985516 (Binary:  51.5% Ternary:  15.4% Other:  33.1%)
+

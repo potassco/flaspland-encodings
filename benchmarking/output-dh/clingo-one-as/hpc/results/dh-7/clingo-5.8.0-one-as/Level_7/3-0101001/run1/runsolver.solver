@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_7/3-0101001.lp ...
+Solving...
+Answer: 1 (Time: 31.828s)
+drive(1,(12,18),28) drive(1,(12,17),29) drive(1,(13,17),30) drive(1,(13,16),31) drive(1,(13,15),32) drive(1,(13,14),33) drive(1,(13,13),34) drive(1,(14,13),35) drive(1,(15,13),36) drive(1,(16,13),37) drive(1,(17,13),38) drive(1,(17,12),39) drive(1,(18,12),40) drive(1,(18,11),41) drive(1,(18,10),42) drive(1,(18,9),43) drive(1,(19,9),44) drive(1,(19,8),45) drive(1,(19,7),46) drive(1,(19,6),47) drive(3,(14,18),5) drive(3,(14,17),6) drive(3,(14,16),7) drive(3,(14,15),8) drive(3,(13,15),9) drive(3,(13,14),10) drive(3,(13,13),11) drive(3,(14,13),12) drive(3,(15,13),13) drive(3,(16,13),14) drive(3,(17,13),15) drive(3,(17,12),16) drive(3,(18,12),17) drive(3,(18,11),18) drive(3,(18,10),19) drive(3,(18,9),20) drive(3,(19,9),21) drive(3,(19,8),22) drive(3,(19,7),23) drive(3,(19,6),24) drive(6,(18,6),25) drive(6,(18,5),26) drive(6,(18,4),27) drive(6,(19,4),28) drive(6,(18,3),30) drive(6,(19,3),29) drive(6,(18,2),31) drive(6,(18,1),32) drive(6,(17,1),33) drive(6,(16,1),34) drive(6,(15,1),35) drive(6,(14,1),36) drive(6,(13,1),37) drive(6,(13,2),38) drive(6,(13,3),39) drive(6,(13,4),40) drive(6,(13,5),41) drive(6,(13,6),42) drive(6,(13,7),43) drive(6,(13,8),44) drive(6,(13,11),47) drive(6,(13,9),45) drive(6,(13,12),48) drive(6,(13,10),46) drive(6,(13,13),49) drive(6,(13,14),50) drive(6,(13,15),51) drive(6,(14,15),52) drive(6,(14,16),53) drive(6,(14,16),54) drive(6,(14,16),55) drive(6,(14,16),56) drive(6,(14,16),57) drive(6,(14,16),58) drive(6,(14,16),59) drive(6,(14,16),60) drive(6,(14,16),61) drive(6,(14,16),62) drive(6,(14,16),63) drive(6,(14,16),64) drive(6,(14,16),65) drive(6,(14,16),66) drive(6,(14,16),67) drive(6,(14,16),68) drive(6,(14,16),69) drive(6,(14,16),70) drive(6,(14,16),71) drive(6,(14,16),72) drive(6,(14,16),73) drive(6,(14,16),74) drive(6,(14,16),75) drive(6,(14,16),76) drive(6,(14,16),77) drive(6,(14,16),78) drive(6,(14,16),79) drive(6,(14,16),80) drive(6,(14,16),81) drive(6,(14,16),82) drive(6,(14,16),83) drive(6,(14,16),84) drive(6,(14,16),85) drive(6,(14,16),86) drive(6,(14,16),87) drive(6,(14,16),88) drive(6,(14,16),89) drive(6,(14,16),90) drive(6,(14,16),91) drive(6,(14,16),92) drive(6,(14,16),93) drive(6,(14,16),94) drive(6,(14,16),95) drive(6,(14,16),96) drive(6,(14,16),97) drive(6,(14,16),98) drive(6,(14,16),99) drive(6,(14,16),100) drive(6,(14,16),101) drive(6,(14,16),102) drive(6,(14,16),103) drive(6,(14,16),104) drive(6,(14,16),105) drive(6,(14,16),106) drive(6,(14,16),107) drive(6,(14,16),108) drive(6,(14,16),109) drive(6,(14,16),110) drive(6,(14,16),111) drive(6,(14,16),112) drive(6,(14,16),113) drive(6,(14,16),114) drive(6,(14,16),115) drive(6,(14,16),116) drive(6,(14,17),117) drive(6,(15,17),118) drive(6,(15,18),119)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 31.828s (Solving: 2.25s 1st Model: 2.25s Unsat: 0.00s)
+CPU Time     : 31.827s
+
+Choices      : 8888    
+Conflicts    : 200      (Analyzed: 200)
+Restarts     : 1        (Average: 200.00 Last: 53 Blocked: 0)
+Model-Level  : 3471.0  
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 200      (Deleted: 0)
+  Binary     : 2        (Ratio:   1.00%)
+  Ternary    : 2        (Ratio:   1.00%)
+  Conflict   : 200      (Average Length:  645.0 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 200      (Average: 26.43 Max: 3120 Sum:   5286)
+  Executed   : 200      (Average: 26.43 Max: 3120 Sum:   5286 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 7312777  (Original: 6698296)
+  Choice     : 42543   
+Atoms        : 672706  
+Bodies       : 6235218  (Original: 6208529)
+  Sum        : 357     
+  Count      : 13552    (Original: 37829)
+Equivalences : 493678   (Atom=Atom: 506 Body=Body: 10401 Other: 482771)
+Tight        : Yes
+Variables    : 2210023  (Eliminated:    0 Frozen: 42949)
+Constraints  : 13065267 (Binary:  55.2% Ternary:  17.4% Other:  27.4%)
+
