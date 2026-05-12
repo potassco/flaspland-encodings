@@ -13,3 +13,5 @@ path'(Z,(X,Y,D),0) :- start(Z,(X,Y),_,D).
 path(Z,(X,Y),T) :- path'(Z,(X,Y,D),T).
 
 end_of_path(Z,T) :- end(Z,(X,Y),_), path(Z,(X,Y),T).
+
+#show path'/3.
