@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_0/3-1101000.lp ...
+Solving...
+Answer: 1 (Time: 82.562s)
+drive(0,(10,7),8) drive(0,(9,7),9) drive(0,(8,7),10) drive(0,(7,7),11) drive(0,(6,7),12) drive(0,(5,7),13) drive(0,(5,8),14) drive(0,(5,9),15) drive(0,(5,10),16) drive(0,(5,11),17) drive(0,(5,12),18) drive(0,(6,12),19) drive(0,(7,12),20) drive(0,(8,12),21) drive(0,(9,12),22) drive(0,(10,12),23) drive(0,(11,12),24) drive(0,(12,12),25) drive(0,(13,12),26) drive(0,(14,12),27) drive(0,(15,12),28) drive(0,(16,12),29) drive(0,(18,12),31) drive(0,(17,12),30) drive(0,(19,12),32) drive(0,(20,12),33) drive(0,(21,12),34) drive(0,(21,13),35) drive(0,(22,13),36) drive(0,(23,13),37) drive(0,(24,13),38) drive(1,(24,12),64) drive(1,(23,12),65) drive(1,(22,12),66) drive(1,(21,12),67) drive(1,(20,12),68) drive(1,(19,12),69) drive(1,(19,11),70) drive(1,(19,10),71) drive(1,(19,9),72) drive(1,(19,8),73) drive(1,(19,7),74) drive(1,(18,7),75) drive(1,(17,7),76) drive(1,(16,7),77) drive(1,(15,7),78) drive(1,(14,7),79) drive(1,(13,7),80) drive(1,(13,8),81) drive(1,(12,8),82) drive(1,(11,8),83) drive(1,(10,8),84) drive(3,(10,7),6) drive(3,(9,7),7) drive(3,(8,7),8) drive(3,(7,7),9) drive(3,(6,7),10) drive(3,(5,7),11) drive(3,(5,8),12) drive(3,(5,9),13) drive(3,(5,10),14) drive(3,(5,11),15) drive(3,(5,12),16) drive(3,(6,12),17) drive(3,(7,12),18) drive(3,(8,12),19) drive(3,(8,12),20) drive(3,(9,12),21) drive(3,(10,12),22) drive(3,(11,12),23) drive(3,(12,12),24) drive(3,(13,12),25) drive(3,(14,12),26) drive(3,(15,12),27) drive(3,(16,12),28) drive(3,(18,12),30) drive(3,(17,12),29) drive(3,(19,12),31) drive(3,(20,12),32) drive(3,(21,12),33) drive(3,(21,13),34) drive(3,(22,13),35) drive(3,(23,13),36) drive(3,(24,13),37)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 82.562s (Solving: 4.86s 1st Model: 4.86s Unsat: 0.00s)
+CPU Time     : 82.550s
+
+Choices      : 3659    
+Conflicts    : 24       (Analyzed: 24)
+Restarts     : 0       
+Model-Level  : 666.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 24       (Deleted: 0)
+  Binary     : 4        (Ratio:  16.67%)
+  Ternary    : 3        (Ratio:  12.50%)
+  Conflict   : 24       (Average Length:   23.3 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 24       (Average: 124.71 Max: 604 Sum:   2993)
+  Executed   : 24       (Average: 124.71 Max: 604 Sum:   2993 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 18615861 (Original: 16031633)
+  Choice     : 89953   
+Atoms        : 1435911 
+Bodies       : 15050647 (Original: 14994931)
+  Sum        : 552     
+  Count      : 35705    (Original: 88695)
+Equivalences : 1108899  (Atom=Atom: 825 Body=Body: 28621 Other: 1079453)
+Tight        : Yes
+Variables    : 6697487  (Eliminated:    0 Frozen: 110442)
+Constraints  : 36819681 (Binary:  61.3% Ternary:  18.6% Other:  20.1%)
+

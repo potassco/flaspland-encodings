@@ -1,0 +1,47 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			hpc-node7
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1500 seconds
+[runlim] space limit:		15000 MB
+[runlim] argv[0]:		../../../../../../../../../programs/clingo-5.8.0
+[runlim] argv[1]:		--stats
+[runlim] argv[2]:		1
+[runlim] argv[3]:		../../../../../../../../../envs/modified/Test_00/Level_5/4-1110010.lp
+[runlim] argv[4]:		../../../../../../../../../envs/modified/Test_00/Level_5/cells.lp
+[runlim] argv[5]:		../../../../../../../../../experiments/exp-ma.lp
+[runlim] start:			Wed Apr 29 14:32:20 2026
+[runlim] child:			9575
+[runlim] sample:		10.00 time, 10.01 real, 318 MB, 5.03 load
+[runlim] sample:		20.00 time, 20.01 real, 318 MB, 5.02 load
+[runlim] sample:		30.00 time, 30.01 real, 318 MB, 5.09 load
+[runlim] sample:		40.00 time, 40.01 real, 318 MB, 5.08 load
+[runlim] sample:		50.00 time, 50.01 real, 318 MB, 5.07 load
+[runlim] sample:		60.00 time, 60.01 real, 318 MB, 5.14 load
+[runlim] sample:		70.00 time, 70.01 real, 318 MB, 5.12 load
+[runlim] sample:		80.00 time, 80.01 real, 318 MB, 5.18 load
+[runlim] sample:		90.00 time, 90.01 real, 318 MB, 5.15 load
+[runlim] sample:		100.00 time, 100.01 real, 318 MB, 5.20 load
+[runlim] sample:		110.00 time, 110.01 real, 318 MB, 5.17 load
+[runlim] sample:		120.00 time, 120.01 real, 318 MB, 5.14 load
+[runlim] sample:		130.00 time, 130.01 real, 318 MB, 5.12 load
+[runlim] sample:		140.00 time, 140.01 real, 318 MB, 5.10 load
+[runlim] sample:		150.00 time, 150.01 real, 318 MB, 5.09 load
+[runlim] sample:		160.00 time, 160.01 real, 318 MB, 5.07 load
+[runlim] sample:		169.99 time, 170.01 real, 318 MB, 5.06 load
+[runlim] sample:		179.99 time, 180.01 real, 318 MB, 5.05 load
+[runlim] sample:		189.99 time, 190.01 real, 318 MB, 5.12 load
+[runlim] sample:		199.99 time, 200.01 real, 318 MB, 5.10 load
+[runlim] sample:		209.99 time, 210.01 real, 318 MB, 5.08 load
+[runlim] sample:		219.99 time, 220.01 real, 318 MB, 5.07 load
+[runlim] sample:		229.99 time, 230.01 real, 318 MB, 5.06 load
+[runlim] sample:		239.99 time, 240.01 real, 318 MB, 5.05 load
+[runlim] end:			Wed Apr 29 14:36:29 2026
+[runlim] status:		ok
+[runlim] result:		10
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			249.59 seconds
+[runlim] time:			249.49 seconds
+[runlim] space:			318 MB
+[runlim] load:			5.22 maximum
+[runlim] samples:		2496

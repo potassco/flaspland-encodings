@@ -1,0 +1,38 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_2/2-0011000.lp ...
+Solving...
+Answer: 1 (Time: 33.486s)
+drive(2,(7,24),13) drive(2,(6,24),14) drive(2,(5,24),15) drive(2,(4,24),16) drive(2,(3,24),17) drive(2,(2,24),18) drive(2,(2,23),19) drive(2,(2,22),20) drive(2,(2,21),21) drive(2,(2,20),22) drive(2,(2,19),23) drive(2,(3,19),24) drive(2,(4,19),25) drive(2,(5,19),26) drive(2,(6,19),27) drive(2,(7,19),28) drive(2,(8,19),29) drive(2,(9,19),30) drive(2,(10,19),31) drive(2,(11,19),32) drive(2,(12,19),33) drive(2,(12,20),34) drive(2,(12,21),35) drive(2,(13,21),36) drive(2,(14,21),37) drive(2,(15,21),38) drive(2,(16,21),39) drive(2,(17,21),40) drive(2,(18,21),41) drive(3,(18,22),13) drive(3,(17,22),14) drive(3,(16,22),15) drive(3,(15,22),16) drive(3,(15,21),17) drive(3,(14,21),18) drive(3,(13,21),19) drive(3,(13,22),20) drive(3,(13,23),21) drive(3,(13,24),22) drive(3,(12,24),23) drive(3,(11,24),24) drive(3,(10,24),25) drive(3,(10,25),26) drive(3,(9,25),27) drive(3,(8,25),28) drive(3,(7,25),29)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 33.486s (Solving: 0.82s 1st Model: 0.82s Unsat: 0.00s)
+CPU Time     : 33.468s
+
+Choices      : 445     
+Conflicts    : 1        (Analyzed: 1)
+Restarts     : 0       
+Model-Level  : 417.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 1        (Deleted: 0)
+  Binary     : 1        (Ratio: 100.00%)
+  Ternary    : 0        (Ratio:   0.00%)
+  Conflict   : 1        (Average Length:    2.0 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 1        (Average: 28.00 Max:  28 Sum:     28)
+  Executed   : 1        (Average: 28.00 Max:  28 Sum:     28 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 7506692  (Original: 5997650)
+  Choice     : 46912   
+Atoms        : 292066  
+Bodies       : 6004589  (Original: 5975227)
+  Sum        : 360     
+  Count      : 22204    (Original: 49402)
+Equivalences : 712475   (Atom=Atom: 16949 Body=Body: 58665 Other: 636861)
+Tight        : Yes
+Variables    : 3744854  (Eliminated:    0 Frozen: 76072)
+Constraints  : 18136487 (Binary:  67.7% Ternary:  19.7% Other:  12.7%)
+

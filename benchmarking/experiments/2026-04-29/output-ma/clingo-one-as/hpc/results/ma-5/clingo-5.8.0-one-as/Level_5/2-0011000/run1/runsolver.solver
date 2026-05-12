@@ -1,0 +1,37 @@
+clingo version 5.8.0
+Reading from .../modified/Test_00/Level_5/2-0011000.lp ...
+Solving...
+Answer: 1 (Time: 2.036s)
+at(2,start(2),0) at(3,start(3),0) at(3,start(3),1) at(2,start(2),1) at(2,start(2),2) at(3,start(3),2) at(3,start(3),3) at(2,start(2),3) at(2,start(2),4) at(3,start(3),4) at(3,start(3),5) at(2,start(2),5) at(2,start(2),6) at(3,start(3),6) at(3,start(3),7) at(2,start(2),7) at(2,start(2),8) at(3,start(3),8) at(3,start(3),9) at(2,start(2),9) at(2,start(2),10) at(3,start(3),10) at(3,start(3),11) at(2,start(2),11) at(2,start(2),12) at(3,start(3),12) at(3,start(3),13) at(2,start(2),13) at(3,start(3),14) at(3,start(3),15) at(3,start(3),16) at(3,start(3),17) at(3,start(3),18) at(3,start(3),19) at(3,start(3),20) at(3,start(3),21) at(3,start(3),22) at(3,start(3),23) at(3,start(3),24) at(3,start(3),25) at(3,start(3),26) at(3,start(3),27) at(3,start(3),28) at(3,start(3),29) at(3,start(3),30) at(3,start(3),31) at(3,start(3),32) at(3,start(3),33) at(3,start(3),34) at(3,start(3),35) at(3,start(3),36) at(3,start(3),37) at(3,start(3),38) at(3,start(3),39) at(3,start(3),40) at(3,start(3),41) at(3,start(3),42) at(3,start(3),43) at(3,start(3),44) at(3,start(3),45) at(3,start(3),46) at(2,(24,14),15) at(2,(23,14),16) at(2,(22,14),17) at(2,(22,15),18) at(2,(21,15),19) at(2,(21,14),20) at(2,(21,14),21) at(2,(21,14),22) at(2,(21,14),23) at(2,(21,14),24) at(2,(21,14),25) at(2,(20,14),26) at(2,(19,14),27) at(2,(19,15),28) at(2,(19,16),29) at(2,(19,16),30) at(2,(19,16),31) at(2,(19,16),32) at(2,(19,16),33) at(2,(18,16),34) at(2,(18,16),35) at(2,(17,16),36) at(2,(16,16),37) at(2,(16,17),38) at(2,(16,18),39) at(2,(16,19),40) at(2,(16,20),41) at(2,(15,20),42) at(2,(14,20),43) at(2,(13,20),44) at(2,(12,20),45) at(2,(12,20),46) at(2,(12,20),47) at(2,(12,20),48) at(3,(11,19),48) at(2,(12,20),49) at(3,(12,19),49) at(2,(12,20),50) at(3,(12,19),50) at(2,(11,20),51) at(3,(12,19),51) at(2,goal(2),52) at(3,(12,20),52) at(2,goal(2),53) at(3,(12,20),53) at(2,goal(2),54) at(3,(12,20),54) at(2,goal(2),55) at(3,(13,20),55) at(2,goal(2),56) at(3,(14,20),56) at(2,goal(2),57) at(3,(15,20),57) at(2,goal(2),58) at(3,(16,20),58) at(2,goal(2),59) at(3,(17,20),59) at(2,goal(2),60) at(3,(18,20),60) at(2,goal(2),61) at(3,(19,20),61) at(2,goal(2),62) at(3,(20,20),62) at(2,goal(2),63) at(3,(21,20),63) at(2,goal(2),64) at(3,(22,20),64) at(2,goal(2),65) at(3,(22,20),65) at(2,goal(2),66) at(3,(22,20),66) at(2,goal(2),67) at(3,(22,20),67) at(2,goal(2),68) at(3,(22,20),68) at(2,goal(2),69) at(3,(22,20),69) at(2,goal(2),70) at(3,(22,20),70) at(2,goal(2),71) at(3,(22,20),71) at(2,goal(2),72) at(3,(22,20),72) at(2,goal(2),73) at(3,(22,20),73) at(2,goal(2),74) at(3,(22,20),74) at(2,goal(2),75) at(3,(22,20),75) at(2,goal(2),76) at(3,(22,20),76) at(2,goal(2),77) at(3,(23,20),77) at(2,goal(2),78) at(3,(24,20),78) at(2,goal(2),79) at(3,(25,20),79) at(2,goal(2),80) at(3,(26,20),80) at(2,goal(2),81) at(3,(27,20),81) at(2,goal(2),82) at(3,(28,20),82) at(2,goal(2),83) at(3,(29,20),83) at(2,goal(2),84) at(3,(29,19),84) at(2,goal(2),85) at(3,(29,19),85) at(2,goal(2),86) at(3,(29,19),86) at(2,goal(2),87) at(3,(29,19),87) at(2,goal(2),88) at(3,(29,19),88) at(2,goal(2),89) at(3,(29,19),89) at(2,goal(2),90) at(3,(29,19),90) at(2,goal(2),91) at(3,(29,19),91) at(2,goal(2),92) at(3,(29,19),92) at(2,goal(2),93) at(3,(29,19),93) at(2,goal(2),94) at(3,(29,19),94) at(2,goal(2),95) at(3,(29,19),95) at(2,goal(2),96) at(3,(29,18),96) at(2,goal(2),97) at(3,(29,17),97) at(2,goal(2),98) at(3,(29,16),98) at(2,goal(2),99) at(3,(29,15),99) at(2,goal(2),100) at(3,(28,15),100) at(2,goal(2),101) at(3,(27,15),101) at(2,goal(2),102) at(3,(26,15),102) at(2,goal(2),103) at(3,(25,15),103) at(2,goal(2),104) at(3,(24,15),104) at(2,goal(2),105) at(3,goal(3),105) at(2,start(2),14) at(3,start(3),47)
+SATISFIABLE
+
+Models       : 1+
+Calls        : 1
+Time         : 2.037s (Solving: 0.07s 1st Model: 0.07s Unsat: 0.00s)
+CPU Time     : 2.035s
+
+Choices      : 2106    
+Conflicts    : 28       (Analyzed: 28)
+Restarts     : 0       
+Model-Level  : 408.0   
+Problems     : 1        (Average Length: 0.00 Splits: 0)
+Lemmas       : 28       (Deleted: 0)
+  Binary     : 1        (Ratio:   3.57%)
+  Ternary    : 7        (Ratio:  25.00%)
+  Conflict   : 28       (Average Length:   24.7 Ratio: 100.00%) 
+  Loop       : 0        (Average Length:    0.0 Ratio:   0.00%) 
+  Other      : 0        (Average Length:    0.0 Ratio:   0.00%) 
+Backjumps    : 28       (Average: 60.64 Max: 1016 Sum:   1698)
+  Executed   : 28       (Average: 60.64 Max: 1016 Sum:   1698 Ratio: 100.00%)
+  Bounded    : 0        (Average:  0.00 Max:   0 Sum:      0 Ratio:   0.00%)
+
+Rules        : 502408   (Original: 450478)
+  Choice     : 210     
+Atoms        : 210749   (Original: 195845 Auxiliary: 14904)
+Bodies       : 255835   (Original: 219297)
+  Count      : 348      (Original: 630)
+Equivalences : 190376   (Atom=Atom: 9777 Body=Body: 8713 Other: 171886)
+Tight        : Yes
+Variables    : 178297   (Eliminated:    0 Frozen: 44161)
+Constraints  : 402412   (Binary:  76.9% Ternary:  20.5% Other:   2.6%)
+

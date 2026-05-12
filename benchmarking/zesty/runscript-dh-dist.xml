@@ -1,0 +1,517 @@
+<runscript output="output-dh">
+
+	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>
+
+	<config name="dist-generic" template="templates/seq-generic.sh"/>
+	<system name="clingo" version="5.8.0" measures="clasp" config="dist-generic">
+		<setting name="one-as" tag="one-as" cmdline="--stats 1" dist_template="templates/single.dist" dist_options="#SBATCH --hint=compute_bound"/>
+
+	</system>
+
+	<distjob name="dist-generic" timeout="1500s" runs="1" memout="15000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
+
+	<benchmark name="dh-0">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_0/2-0000101.lp" cmdline=""/>
+			<add file="Level_0/2-0000110.lp" cmdline=""/>
+			<add file="Level_0/2-0001001.lp" cmdline=""/>
+			<add file="Level_0/2-0001010.lp" cmdline=""/>
+			<add file="Level_0/2-0001100.lp" cmdline=""/>
+			<add file="Level_0/2-0100001.lp" cmdline=""/>
+			<add file="Level_0/2-0100100.lp" cmdline=""/>
+
+			<add file="Level_0/3-0001101.lp" cmdline=""/>
+			<add file="Level_0/3-0001110.lp" cmdline=""/>
+			<add file="Level_0/3-0101001.lp" cmdline=""/>
+			<add file="Level_0/3-1011000.lp" cmdline=""/>
+			<add file="Level_0/3-1100010.lp" cmdline=""/>
+			<add file="Level_0/3-1100100.lp" cmdline=""/>
+			<add file="Level_0/3-1101000.lp" cmdline=""/>
+
+			<add file="Level_0/4-0010111.lp" cmdline=""/>
+			<add file="Level_0/4-0011110.lp" cmdline=""/>
+			<add file="Level_0/4-0100111.lp" cmdline=""/>
+			<add file="Level_0/4-1000111.lp" cmdline=""/>
+			<add file="Level_0/4-1001110.lp" cmdline=""/>
+			<add file="Level_0/4-1100101.lp" cmdline=""/>
+			<add file="Level_0/4-1100110.lp" cmdline=""/>
+
+			<add file="Level_0/5-0101111.lp" cmdline=""/>
+			<add file="Level_0/5-0111011.lp" cmdline=""/>
+			<add file="Level_0/5-1010111.lp" cmdline=""/>
+			<add file="Level_0/5-1101011.lp" cmdline=""/>
+			<add file="Level_0/5-1110110.lp" cmdline=""/>
+			<add file="Level_0/5-1111001.lp" cmdline=""/>
+			<add file="Level_0/5-1111100.lp" cmdline=""/>
+
+			<add file="Level_0/6-0111111.lp" cmdline=""/>
+			<add file="Level_0/6-1011111.lp" cmdline=""/>
+			<add file="Level_0/6-1101111.lp" cmdline=""/>
+			<add file="Level_0/6-1110111.lp" cmdline=""/>
+			<add file="Level_0/6-1111011.lp" cmdline=""/>
+			<add file="Level_0/6-1111101.lp" cmdline=""/>
+			<add file="Level_0/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_0/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_0/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-1">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_1/2-0000101.lp" cmdline=""/>
+			<add file="Level_1/2-0001010.lp" cmdline=""/>
+			<add file="Level_1/2-0010100.lp" cmdline=""/>
+			<add file="Level_1/2-0011000.lp" cmdline=""/>
+			<add file="Level_1/2-0101000.lp" cmdline=""/>
+			<add file="Level_1/2-1000100.lp" cmdline=""/>
+			<add file="Level_1/2-1001000.lp" cmdline=""/>
+
+			<add file="Level_1/3-0010110.lp" cmdline=""/>
+			<add file="Level_1/3-0011001.lp" cmdline=""/>
+			<add file="Level_1/3-0100101.lp" cmdline=""/>
+			<add file="Level_1/3-0110100.lp" cmdline=""/>
+			<add file="Level_1/3-0111000.lp" cmdline=""/>
+			<add file="Level_1/3-1000011.lp" cmdline=""/>
+			<add file="Level_1/3-1100001.lp" cmdline=""/>
+
+			<add file="Level_1/4-0010111.lp" cmdline=""/>
+			<add file="Level_1/4-0011110.lp" cmdline=""/>
+			<add file="Level_1/4-0101011.lp" cmdline=""/>
+			<add file="Level_1/4-0111001.lp" cmdline=""/>
+			<add file="Level_1/4-1001110.lp" cmdline=""/>
+			<add file="Level_1/4-1010011.lp" cmdline=""/>
+			<add file="Level_1/4-1011010.lp" cmdline=""/>
+
+			<add file="Level_1/5-1001111.lp" cmdline=""/>
+			<add file="Level_1/5-1011101.lp" cmdline=""/>
+			<add file="Level_1/5-1011110.lp" cmdline=""/>
+			<add file="Level_1/5-1101101.lp" cmdline=""/>
+			<add file="Level_1/5-1101110.lp" cmdline=""/>
+			<add file="Level_1/5-1110011.lp" cmdline=""/>
+			<add file="Level_1/5-1110110.lp" cmdline=""/>
+
+			<add file="Level_1/6-0111111.lp" cmdline=""/>
+			<add file="Level_1/6-1011111.lp" cmdline=""/>
+			<add file="Level_1/6-1101111.lp" cmdline=""/>
+			<add file="Level_1/6-1110111.lp" cmdline=""/>
+			<add file="Level_1/6-1111011.lp" cmdline=""/>
+			<add file="Level_1/6-1111101.lp" cmdline=""/>
+			<add file="Level_1/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_1/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_1/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-2">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_2/2-0000101.lp" cmdline=""/>
+			<add file="Level_2/2-0001100.lp" cmdline=""/>
+			<add file="Level_2/2-0010010.lp" cmdline=""/>
+			<add file="Level_2/2-0011000.lp" cmdline=""/>
+			<add file="Level_2/2-0100010.lp" cmdline=""/>
+			<add file="Level_2/2-0110000.lp" cmdline=""/>
+			<add file="Level_2/2-1000100.lp" cmdline=""/>
+
+			<add file="Level_2/3-0011100.lp" cmdline=""/>
+			<add file="Level_2/3-0101010.lp" cmdline=""/>
+			<add file="Level_2/3-0111000.lp" cmdline=""/>
+			<add file="Level_2/3-1000101.lp" cmdline=""/>
+			<add file="Level_2/3-1001001.lp" cmdline=""/>
+			<add file="Level_2/3-1100010.lp" cmdline=""/>
+			<add file="Level_2/3-1101000.lp" cmdline=""/>
+
+			<add file="Level_2/4-0011110.lp" cmdline=""/>
+			<add file="Level_2/4-0100111.lp" cmdline=""/>
+			<add file="Level_2/4-0101101.lp" cmdline=""/>
+			<add file="Level_2/4-0110101.lp" cmdline=""/>
+			<add file="Level_2/4-1011100.lp" cmdline=""/>
+			<add file="Level_2/4-1100101.lp" cmdline=""/>
+			<add file="Level_2/4-1110010.lp" cmdline=""/>
+
+			<add file="Level_2/5-0101111.lp" cmdline=""/>
+			<add file="Level_2/5-0110111.lp" cmdline=""/>
+			<add file="Level_2/5-0111101.lp" cmdline=""/>
+			<add file="Level_2/5-0111110.lp" cmdline=""/>
+			<add file="Level_2/5-1011110.lp" cmdline=""/>
+			<add file="Level_2/5-1101101.lp" cmdline=""/>
+			<add file="Level_2/5-1110011.lp" cmdline=""/>
+
+			<add file="Level_2/6-0111111.lp" cmdline=""/>
+			<add file="Level_2/6-1011111.lp" cmdline=""/>
+			<add file="Level_2/6-1101111.lp" cmdline=""/>
+			<add file="Level_2/6-1110111.lp" cmdline=""/>
+			<add file="Level_2/6-1111011.lp" cmdline=""/>
+			<add file="Level_2/6-1111101.lp" cmdline=""/>
+			<add file="Level_2/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_2/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_2/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-3">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_3/2-0000110.lp" cmdline=""/>
+			<add file="Level_3/2-0001010.lp" cmdline=""/>
+			<add file="Level_3/2-0100010.lp" cmdline=""/>
+			<add file="Level_3/2-0110000.lp" cmdline=""/>
+			<add file="Level_3/2-1000001.lp" cmdline=""/>
+			<add file="Level_3/2-1000010.lp" cmdline=""/>
+			<add file="Level_3/2-1010000.lp" cmdline=""/>
+
+			<add file="Level_3/3-0001110.lp" cmdline=""/>
+			<add file="Level_3/3-0010011.lp" cmdline=""/>
+			<add file="Level_3/3-0110100.lp" cmdline=""/>
+			<add file="Level_3/3-0111000.lp" cmdline=""/>
+			<add file="Level_3/3-1000011.lp" cmdline=""/>
+			<add file="Level_3/3-1000101.lp" cmdline=""/>
+			<add file="Level_3/3-1100001.lp" cmdline=""/>
+
+			<add file="Level_3/4-0001111.lp" cmdline=""/>
+			<add file="Level_3/4-0110110.lp" cmdline=""/>
+			<add file="Level_3/4-0111100.lp" cmdline=""/>
+			<add file="Level_3/4-1001110.lp" cmdline=""/>
+			<add file="Level_3/4-1011001.lp" cmdline=""/>
+			<add file="Level_3/4-1011100.lp" cmdline=""/>
+			<add file="Level_3/4-1101001.lp" cmdline=""/>
+
+			<add file="Level_3/5-0101111.lp" cmdline=""/>
+			<add file="Level_3/5-0111011.lp" cmdline=""/>
+			<add file="Level_3/5-0111110.lp" cmdline=""/>
+			<add file="Level_3/5-1001111.lp" cmdline=""/>
+			<add file="Level_3/5-1101011.lp" cmdline=""/>
+			<add file="Level_3/5-1110011.lp" cmdline=""/>
+			<add file="Level_3/5-1111010.lp" cmdline=""/>
+
+			<add file="Level_3/6-0111111.lp" cmdline=""/>
+			<add file="Level_3/6-1011111.lp" cmdline=""/>
+			<add file="Level_3/6-1101111.lp" cmdline=""/>
+			<add file="Level_3/6-1110111.lp" cmdline=""/>
+			<add file="Level_3/6-1111011.lp" cmdline=""/>
+			<add file="Level_3/6-1111101.lp" cmdline=""/>
+			<add file="Level_3/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_3/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_3/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-4">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_4/2-0000101.lp" cmdline=""/>
+			<add file="Level_4/2-0001010.lp" cmdline=""/>
+			<add file="Level_4/2-0010010.lp" cmdline=""/>
+			<add file="Level_4/2-0011000.lp" cmdline=""/>
+			<add file="Level_4/2-0100100.lp" cmdline=""/>
+			<add file="Level_4/2-1000001.lp" cmdline=""/>
+			<add file="Level_4/2-1000100.lp" cmdline=""/>
+
+			<add file="Level_4/3-0010011.lp" cmdline=""/>
+			<add file="Level_4/3-0100011.lp" cmdline=""/>
+			<add file="Level_4/3-0110010.lp" cmdline=""/>
+			<add file="Level_4/3-1001100.lp" cmdline=""/>
+			<add file="Level_4/3-1010001.lp" cmdline=""/>
+			<add file="Level_4/3-1010100.lp" cmdline=""/>
+			<add file="Level_4/3-1101000.lp" cmdline=""/>
+
+			<add file="Level_4/4-0111001.lp" cmdline=""/>
+			<add file="Level_4/4-1001101.lp" cmdline=""/>
+			<add file="Level_4/4-1010110.lp" cmdline=""/>
+			<add file="Level_4/4-1011001.lp" cmdline=""/>
+			<add file="Level_4/4-1100101.lp" cmdline=""/>
+			<add file="Level_4/4-1100110.lp" cmdline=""/>
+			<add file="Level_4/4-1101001.lp" cmdline=""/>
+
+			<add file="Level_4/5-0110111.lp" cmdline=""/>
+			<add file="Level_4/5-0111101.lp" cmdline=""/>
+			<add file="Level_4/5-0111110.lp" cmdline=""/>
+			<add file="Level_4/5-1010111.lp" cmdline=""/>
+			<add file="Level_4/5-1011110.lp" cmdline=""/>
+			<add file="Level_4/5-1111010.lp" cmdline=""/>
+			<add file="Level_4/5-1111100.lp" cmdline=""/>
+
+			<add file="Level_4/6-0111111.lp" cmdline=""/>
+			<add file="Level_4/6-1011111.lp" cmdline=""/>
+			<add file="Level_4/6-1101111.lp" cmdline=""/>
+			<add file="Level_4/6-1110111.lp" cmdline=""/>
+			<add file="Level_4/6-1111011.lp" cmdline=""/>
+			<add file="Level_4/6-1111101.lp" cmdline=""/>
+			<add file="Level_4/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_4/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_4/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-5">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_5/2-0000011.lp" cmdline=""/>
+			<add file="Level_5/2-0001100.lp" cmdline=""/>
+			<add file="Level_5/2-0010010.lp" cmdline=""/>
+			<add file="Level_5/2-0010100.lp" cmdline=""/>
+			<add file="Level_5/2-0011000.lp" cmdline=""/>
+			<add file="Level_5/2-1000001.lp" cmdline=""/>
+			<add file="Level_5/2-1010000.lp" cmdline=""/>
+
+			<add file="Level_5/3-0010011.lp" cmdline=""/>
+			<add file="Level_5/3-0011100.lp" cmdline=""/>
+			<add file="Level_5/3-1000011.lp" cmdline=""/>
+			<add file="Level_5/3-1000110.lp" cmdline=""/>
+			<add file="Level_5/3-1001001.lp" cmdline=""/>
+			<add file="Level_5/3-1010001.lp" cmdline=""/>
+			<add file="Level_5/3-1100001.lp" cmdline=""/>
+
+			<add file="Level_5/4-0011101.lp" cmdline=""/>
+			<add file="Level_5/4-0111001.lp" cmdline=""/>
+			<add file="Level_5/4-1100011.lp" cmdline=""/>
+			<add file="Level_5/4-1101010.lp" cmdline=""/>
+			<add file="Level_5/4-1101100.lp" cmdline=""/>
+			<add file="Level_5/4-1110010.lp" cmdline=""/>
+			<add file="Level_5/4-1111000.lp" cmdline=""/>
+
+			<add file="Level_5/5-0101111.lp" cmdline=""/>
+			<add file="Level_5/5-0110111.lp" cmdline=""/>
+			<add file="Level_5/5-0111011.lp" cmdline=""/>
+			<add file="Level_5/5-1001111.lp" cmdline=""/>
+			<add file="Level_5/5-1101011.lp" cmdline=""/>
+			<add file="Level_5/5-1110011.lp" cmdline=""/>
+			<add file="Level_5/5-1111100.lp" cmdline=""/>
+
+			<add file="Level_5/6-0111111.lp" cmdline=""/>
+			<add file="Level_5/6-1011111.lp" cmdline=""/>
+			<add file="Level_5/6-1101111.lp" cmdline=""/>
+			<add file="Level_5/6-1110111.lp" cmdline=""/>
+			<add file="Level_5/6-1111011.lp" cmdline=""/>
+			<add file="Level_5/6-1111101.lp" cmdline=""/>
+			<add file="Level_5/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_5/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_5/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-6">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_6/2-0000011.lp" cmdline=""/>
+			<add file="Level_6/2-0000101.lp" cmdline=""/>
+			<add file="Level_6/2-0001001.lp" cmdline=""/>
+			<add file="Level_6/2-0001100.lp" cmdline=""/>
+			<add file="Level_6/2-0100001.lp" cmdline=""/>
+			<add file="Level_6/2-0110000.lp" cmdline=""/>
+			<add file="Level_6/2-1001000.lp" cmdline=""/>
+
+			<add file="Level_6/3-0001011.lp" cmdline=""/>
+			<add file="Level_6/3-0001101.lp" cmdline=""/>
+			<add file="Level_6/3-0010110.lp" cmdline=""/>
+			<add file="Level_6/3-0011100.lp" cmdline=""/>
+			<add file="Level_6/3-1001001.lp" cmdline=""/>
+			<add file="Level_6/3-1010010.lp" cmdline=""/>
+			<add file="Level_6/3-1101000.lp" cmdline=""/>
+
+			<add file="Level_6/4-0110011.lp" cmdline=""/>
+			<add file="Level_6/4-0110110.lp" cmdline=""/>
+			<add file="Level_6/4-1000111.lp" cmdline=""/>
+			<add file="Level_6/4-1001011.lp" cmdline=""/>
+			<add file="Level_6/4-1010011.lp" cmdline=""/>
+			<add file="Level_6/4-1011001.lp" cmdline=""/>
+			<add file="Level_6/4-1011100.lp" cmdline=""/>
+
+			<add file="Level_6/5-0111011.lp" cmdline=""/>
+			<add file="Level_6/5-0111101.lp" cmdline=""/>
+			<add file="Level_6/5-1101110.lp" cmdline=""/>
+			<add file="Level_6/5-1110011.lp" cmdline=""/>
+			<add file="Level_6/5-1110101.lp" cmdline=""/>
+			<add file="Level_6/5-1111001.lp" cmdline=""/>
+			<add file="Level_6/5-1111100.lp" cmdline=""/>
+
+			<add file="Level_6/6-0111111.lp" cmdline=""/>
+			<add file="Level_6/6-1011111.lp" cmdline=""/>
+			<add file="Level_6/6-1101111.lp" cmdline=""/>
+			<add file="Level_6/6-1110111.lp" cmdline=""/>
+			<add file="Level_6/6-1111011.lp" cmdline=""/>
+			<add file="Level_6/6-1111101.lp" cmdline=""/>
+			<add file="Level_6/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_6/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_6/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-7">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_7/2-0000110.lp" cmdline=""/>
+			<add file="Level_7/2-0001001.lp" cmdline=""/>
+			<add file="Level_7/2-0001010.lp" cmdline=""/>
+			<add file="Level_7/2-0010100.lp" cmdline=""/>
+			<add file="Level_7/2-0100001.lp" cmdline=""/>
+			<add file="Level_7/2-0101000.lp" cmdline=""/>
+			<add file="Level_7/2-1000001.lp" cmdline=""/>
+
+			<add file="Level_7/3-0001011.lp" cmdline=""/>
+			<add file="Level_7/3-0100011.lp" cmdline=""/>
+			<add file="Level_7/3-0100101.lp" cmdline=""/>
+			<add file="Level_7/3-0101001.lp" cmdline=""/>
+			<add file="Level_7/3-0110001.lp" cmdline=""/>
+			<add file="Level_7/3-1100001.lp" cmdline=""/>
+			<add file="Level_7/3-1101000.lp" cmdline=""/>
+
+			<add file="Level_7/4-0010111.lp" cmdline=""/>
+			<add file="Level_7/4-0100111.lp" cmdline=""/>
+			<add file="Level_7/4-0101110.lp" cmdline=""/>
+			<add file="Level_7/4-0110011.lp" cmdline=""/>
+			<add file="Level_7/4-1010011.lp" cmdline=""/>
+			<add file="Level_7/4-1011001.lp" cmdline=""/>
+			<add file="Level_7/4-1100110.lp" cmdline=""/>
+
+			<add file="Level_7/5-0111110.lp" cmdline=""/>
+			<add file="Level_7/5-1010111.lp" cmdline=""/>
+			<add file="Level_7/5-1011110.lp" cmdline=""/>
+			<add file="Level_7/5-1100111.lp" cmdline=""/>
+			<add file="Level_7/5-1110011.lp" cmdline=""/>
+			<add file="Level_7/5-1110101.lp" cmdline=""/>
+			<add file="Level_7/5-1111010.lp" cmdline=""/>
+
+			<add file="Level_7/6-0111111.lp" cmdline=""/>
+			<add file="Level_7/6-1011111.lp" cmdline=""/>
+			<add file="Level_7/6-1101111.lp" cmdline=""/>
+			<add file="Level_7/6-1110111.lp" cmdline=""/>
+			<add file="Level_7/6-1111011.lp" cmdline=""/>
+			<add file="Level_7/6-1111101.lp" cmdline=""/>
+			<add file="Level_7/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_7/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_7/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-8">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_8/2-0001001.lp" cmdline=""/>
+			<add file="Level_8/2-0010001.lp" cmdline=""/>
+			<add file="Level_8/2-0010010.lp" cmdline=""/>
+			<add file="Level_8/2-0100100.lp" cmdline=""/>
+			<add file="Level_8/2-1000100.lp" cmdline=""/>
+			<add file="Level_8/2-1010000.lp" cmdline=""/>
+			<add file="Level_8/2-1100000.lp" cmdline=""/>
+
+			<add file="Level_8/3-0000111.lp" cmdline=""/>
+			<add file="Level_8/3-0001011.lp" cmdline=""/>
+			<add file="Level_8/3-0011010.lp" cmdline=""/>
+			<add file="Level_8/3-1000110.lp" cmdline=""/>
+			<add file="Level_8/3-1001100.lp" cmdline=""/>
+			<add file="Level_8/3-1100010.lp" cmdline=""/>
+			<add file="Level_8/3-1101000.lp" cmdline=""/>
+
+			<add file="Level_8/4-0111001.lp" cmdline=""/>
+			<add file="Level_8/4-0111100.lp" cmdline=""/>
+			<add file="Level_8/4-1001011.lp" cmdline=""/>
+			<add file="Level_8/4-1011001.lp" cmdline=""/>
+			<add file="Level_8/4-1011010.lp" cmdline=""/>
+			<add file="Level_8/4-1100011.lp" cmdline=""/>
+			<add file="Level_8/4-1101100.lp" cmdline=""/>
+
+			<add file="Level_8/5-0110111.lp" cmdline=""/>
+			<add file="Level_8/5-0111011.lp" cmdline=""/>
+			<add file="Level_8/5-1010111.lp" cmdline=""/>
+			<add file="Level_8/5-1100111.lp" cmdline=""/>
+			<add file="Level_8/5-1110011.lp" cmdline=""/>
+			<add file="Level_8/5-1110110.lp" cmdline=""/>
+			<add file="Level_8/5-1111100.lp" cmdline=""/>
+
+			<add file="Level_8/6-0111111.lp" cmdline=""/>
+			<add file="Level_8/6-1011111.lp" cmdline=""/>
+			<add file="Level_8/6-1101111.lp" cmdline=""/>
+			<add file="Level_8/6-1110111.lp" cmdline=""/>
+			<add file="Level_8/6-1111011.lp" cmdline=""/>
+			<add file="Level_8/6-1111101.lp" cmdline=""/>
+			<add file="Level_8/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_8/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_8/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="dh-9">
+		<files path="envs/modified/Test_00">
+		    <add file="Level_9/2-0000011.lp" cmdline=""/>
+			<add file="Level_9/2-0010001.lp" cmdline=""/>
+			<add file="Level_9/2-0100001.lp" cmdline=""/>
+			<add file="Level_9/2-0110000.lp" cmdline=""/>
+			<add file="Level_9/2-1000001.lp" cmdline=""/>
+			<add file="Level_9/2-1000100.lp" cmdline=""/>
+			<add file="Level_9/2-1100000.lp" cmdline=""/>
+
+			<add file="Level_9/3-0010101.lp" cmdline=""/>
+			<add file="Level_9/3-0011001.lp" cmdline=""/>
+			<add file="Level_9/3-1000110.lp" cmdline=""/>
+			<add file="Level_9/3-1001010.lp" cmdline=""/>
+			<add file="Level_9/3-1001100.lp" cmdline=""/>
+			<add file="Level_9/3-1100010.lp" cmdline=""/>
+			<add file="Level_9/3-1110000.lp" cmdline=""/>
+
+			<add file="Level_9/4-0110101.lp" cmdline=""/>
+			<add file="Level_9/4-0110110.lp" cmdline=""/>
+			<add file="Level_9/4-0111001.lp" cmdline=""/>
+			<add file="Level_9/4-1010101.lp" cmdline=""/>
+			<add file="Level_9/4-1100011.lp" cmdline=""/>
+			<add file="Level_9/4-1100110.lp" cmdline=""/>
+			<add file="Level_9/4-1101100.lp" cmdline=""/>
+
+			<add file="Level_9/5-0110111.lp" cmdline=""/>
+			<add file="Level_9/5-0111110.lp" cmdline=""/>
+			<add file="Level_9/5-1101011.lp" cmdline=""/>
+			<add file="Level_9/5-1101110.lp" cmdline=""/>
+			<add file="Level_9/5-1110101.lp" cmdline=""/>
+			<add file="Level_9/5-1111010.lp" cmdline=""/>
+			<add file="Level_9/5-1111100.lp" cmdline=""/>
+
+			<add file="Level_9/6-0111111.lp" cmdline=""/>
+			<add file="Level_9/6-1011111.lp" cmdline=""/>
+			<add file="Level_9/6-1101111.lp" cmdline=""/>
+			<add file="Level_9/6-1110111.lp" cmdline=""/>
+			<add file="Level_9/6-1111011.lp" cmdline=""/>
+			<add file="Level_9/6-1111101.lp" cmdline=""/>
+			<add file="Level_9/6-1111110.lp" cmdline=""/>
+
+			<add file="Level_9/7-1111111.lp" cmdline=""/>
+			
+		<encoding file="envs/modified/Test_00/Level_9/cells.lp"/>
+		<encoding file="experiments/exp-dh.lp"/>
+		</files>
+	</benchmark>
+
+	<project name="clingo-one-as" job="dist-generic">
+		<runspec machine="hpc" benchmark="dh-0" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-1" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-2" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-3" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-4" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-5" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-6" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-7" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-8" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dh-9" system="clingo" version="5.8.0" setting="one-as"/>
+	</project>
+
+</runscript>
