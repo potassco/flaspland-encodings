@@ -4,6 +4,7 @@ set -euo pipefail
 
 btool init
 ln -sf "$(which clingo)" programs/clingo-5.8.0
+ln -sf "$(which clingo-dl)" programs/clingo-dl
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ln -sf "${SCRIPT_DIR}/zesty/runlim" programs/runlim
