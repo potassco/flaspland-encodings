@@ -19,4 +19,4 @@
 2. `cs`: drive-collisions-compact + drive-map + subnodes
 
 ## Round 4
-1. `lc`: clingo-dl + constraint
+1. `dc`: clingo-dl + constraint
