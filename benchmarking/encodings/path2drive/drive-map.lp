@@ -5,4 +5,4 @@
                    :- path(Z,_,P), not map(Z,  _,P).
       drive(Z,C,D) :- path(Z,C,P), map(Z,D,P).
 
-#show drive/3.
+% #show drive/3.
