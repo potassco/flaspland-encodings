@@ -502,16 +502,16 @@
 	</benchmark>
 
 	<project name="clingo-one-as" job="dist-generic">
-		<runspec machine="hpc" benchmark="dl-0" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-1" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-2" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-3" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-4" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-5" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-6" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-7" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-8" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-9" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-0" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-1" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-2" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-3" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-4" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-5" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-6" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-7" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-8" system="clingo-dl" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dl-9" system="clingo-dl" version="5.8.0" setting="one-as"/>
 	</project>
 
 </runscript>
