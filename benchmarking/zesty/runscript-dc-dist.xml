@@ -1,4 +1,4 @@
-<runscript output="output-dl">
+<runscript output="output-dc">
 
 	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
 	<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>
@@ -11,7 +11,7 @@
 
 	<distjob name="dist-generic" timeout="1500s" runs="1" memout="15000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
 
-	<benchmark name="dl-0">
+	<benchmark name="dc-0">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_0/2-0000101.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_0/2-0000110.lp" cmdline="--propagate=full --project"/>
@@ -56,11 +56,11 @@
 			<add file="Level_0/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_0/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-1">
+	<benchmark name="dc-1">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_1/2-0000101.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_1/2-0001010.lp" cmdline="--propagate=full --project"/>
@@ -105,11 +105,11 @@
 			<add file="Level_1/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_1/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-2">
+	<benchmark name="dc-2">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_2/2-0000101.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_2/2-0001100.lp" cmdline="--propagate=full --project"/>
@@ -154,11 +154,11 @@
 			<add file="Level_2/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_2/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-3">
+	<benchmark name="dc-3">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_3/2-0000110.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_3/2-0001010.lp" cmdline="--propagate=full --project"/>
@@ -203,11 +203,11 @@
 			<add file="Level_3/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_3/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-4">
+	<benchmark name="dc-4">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_4/2-0000101.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_4/2-0001010.lp" cmdline="--propagate=full --project"/>
@@ -252,11 +252,11 @@
 			<add file="Level_4/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_4/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-5">
+	<benchmark name="dc-5">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_5/2-0000011.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_5/2-0001100.lp" cmdline="--propagate=full --project"/>
@@ -301,11 +301,11 @@
 			<add file="Level_5/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_5/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-6">
+	<benchmark name="dc-6">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_6/2-0000011.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_6/2-0000101.lp" cmdline="--propagate=full --project"/>
@@ -350,11 +350,11 @@
 			<add file="Level_6/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_6/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-7">
+	<benchmark name="dc-7">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_7/2-0000110.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_7/2-0001001.lp" cmdline="--propagate=full --project"/>
@@ -399,11 +399,11 @@
 			<add file="Level_7/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_7/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-8">
+	<benchmark name="dc-8">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_8/2-0001001.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_8/2-0010001.lp" cmdline="--propagate=full --project"/>
@@ -448,11 +448,11 @@
 			<add file="Level_8/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_8/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
-	<benchmark name="dl-9">
+	<benchmark name="dc-9">
 		<files path="envs/modified/Test_00">
 		    <add file="Level_9/2-0000011.lp" cmdline="--propagate=full --project"/>
 			<add file="Level_9/2-0010001.lp" cmdline="--propagate=full --project"/>
@@ -497,21 +497,21 @@
 			<add file="Level_9/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_9/cells.lp"/>
-		<encoding file="experiments/exp-dl.lp"/>
+		<encoding file="experiments/exp-dc.lp"/>
 		</files>
 	</benchmark>
 
 	<project name="clingo-one-as" job="dist-generic">
-		<runspec machine="hpc" benchmark="dl-0" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-1" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-2" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-3" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-4" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-5" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-6" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-7" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-8" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="dl-9" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-0" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-1" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-2" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-3" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-4" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-5" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-6" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-7" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-8" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="dc-9" system="clingo" version="5.8.0" setting="one-as"/>
 	</project>
 
 </runscript>
