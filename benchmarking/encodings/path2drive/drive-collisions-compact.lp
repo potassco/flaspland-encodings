@@ -4,5 +4,5 @@
 
 % edge collisions
 %:- drive(Z,C,T), drive(Z,C',T+1), drive(Z',C',T), drive(Z',C,T+1), Z < Z'.
-move(Z,(X,Y),(X',Y'),T) :- edge((X,Y,D),(X',Y',D')), drive(Z,(X,Y),T-1), drive(Z,(X',Y'),T).
+move(Z,(X,Y),(X',Y'),T) :- connected((X,Y),D,(X',Y')), drive(Z,(X,Y),T-1), drive(Z,(X',Y'),T).
 :- move(A,U,V,T), move(B,V,U,T), U < V.

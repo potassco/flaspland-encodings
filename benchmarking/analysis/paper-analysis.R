@@ -9,7 +9,7 @@ library(purrr)
 
 BASE_PATH   <- "~/git/flaspland-encodings/benchmarking/"
 FILE_PREFIX <- "results-dist-"
-SUFFIXES    <- c("ce", "cs", "ch")
+SUFFIXES    <- c("me", "mh", "ms")
 
 TRAINS_COL_IDX  <- 1
 TRAINS_CHAR_POS <- 9
@@ -73,5 +73,5 @@ combined <- SUFFIXES |>
   mutate(instances = instances_for(trains)) |>
   select(trains, instances, everything())
 
-write.csv(combined, file="averages-new.csv")
+write.csv(combined, file="averages-dl.csv")
 View(combined)
