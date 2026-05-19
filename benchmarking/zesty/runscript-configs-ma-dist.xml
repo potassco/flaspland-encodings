@@ -507,16 +507,16 @@
 	</benchmark>
 
 	<project name="configs-ma" job="dist-generic">
-		<runspec machine="hpc" benchmark="ma-0" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-1" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-2" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-3" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-4" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-5" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-6" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-7" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-8" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
-		<runspec machine="hpc" benchmark="ma-9" tag="base" system="clingo" version="5.8.0" setting="one-as"/>
+		<runtag machine="hpc" benchmark="ma-0" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-1" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-2" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-3" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-4" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-5" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-6" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-7" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-8" tag="base"/>
+		<runtag machine="hpc" benchmark="ma-9" tag="base"/>
 	</project>
 
 </runscript>
