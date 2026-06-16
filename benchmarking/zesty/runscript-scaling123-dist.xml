@@ -1,0 +1,71 @@
+<runscript output="output-scaling123">
+
+	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>
+
+	<config name="dist-generic" template="templates/seq-generic.sh"/>
+	<system name="clingo" version="5.8.0" measures="clasp" config="dist-generic">
+		<setting name="one-as" tag="one-as" cmdline="--stats 1" dist_template="templates/single.dist" dist_options="#SBATCH --hint=compute_bound"/>
+
+	</system>
+
+	<distjob name="dist-generic" timeout="1500s" runs="1" memout="15000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
+
+	<benchmark name="scaling123-1">
+		<files path="envs/modified/Test_01">
+				<add file="Level_0.lp" cmdline=""/>
+				<add file="Level_1.lp" cmdline=""/>
+				<add file="Level_2.lp" cmdline=""/>
+				<add file="Level_3.lp" cmdline=""/>
+				<add file="Level_4.lp" cmdline=""/>
+				<add file="Level_5.lp" cmdline=""/>
+				<add file="Level_6.lp" cmdline=""/>
+				<add file="Level_7.lp" cmdline=""/>
+				<add file="Level_8.lp" cmdline=""/>
+				<add file="Level_9.lp" cmdline=""/>
+
+			<encoding file="experiments/exp-dl.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="scaling123-2">
+		<files path="envs/modified/Test_02">
+				<add file="Level_0.lp" cmdline=""/>
+				<add file="Level_1.lp" cmdline=""/>
+				<add file="Level_2.lp" cmdline=""/>
+				<add file="Level_3.lp" cmdline=""/>
+				<add file="Level_4.lp" cmdline=""/>
+				<add file="Level_5.lp" cmdline=""/>
+				<add file="Level_6.lp" cmdline=""/>
+				<add file="Level_7.lp" cmdline=""/>
+				<add file="Level_8.lp" cmdline=""/>
+				<add file="Level_9.lp" cmdline=""/>
+
+			<encoding file="experiments/exp-dl.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="scaling123-3">
+		<files path="envs/modified/Test_03">
+				<add file="Level_0.lp" cmdline=""/>
+				<add file="Level_1.lp" cmdline=""/>
+				<add file="Level_2.lp" cmdline=""/>
+				<add file="Level_3.lp" cmdline=""/>
+				<add file="Level_4.lp" cmdline=""/>
+				<add file="Level_5.lp" cmdline=""/>
+				<add file="Level_6.lp" cmdline=""/>
+				<add file="Level_7.lp" cmdline=""/>
+				<add file="Level_8.lp" cmdline=""/>
+				<add file="Level_9.lp" cmdline=""/>
+
+			<encoding file="experiments/exp-dl.lp"/>
+		</files>
+	</benchmark>
+
+	<project name="clingo-one-as" job="dist-generic">
+		<runspec machine="hpc" benchmark="scaling123-1" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="scaling123-2" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="scaling123-3" system="clingo" version="5.8.0" setting="one-as"/>
+	</project>
+
+</runscript>
