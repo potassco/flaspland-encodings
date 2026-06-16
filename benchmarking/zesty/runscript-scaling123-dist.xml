@@ -12,7 +12,7 @@
 	<distjob name="dist-generic" timeout="1500s" runs="1" memout="15000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
 
 	<benchmark name="scaling123-1">
-		<files path="envs/modified/Test_01">
+		<files path="envs/Test_01">
 				<add file="Level_0.lp" cmdline=""/>
 				<add file="Level_1.lp" cmdline=""/>
 				<add file="Level_2.lp" cmdline=""/>
@@ -29,7 +29,7 @@
 	</benchmark>
 
 	<benchmark name="scaling123-2">
-		<files path="envs/modified/Test_02">
+		<files path="envs/Test_02">
 				<add file="Level_0.lp" cmdline=""/>
 				<add file="Level_1.lp" cmdline=""/>
 				<add file="Level_2.lp" cmdline=""/>
@@ -46,7 +46,7 @@
 	</benchmark>
 
 	<benchmark name="scaling123-3">
-		<files path="envs/modified/Test_03">
+		<files path="envs/Test_03">
 				<add file="Level_0.lp" cmdline=""/>
 				<add file="Level_1.lp" cmdline=""/>
 				<add file="Level_2.lp" cmdline=""/>
