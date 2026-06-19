@@ -24,7 +24,7 @@
 				<add file="Level_8.lp" cmdline=""/>
 				<add file="Level_9.lp" cmdline=""/>
 
-			<encoding file="experiments/exp-dl.lp"/>
+			<encoding file="experiments/exp-ms.lp"/>
 		</files>
 	</benchmark>
 
@@ -41,7 +41,7 @@
 				<add file="Level_8.lp" cmdline=""/>
 				<add file="Level_9.lp" cmdline=""/>
 
-			<encoding file="experiments/exp-dl.lp"/>
+			<encoding file="experiments/exp-ms.lp"/>
 		</files>
 	</benchmark>
 
@@ -58,7 +58,7 @@
 				<add file="Level_8.lp" cmdline=""/>
 				<add file="Level_9.lp" cmdline=""/>
 
-			<encoding file="experiments/exp-dl.lp"/>
+			<encoding file="experiments/exp-ms.lp"/>
 		</files>
 	</benchmark>
 
