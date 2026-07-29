@@ -41,11 +41,15 @@ The `base` files were migrated over from the first round of benchmarking.
 The encodings here were adopted from the Routing and Scheduling paper,
 and were modified to handle the directionality of the trains.
 
+---
+
 <a name="extensions"></a>
 ### `extensions` 
 The `extensions` are currently a work-in-progress.
 The goal is to introduce modularity to encodings,
 for instance by optionally allowing for optimization or collision-handling.
+
+---
 
 <a name="mapf"></a>
 ### `mapf`
@@ -54,11 +58,15 @@ The encodings here were adopted from the Routing and Scheduling paper,
 and were modified by adding wrappers that translate the Flatland environment
 into a MAPF environment.
 
+---
+
 <a name="pathfinding"></a>
 ### `pathfinding`
 The `pathfinding` directory includes both files and sub-directories.
 There are simple files in here that handle basic pathfinding without collisions
 for each environment representation.
+
+---
 
 <a name="translations"></a>
 ### ⭐ `translations`
@@ -66,6 +74,8 @@ The `translation` files should remain unchanged.
 The encodings here convert a Flatland environment,
 represented according to our established fact format,
 from a grid into the corresponding graph representation.
+
+---
 
 <a name="wip"></a>
 ### `work in progress`
