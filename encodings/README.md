@@ -32,7 +32,7 @@ These include the necessary components for constructing the topology of the envi
 `aux.lp` can be invoked as an `#include` statement in an encoding as shorthand for referencing all three files:
 
 ```
-#include "./aux.lp".
+#include "./aux/aux.lp".
 ...
 ```
 <a name="base"></a>
@@ -48,6 +48,13 @@ and were modified to handle the directionality of the trains.
 The `extensions` are currently a work-in-progress.
 The goal is to introduce modularity to encodings,
 for instance by optionally allowing for optimization or collision-handling.
+
+These extensions can be invoked as an `#include` statement in an encoding:
+
+```
+#include "./extensions/optimization.lp".
+...
+```
 
 ---
 
