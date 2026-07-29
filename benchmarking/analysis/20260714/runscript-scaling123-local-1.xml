@@ -1,0 +1,70 @@
+<runscript output="output-scaling123">
+
+	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>
+
+	<config name="seq-generic" template="templates/seq-generic.sh"/>
+	<system name="clingo" version="5.8.0" measures="clasp" config="seq-generic" cmdline="--stats" cmdline_post="--configuration=auto">
+		<setting name="default"  tag="seq" cmdline="-q" cmdline_post="1"/>
+	</system>
+
+	<seqjob name="seq-generic" timeout="900s" runs="1" memout="10000" parallel="8"/>
+
+	<benchmark name="scaling123-1">
+		<files path="envs/Test_01">
+				<add file="Level_0.lp" cmdline="--const h=200"/>
+				<add file="Level_1.lp" cmdline="--const h=200"/>
+				<add file="Level_2.lp" cmdline="--const h=200"/>
+				<add file="Level_3.lp" cmdline="--const h=200"/>
+				<add file="Level_4.lp" cmdline="--const h=200"/>
+				<add file="Level_5.lp" cmdline="--const h=200"/>
+				<add file="Level_6.lp" cmdline="--const h=200"/>
+				<add file="Level_7.lp" cmdline="--const h=200"/>
+				<add file="Level_8.lp" cmdline="--const h=200"/>
+				<add file="Level_9.lp" cmdline="--const h=200"/>
+
+			<encoding file="experiments/exp-ms.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="scaling123-2">
+		<files path="envs/Test_02">
+				<add file="Level_0.lp" cmdline="--const h=300"/>
+				<add file="Level_1.lp" cmdline="--const h=300"/>
+				<add file="Level_2.lp" cmdline="--const h=300"/>
+				<add file="Level_3.lp" cmdline="--const h=300"/>
+				<add file="Level_4.lp" cmdline="--const h=300"/>
+				<add file="Level_5.lp" cmdline="--const h=300"/>
+				<add file="Level_6.lp" cmdline="--const h=300"/>
+				<add file="Level_7.lp" cmdline="--const h=300"/>
+				<add file="Level_8.lp" cmdline="--const h=300"/>
+				<add file="Level_9.lp" cmdline="--const h=300"/>
+
+			<encoding file="experiments/exp-ms.lp"/>
+		</files>
+	</benchmark>
+
+	<benchmark name="scaling123-3">
+		<files path="envs/Test_03">
+				<add file="Level_0.lp" cmdline="--const h=400"/>
+				<add file="Level_1.lp" cmdline="--const h=400"/>
+				<add file="Level_2.lp" cmdline="--const h=400"/>
+				<add file="Level_3.lp" cmdline="--const h=400"/>
+				<add file="Level_4.lp" cmdline="--const h=400"/>
+				<add file="Level_5.lp" cmdline="--const h=400"/>
+				<add file="Level_6.lp" cmdline="--const h=400"/>
+				<add file="Level_7.lp" cmdline="--const h=400"/>
+				<add file="Level_8.lp" cmdline="--const h=400"/>
+				<add file="Level_9.lp" cmdline="--const h=400"/>
+
+			<encoding file="experiments/exp-ms.lp"/>
+		</files>
+	</benchmark>
+
+	<project name="clasp-seq" job="seq-generic">
+		<runtag machine="local" benchmark="scaling123-1" tag="seq"/>
+		<runtag machine="local" benchmark="scaling123-2" tag="seq"/>
+		<runtag machine="local" benchmark="scaling123-3" tag="seq"/>
+	</project>
+
+</runscript>

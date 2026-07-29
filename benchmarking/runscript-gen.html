@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>runscript generator</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --surface-alt: #f2f0ec;
+    --border: rgba(0,0,0,0.10);
+    --border-strong: rgba(0,0,0,0.18);
+    --text: #1a1917;
+    --text-muted: #6b6a66;
+    --text-faint: #9e9d99;
+    --accent: #3b4f7a;
+    --accent-light: #e8ecf4;
+    --accent-hover: #2d3d5f;
+    --danger: #b03030;
+    --danger-bg: #fdf0f0;
+    --danger-border: #e8b0b0;
+    --success: #2d6a3f;
+    --success-bg: #edf7f0;
+    --warn-bg: #fffbea;
+    --warn-border: #e6d87a;
+    --radius: 6px;
+    --radius-lg: 10px;
+    --mono: 'JetBrains Mono', 'Fira Mono', 'Cascadia Code', ui-monospace, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #18181a;
+      --surface: #222226;
+      --surface-alt: #2a2a2e;
+      --border: rgba(255,255,255,0.08);
+      --border-strong: rgba(255,255,255,0.14);
+      --text: #e8e7e3;
+      --text-muted: #9e9d99;
+      --text-faint: #6b6a66;
+      --accent: #7a96d4;
+      --accent-light: #1e2535;
+      --accent-hover: #9ab0e0;
+      --danger: #e87070;
+      --danger-bg: #2a1a1a;
+      --danger-border: #5a2a2a;
+      --success: #6dbf85;
+      --success-bg: #162218;
+      --warn-bg: #1e1c0a;
+      --warn-border: #5a5020;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 0 4rem;
+  }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  header h1 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text);
+  }
+
+  header .sub {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .layout {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .section-header {
+    padding: 0.75rem 1.25rem;
+    background: var(--surface-alt);
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .section-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 7px 10px;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  input.error {
+    border-color: var(--danger);
+  }
+
+  .field-hint {
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  .field-error {
+    font-size: 11px;
+    color: var(--danger);
+    display: none;
+  }
+
+  .field-error.visible {
+    display: block;
+  }
+
+  /* Benchmarks */
+  .benchmarks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .benchmark-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .benchmark-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    background: var(--surface-alt);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .benchmark-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .benchmark-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-faint);
+    font-size: 16px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    line-height: 1;
+    transition: color 0.1s, background 0.1s;
+  }
+
+  .btn-remove:hover {
+    color: var(--danger);
+    background: var(--danger-bg);
+  }
+
+  .dir-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+  }
+
+  .dir-row .field { flex: 1; }
+
+  .btn-pick {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    background: var(--accent-light);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.1s, color 0.1s;
+  }
+
+  .btn-pick:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .files-list {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px;
+    max-height: 180px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .files-empty {
+    font-size: 12px;
+    color: var(--text-faint);
+    padding: 4px 2px;
+    font-style: italic;
+  }
+
+  .file-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.1s;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .file-item:hover {
+    background: var(--surface-alt);
+  }
+
+  .file-item input[type="checkbox"] {
+    width: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: var(--accent);
+  }
+
+  .enc-section {
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+
+  .enc-section label {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* Add benchmark button */
+  .btn-add-benchmark {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: none;
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+
+  .btn-add-benchmark:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  /* Alert / status */
+  .alert {
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    display: none;
+  }
+
+  .alert.visible { display: block; }
+
+  .alert-danger {
+    background: var(--danger-bg);
+    border: 1px solid var(--danger-border);
+    color: var(--danger);
+  }
+
+  .alert-success {
+    background: var(--success-bg);
+    border: 1px solid color-mix(in srgb, var(--success) 30%, transparent);
+    color: var(--success);
+  }
+
+  .alert-warn {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: color-mix(in srgb, var(--text) 80%, transparent);
+  }
+
+  /* Run button */
+  .run-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-run {
+    padding: 11px 28px;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-run:hover { background: var(--accent-hover); }
+  .btn-run:active { transform: scale(0.98); }
+  .btn-run:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* Preview pane */
+  .preview-wrap {
+    position: relative;
+  }
+
+  .preview-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 0 1.25rem;
+  }
+
+  .preview-tab {
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-faint);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.1s, border-color 0.1s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .preview-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .preview-pane {
+    display: none;
+    padding: 1rem 1.25rem;
+  }
+
+  .preview-pane.active { display: block; }
+
+  pre {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.65;
+    overflow-x: auto;
+    white-space: pre;
+    color: var(--text-muted);
+    max-height: 380px;
+    overflow-y: auto;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.25rem;
+    padding: 4px 10px;
+    font-size: 11px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: background 0.1s;
+  }
+
+  .copy-btn:hover { background: var(--border); }
+
+  select option { background: var(--surface); color: var(--text); }
+
+  .enc-toggle-row {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    overflow: hidden;
+    align-self: flex-start;
+  }
+
+  .enc-toggle {
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .enc-toggle:not(:last-child) {
+    border-right: 1px solid var(--border-strong);
+  }
+
+  .enc-toggle.active {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .enc-toggle:not(.active):hover {
+    background: var(--surface-alt);
+    color: var(--text);
+  }
+
+  .dir-path-display {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    padding: 3px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>runscript generator</h1>
+  <span class="sub">benchmarking / </span>
+</header>
+
+<div class="layout">
+
+  <!-- Experiment name -->
+  <div class="section">
+    <div class="section-header">Experiment</div>
+    <div class="section-body">
+      <div class="field">
+        <label for="exp-name">Runscript name <span style="color:var(--text-faint);font-weight:400">(no spaces or special characters)</span></label>
+        <input type="text" id="exp-name" placeholder="e.g. test00-scale2" spellcheck="false">
+        <span class="field-hint" id="name-hint">Output: <code>zesty/runscript-{NAME}-dist.xml</code> and <code>experiments/exp-{NAME}.lp</code></span>
+        <span class="field-error" id="name-error"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="section">
+    <div class="section-header">Settings</div>
+    <div class="section-body">
+      <div class="field-row">
+        <div class="field">
+          <label for="timeout">Timeout <span style="color:var(--text-faint);font-weight:400">(seconds)</span></label>
+          <input type="number" id="timeout" value="1500" min="1">
+        </div>
+        <div class="field">
+          <label for="memout">Memout <span style="color:var(--text-faint);font-weight:400">(MB)</span></label>
+          <input type="number" id="memout" value="15000" min="1">
+        </div>
+        <div class="field">
+          <label for="partition">Partition</label>
+          <select id="partition">
+            <option value="short">short</option>
+            <option value="long" selected>long</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benchmarks -->
+  <div class="section">
+    <div class="section-header">Benchmarks</div>
+    <div class="section-body">
+      <div id="benchmarks-list" class="benchmarks-list"></div>
+      <button class="btn-add-benchmark" id="add-benchmark-btn">
+        <span style="font-size:18px;line-height:1">+</span>
+        Add benchmark group
+      </button>
+    </div>
+  </div>
+
+  <!-- Encodings (global, shared across all benchmarks) -->
+  <div class="section">
+    <div class="section-header">Experiment file</div>
+    <div class="section-body">
+      <div class="enc-toggle-row">
+        <button class="enc-toggle active" id="enc-toggle-new" data-mode="new">New exp file</button>
+        <button class="enc-toggle" id="enc-toggle-existing" data-mode="existing">Use existing exp file</button>
+      </div>
+
+      <div id="enc-mode-new">
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div class="dir-row">
+            <div class="field">
+              <label>Encoding directory</label>
+              <div class="dir-path-display" id="enc-dir-display">No directory selected</div>
+            </div>
+            <button class="btn-pick" id="enc-dir-btn">Browse…</button>
+          </div>
+          <div class="files-list" id="enc-files-list">
+            <span class="files-empty">Select a directory to browse .lp files</span>
+          </div>
+          <span class="field-hint">Each checked file becomes an <code>#include</code> line in a new <code>experiments/exp-{NAME}.lp</code>.</span>
+        </div>
+      </div>
+
+      <div id="enc-mode-existing" style="display:none">
+        <div class="field">
+          <label for="existing-exp-name">Existing exp file name <span style="color:var(--text-faint);font-weight:400">(just the name, without <code>exp-</code> prefix or <code>.lp</code>)</span></label>
+          <input type="text" id="existing-exp-name" placeholder="e.g. baseline-run1" spellcheck="false" style="font-family:var(--mono)">
+          <span class="field-hint">Will reference <code>experiments/exp-{NAME}.lp</code> in the runscript. No new exp file will be created.</span>
+          <span class="field-error" id="existing-exp-error"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Generate -->
+  <div class="section">
+    <div class="section-header">Generate</div>
+    <div class="section-body run-row">
+      <div id="gen-alert" class="alert"></div>
+      <button class="btn-run" id="run-btn">Generate files</button>
+      <span class="field-hint" id="run-hint">Files will be saved via your browser's download dialog. Place them in the correct subdirectories.</span>
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <div class="section preview-wrap" id="preview-section" style="display:none">
+    <div class="preview-tabs">
+      <button class="preview-tab active" data-tab="runscript">runscript-{NAME}-dist.xml</button>
+      <button class="preview-tab" data-tab="expfile">exp-{NAME}.lp</button>
+    </div>
+    <button class="copy-btn" id="copy-btn">Copy</button>
+    <div class="preview-pane active" id="tab-runscript"><pre id="pre-runscript"></pre></div>
+    <div class="preview-pane" id="tab-expfile"><pre id="pre-expfile"></pre></div>
+  </div>
+
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+let benchmarks = [];
+let benchmarkCounter = 0;
+let encodingDir = null;
+let encodingFiles = [];
+let generatedRunscript = '';
+let generatedExpFile = '';
+
+function sanitizeName(s) {
+  return s.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9_\-]/g, '');
+}
+
+function makeRelativePath(fileHandle, dirHandle) {
+  return fileHandle.name;
+}
+
+async function pickDirectory(btnEl, displayEl, listEl, onFiles, prefix) {
+  try {
+    const dirHandle = await window.showDirectoryPicker({ mode: 'read' });
+    const files = [];
+    for await (const [name, handle] of dirHandle.entries()) {
+      if (handle.kind === 'file' && name.endsWith('.lp')) {
+        files.push({ name, handle, dirHandle, dirName: dirHandle.name });
+      }
+    }
+    files.sort((a, b) => a.name.localeCompare(b.name));
+    displayEl.textContent = dirHandle.name + '/';
+    displayEl.title = dirHandle.name;
+    renderFileList(listEl, files, onFiles);
+    return { dirHandle, files };
+  } catch (e) {
+    if (e.name !== 'AbortError') {
+      console.error(e);
+    }
+    return null;
+  }
+}
+
+function renderFileList(listEl, files, onChange) {
+  listEl.innerHTML = '';
+  if (files.length === 0) {
+    listEl.innerHTML = '<span class="files-empty">No .lp files found in this directory</span>';
+    return;
+  }
+  files.forEach((f, i) => {
+    const item = document.createElement('label');
+    item.className = 'file-item';
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = true;
+    cb.addEventListener('change', onChange);
+    const span = document.createElement('span');
+    span.textContent = f.name;
+    item.appendChild(cb);
+    item.appendChild(span);
+    listEl.appendChild(item);
+    f._checkbox = cb;
+  });
+}
+
+function getCheckedFiles(files) {
+  return files.filter(f => f._checkbox && f._checkbox.checked);
+}
+
+function addBenchmark() {
+  const idx = benchmarkCounter++;
+  const id = 'bm-' + idx;
+  const data = { id, idx, dirHandle: null, dirPath: '', files: [], selectedEncodings: [] };
+  benchmarks.push(data);
+  renderBenchmarks();
+  return data;
+}
+
+function removeBenchmark(id) {
+  benchmarks = benchmarks.filter(b => b.id !== id);
+  benchmarks.forEach((b, i) => { b.displayIdx = i; });
+  renderBenchmarks();
+}
+
+function renderBenchmarks() {
+  const list = $('benchmarks-list');
+  list.innerHTML = '';
+
+  benchmarks.forEach((bm, displayIdx) => {
+    bm.displayIdx = displayIdx;
+    const card = document.createElement('div');
+    card.className = 'benchmark-card';
+    card.innerHTML = `
+      <div class="benchmark-card-header">
+        <span class="benchmark-label">benchmark-${displayIdx}</span>
+        <button class="btn-remove" title="Remove this benchmark group" data-id="${bm.id}">×</button>
+      </div>
+      <div class="benchmark-body">
+        <div>
+          <label style="font-size:12px;font-weight:500;color:var(--text-muted);display:block;margin-bottom:4px;">Directory <span style="font-weight:400;color:var(--text-faint)">(env instances folder)</span></label>
+          <div class="dir-row">
+            <div class="field">
+              <div class="dir-path-display" id="bm-dir-display-${bm.id}">No directory selected</div>
+            </div>
+            <button class="btn-pick" data-bm-pick="${bm.id}">Browse…</button>
+          </div>
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:500;color:var(--text-muted);display:block;margin-bottom:4px;">.lp instance files</label>
+          <div class="files-list" id="bm-files-${bm.id}">
+            <span class="files-empty">Select a directory first</span>
+          </div>
+        </div>
+        <div id="bm-dirpath-row-${bm.id}" style="display:none">
+          <label style="font-size:12px;font-weight:500;color:var(--text-muted);display:block;margin-bottom:4px">
+            Path in runscript <span style="font-weight:400;color:var(--text-faint)">(relative to benchmarking root, e.g. envs/modified/Test_00)</span>
+          </label>
+          <input type="text" id="bm-dirpath-${bm.id}" placeholder="envs/modified/Test_00" spellcheck="false" style="font-family:var(--mono);font-size:12px">
+        </div>
+      </div>
+    `;
+    list.appendChild(card);
+
+    card.querySelector(`[data-id="${bm.id}"]`).addEventListener('click', () => removeBenchmark(bm.id));
+
+    card.querySelector(`[data-bm-pick="${bm.id}"]`).addEventListener('click', async () => {
+      const displayEl = $(`bm-dir-display-${bm.id}`);
+      const listEl = $(`bm-files-${bm.id}`);
+      const result = await pickDirectory(null, displayEl, listEl, () => {}, null);
+      if (result) {
+        bm.dirHandle = result.dirHandle;
+        bm.files = result.files;
+        const pathRow = $(`bm-dirpath-row-${bm.id}`);
+        const pathInput = $(`bm-dirpath-${bm.id}`);
+        pathRow.style.display = 'block';
+        pathInput.placeholder = 'envs/modified/' + result.dirHandle.name;
+        pathInput.value = '';
+      }
+    });
+
+    if (bm.dirHandle) {
+      $(`bm-dir-display-${bm.id}`).textContent = bm.dirHandle.name + '/';
+      renderFileList($(`bm-files-${bm.id}`), bm.files, () => {});
+      $(`bm-dirpath-row-${bm.id}`).style.display = 'block';
+    }
+  });
+
+  if (benchmarks.length === 0) {
+    const empty = document.createElement('div');
+    empty.style.cssText = 'font-size:13px;color:var(--text-faint);font-style:italic;padding:0.25rem 0;text-align:center';
+    empty.textContent = 'No benchmark groups yet';
+    list.appendChild(empty);
+  }
+}
+
+$('add-benchmark-btn').addEventListener('click', addBenchmark);
+
+let encMode = 'new';
+
+document.querySelectorAll('.enc-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    encMode = btn.dataset.mode;
+    document.querySelectorAll('.enc-toggle').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    $('enc-mode-new').style.display      = encMode === 'new'      ? 'block' : 'none';
+    $('enc-mode-existing').style.display = encMode === 'existing' ? 'block' : 'none';
+    updateNameHint();
+  });
+});
+
+function updateNameHint() {
+  const hint = $('name-hint');
+  if (encMode === 'new') {
+    hint.innerHTML = 'Output: <code>zesty/runscript-{NAME}-dist.xml</code> and <code>experiments/exp-{NAME}.lp</code>';
+  } else {
+    hint.innerHTML = 'Output: <code>zesty/runscript-{NAME}-dist.xml</code> only';
+  }
+}
+
+$('enc-dir-btn').addEventListener('click', async () => {
+  const displayEl = $('enc-dir-display');
+  const listEl = $('enc-files-list');
+  const result = await pickDirectory(null, displayEl, listEl, () => {}, null);
+  if (result) {
+    encodingDir = result.dirHandle;
+    encodingFiles = result.files;
+  }
+});
+
+function validateName(name) {
+  if (!name) return 'Name is required.';
+  if (/\s/.test(name)) return 'Name must not contain spaces.';
+  if (!/^[a-zA-Z0-9_\-]+$/.test(name)) return 'Name may only contain letters, numbers, hyphens, and underscores.';
+  return null;
+}
+
+function showAlert(msg, type) {
+  const el = $('gen-alert');
+  el.textContent = msg;
+  el.className = `alert visible alert-${type}`;
+}
+
+function clearAlert() {
+  const el = $('gen-alert');
+  el.className = 'alert';
+  el.textContent = '';
+}
+
+function buildExpFile(name, selectedEncs) {
+  if (selectedEncs.length === 0) {
+    return `% exp-${name}.lp\n% No encoding files selected.\n`;
+  }
+  const lines = selectedEncs.map(f => `#include "${f}".`);
+  return `% exp-${name}.lp\n\n` + lines.join('\n') + '\n';
+}
+
+function buildRunscript(name, timeout, memout, partition, bmGroups, expFilePath) {
+  const distjob = `\t<distjob name="dist-generic" timeout="${timeout}s" runs="1" memout="${memout}" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="${partition}"/>`;
+
+  const bmBlocks = bmGroups.map((bm, i) => {
+    const bmName = `${name}-${i}`;
+    const dirPath = bm.dirPath || ('envs/modified/' + (bm.dirHandle ? bm.dirHandle.name : 'UNKNOWN'));
+    const addLines = bm.selectedFiles.map(f => `\t\t\t\t<add file="${f}" cmdline=""/>`).join('\n');
+    const expEnc   = `\t\t\t<encoding file="${expFilePath}"/>`;
+    return `\t<benchmark name="${bmName}">\n\t\t<files path="${dirPath}">\n${addLines}\n\n${expEnc}\n\t\t</files>\n\t</benchmark>`;
+  }).join('\n\n');
+
+  const runspecs = bmGroups.map((_, i) => {
+    const bmName = `${name}-${i}`;
+    return `\t\t<runspec machine="hpc" benchmark="${bmName}" system="clingo" version="5.8.0" setting="one-as"/>`;
+  }).join('\n');
+
+  return [
+    `<runscript output="output-${name}">`,
+    ``,
+    `\t<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>`,
+    `\t<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>`,
+    ``,
+    `\t<config name="dist-generic" template="templates/seq-generic.sh"/>`,
+    `\t<system name="clingo" version="5.8.0" measures="clasp" config="dist-generic">`,
+    `\t\t<setting name="one-as" tag="one-as" cmdline="--stats 1" dist_template="templates/single.dist" dist_options="#SBATCH --hint=compute_bound"/>`,
+    ``,
+    `\t</system>`,
+    ``,
+    distjob,
+    ``,
+    bmBlocks,
+    ``,
+    `\t<project name="clingo-one-as" job="dist-generic">`,
+    runspecs,
+    `\t</project>`,
+    ``,
+    `</runscript>`,
+  ].join('\n');
+}
+
+function downloadText(filename, content) {
+  const blob = new Blob([content], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+$('run-btn').addEventListener('click', async () => {
+  clearAlert();
+
+  const rawName = $('exp-name').value.trim();
+  const nameErr = validateName(rawName);
+  const nameInput = $('exp-name');
+  const nameErrEl = $('name-error');
+
+  if (nameErr) {
+    nameInput.classList.add('error');
+    nameErrEl.textContent = nameErr;
+    nameErrEl.classList.add('visible');
+    showAlert('Please fix the errors above before generating.', 'danger');
+    return;
+  } else {
+    nameInput.classList.remove('error');
+    nameErrEl.classList.remove('visible');
+  }
+
+  const name = rawName;
+
+  if (benchmarks.length === 0) {
+    showAlert('Add at least one benchmark group.', 'danger');
+    return;
+  }
+
+  const bmGroups = [];
+  for (let i = 0; i < benchmarks.length; i++) {
+    const bm = benchmarks[i];
+    if (!bm.dirHandle) {
+      showAlert(`Benchmark group ${i} has no directory selected.`, 'danger');
+      return;
+    }
+    const selectedFiles = getCheckedFiles(bm.files).map(f => f.name);
+    const pathInput = $(`bm-dirpath-${bm.id}`);
+    const dirPath = (pathInput && pathInput.value.trim()) || ('envs/modified/' + bm.dirHandle.name);
+    bmGroups.push({ selectedFiles, dirPath, dirHandle: bm.dirHandle });
+  }
+
+  const timeout = parseInt($('timeout').value, 10) || 1500;
+  const memout  = parseInt($('memout').value, 10) || 15000;
+  const partition = $('partition').value;
+
+  let expFilePath;
+  let expContent = null;
+  let expFileName = null;
+
+  if (encMode === 'new') {
+    const selectedEncs = getCheckedFiles(encodingFiles);
+    const encPaths = selectedEncs.map(f => {
+      return `../encodings/${f.dirName || encodingDir.name}/${f.name}`;
+    });
+    expFilePath = `experiments/exp-${name}.lp`;
+    expContent  = buildExpFile(name, encPaths);
+    expFileName = `exp-${name}.lp`;
+  } else {
+    const existingName = $('existing-exp-name').value.trim();
+    const existingErrEl = $('existing-exp-error');
+    const existingErr = validateName(existingName);
+    if (existingErr) {
+      $('existing-exp-name').classList.add('error');
+      existingErrEl.textContent = existingErr;
+      existingErrEl.classList.add('visible');
+      showAlert('Please provide a valid existing exp file name.', 'danger');
+      return;
+    }
+    $('existing-exp-name').classList.remove('error');
+    existingErrEl.classList.remove('visible');
+    expFilePath = `experiments/exp-${existingName}.lp`;
+  }
+
+  const rsContent = buildRunscript(name, timeout, memout, partition, bmGroups, expFilePath);
+
+  generatedRunscript = rsContent;
+  generatedExpFile   = expContent || '';
+
+  if (expContent) {
+    downloadText(expFileName, expContent);
+    setTimeout(() => downloadText(`runscript-${name}-dist.xml`, rsContent), 300);
+  } else {
+    downloadText(`runscript-${name}-dist.xml`, rsContent);
+  }
+
+  $('pre-runscript').textContent = rsContent;
+  $('pre-expfile').textContent   = expContent || '(no exp file generated — using existing)';
+
+  const previewSection = $('preview-section');
+  previewSection.style.display = 'block';
+
+  document.querySelectorAll('.preview-tab').forEach(t => {
+    if (t.dataset.tab === 'runscript') {
+      t.textContent = `runscript-${name}-dist.xml`;
+    } else {
+      t.textContent = expContent ? `exp-${name}.lp` : `exp file (existing)`;
+    }
+  });
+
+  previewSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  if (expContent) {
+    showAlert(`Generated: exp-${name}.lp → experiments/   and   runscript-${name}-dist.xml → zesty/`, 'success');
+  } else {
+    showAlert(`Generated: runscript-${name}-dist.xml → zesty/   (referencing existing ${expFilePath})`, 'success');
+  }
+});
+
+$('exp-name').addEventListener('input', () => {
+  const v = $('exp-name').value;
+  if (/\s/.test(v)) {
+    $('exp-name').value = v.replace(/\s+/g, '-');
+  }
+});
+
+document.querySelectorAll('.preview-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.preview-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.preview-pane').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    $('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+$('copy-btn').addEventListener('click', () => {
+  const activeTab = document.querySelector('.preview-tab.active');
+  const content = activeTab.dataset.tab === 'runscript' ? generatedRunscript : generatedExpFile;
+  navigator.clipboard.writeText(content).then(() => {
+    const btn = $('copy-btn');
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+  });
+});
+
+renderBenchmarks();
+</script>
+</body>
+</html>
