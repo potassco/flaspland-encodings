@@ -9,7 +9,7 @@
 - 📁 [`base`](#base)
 - 📁 [`extensions`](#extensions)
 - 📁 [`mapf`](#mapf)
-- 📂 [`pathfinding]`(#pathfinding)
+- 📂 [`pathfinding`](#pathfinding)
     - 📁 move2drive
     - 📁 move2path
     - 📁 path2drive
