@@ -1,1 +1,1 @@
-#include "../encodings/mapf/mapf.lp".
+#include "../../encodings/mapf/mapf.lp".

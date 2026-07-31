@@ -1,8 +1,6 @@
 % environment physics
-#include "encodings/aux/directions.lp".
-#include "encodings/aux/grid-functions.lp".
-#include "encodings/aux/tracks.lp".
+#include "encodings/aux/aux.lp".
 
 % specific approach
-#include "encodings/graph-translations/hypergraph.lp".
+#include "encodings/translations/hypergraph.lp".
 #include "encodings/pathfinding/pathfinding-hyper-edges.lp".

@@ -1,10 +1,6 @@
-#include "../directions.lp".
-#include "../tracks.lp".
-#include "../grid-functions.lp".
-
-#include "../train-time.lp".
-#include "../subnodes.lp".
-
+#include "../../aux/aux.lp".
+#include "../../wip/train-time.lp". % file missing
+#include "../../translations/subnodes.lp".
 #include "move-collisions-subnodes.lp".
 
 { move(Z,C,C',T) : edge(C,C'); move(Z,C,C,T) : node(C) } = 1 :- time(Z,T), not ready(Z,T).

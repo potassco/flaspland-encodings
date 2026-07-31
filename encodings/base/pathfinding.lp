@@ -1,6 +1,4 @@
-#include "../directions.lp".
-#include "../grid-functions.lp".
-#include "../tracks.lp".
+#include "../aux/aux.lp".
 
 #const h=12.
 

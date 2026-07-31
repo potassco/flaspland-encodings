@@ -1,1 +1,1 @@
-#include "../encodings/base/baseline.lp".
+#include "../../encodings/base/baseline.lp".

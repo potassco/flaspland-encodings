@@ -1,7 +1,7 @@
 % This encoding derives paths with length <= h between start and end cells of trains,
 % taking into account the train's starting orientation
 
-#include "../subnodes.lp".
+#include "../../translations/subnodes.lp".
 #include "pathfinding-common.lp".
 
 path'(Z,(X,Y,D),0) :- start(Z,(X,Y),_,D).

@@ -1,7 +1,7 @@
 % This encoding derives paths with length <= h between start and end cells of trains,
 % taking into account the train's starting orientation
 
-#include "../hypergraph.lp".
+#include "../../translations/hypergraph.lp".
 #include "pathfinding-common.lp".
 
 % we enforce that the starting position and direction is respected

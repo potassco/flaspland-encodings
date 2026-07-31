@@ -1,7 +1,5 @@
-#include "../directions.lp".
-#include "../grid-functions.lp".
-#include "../tracks.lp".
-#include "../hypergraph.lp".
+#include "../aux/aux.lp".
+#include "../translations/hypergraph.lp".
 
 % #const h=30.
 
