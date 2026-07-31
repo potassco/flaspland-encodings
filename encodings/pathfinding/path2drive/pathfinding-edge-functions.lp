@@ -1,7 +1,7 @@
 % This encoding derives paths with length <= h between start and end cells of trains,
 % taking into account the train's starting orientation
 
-#include "../translations/edge-functions.lp".
+#include "../../translations/edge-functions.lp".
 #include "pathfinding-common.lp".
 
 % we enforce that the starting position and direction is respected

@@ -1,1 +1,0 @@
-#show path/3.

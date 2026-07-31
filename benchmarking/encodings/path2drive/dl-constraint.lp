@@ -1,1 +1,0 @@
-&diff{ (Z,T) + 0 } <= h :- end_of_path(Z,T), edge != 1.

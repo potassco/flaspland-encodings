@@ -1,6 +1,6 @@
-#include "../aux/aux.lp".
-#include "../wip/train-time.lp". % file missing
-#include "../translations/hypergraph.lp".
+#include "../../aux/aux.lp".
+#include "../../wip/train-time.lp". % file missing
+#include "../../translations/hypergraph.lp".
 #include "move-collisions-one.lp".
 
 edge(C,C') :- hyperedge(_,C,C').

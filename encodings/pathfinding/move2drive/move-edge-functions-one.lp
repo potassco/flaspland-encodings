@@ -1,6 +1,6 @@
-#include "../aux/aux.lp".
-#include "../wip/train-time.lp". % file missing
-#include "../translations/edge-functions.lp".
+#include "../../aux/aux.lp".
+#include "../../wip/train-time.lp". % file missing
+#include "../../translations/edge-functions.lp".
 #include "move-collisions-one.lp".
 
 { move(Z,C,C',T) : edge(C,C') } <= 1 :- time(Z,T), not ready(Z,T).

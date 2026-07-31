@@ -1,5 +1,5 @@
-#include "../aux/aux.lp".
-#include "../translations/hypergraph.lp".
+#include "../../aux/aux.lp".
+#include "../../translations/hypergraph.lp".
 
 time(Z,0) :- start(Z,_,_,_).
 time(Z,T+1) :- time(Z,T), not end_of_path(Z,T), T<h.
