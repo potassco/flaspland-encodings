@@ -1,4 +1,4 @@
-<runscript output="output-dc">
+<runscript output="output-dc-configs">
 
 	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
 	<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>
@@ -60,7 +60,7 @@
 			<add file="Level_0/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_0/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -109,7 +109,7 @@
 			<add file="Level_1/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_1/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -158,7 +158,7 @@
 			<add file="Level_2/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_2/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -207,7 +207,7 @@
 			<add file="Level_3/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_3/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -256,7 +256,7 @@
 			<add file="Level_4/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_4/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -305,7 +305,7 @@
 			<add file="Level_5/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_5/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -354,7 +354,7 @@
 			<add file="Level_6/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_6/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -403,7 +403,7 @@
 			<add file="Level_7/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_7/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -452,7 +452,7 @@
 			<add file="Level_8/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_8/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
@@ -501,7 +501,7 @@
 			<add file="Level_9/7-1111111.lp" cmdline="--propagate=full --project"/>
 			
 		<encoding file="envs/modified/Test_00/Level_9/cells.lp"/>
-		<encoding file="experiments/exp-dc.lp"/>
+		<encoding file="experiments/exp-dc-configs.lp"/>
 		</files>
 	</benchmark>
 
