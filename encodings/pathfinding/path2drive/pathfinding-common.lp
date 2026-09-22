@@ -1,6 +1,6 @@
 #include "../../aux/aux.lp".
 
-% #const h = 3.
+#const h = 3.
 
 #const allow_repetitions = 1.
 

@@ -4,6 +4,7 @@
 #include "../../translations/hypergraph.lp".
 #include "pathfinding-common.lp".
 
+
 % we enforce that the starting position and direction is respected
 path(Z,C, 0;
      Z,C',1) :- start(Z,C,_,D), adjacent(C,D,C').
