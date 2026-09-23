@@ -7,9 +7,9 @@ library(purrr)
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-BASE_PATH   <- "~/git/flaspland-encodings/benchmarking/"
-FILE_PREFIX <- "results-dist-"
-SUFFIXES    <- c("me", "mh", "ms")
+BASE_PATH   <- "~/git/flaspland-encodings/benchmarking/analysis/20260917"
+FILE_PREFIX <- "dc-configs-"
+SUFFIXES    <- c("crafty","frumpy","handy","jumpy","trendy","tweety")
 
 TRAINS_COL_IDX  <- 1
 TRAINS_CHAR_POS <- 9
@@ -29,16 +29,17 @@ instances_for <- function(trains) {
 
 process_experiment <- function(suffix) {
   path <- file.path(BASE_PATH, paste0(FILE_PREFIX, suffix, ".xlsx"))
+  #print(read_excel(path, skip = 1))
   
   raw <- read_excel(path, skip = 1) |>
     select(1:18) |>
-    rename(
-      "overall-time"  = "overall-time...9",
-      "solving-time"  = "solving-time...14",
-      rules           = "rules...13",
-      variables       = "variables...18",
-      constraints     = "constraints...4"
-    ) |>
+    # rename(
+    #   "overall-time"  = "overall-time...9",
+    #   "solving-time"  = "solving-time...14",
+    #   rules           = "rules...13",
+    #   variables       = "variables...18",
+    #   constraints     = "constraints...4"
+    # ) |>
     mutate(trains = extract_trains(pick(everything())))
   
   # Timeout count per trains value (before filtering)
@@ -73,5 +74,5 @@ combined <- SUFFIXES |>
   mutate(instances = instances_for(trains)) |>
   select(trains, instances, everything())
 
-write.csv(combined, file="averages-dl.csv")
+write.csv(combined, file="averages-dc-configs.csv")
 View(combined)
