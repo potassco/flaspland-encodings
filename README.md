@@ -7,8 +7,12 @@ In this repository, we provide a collection of encodings that can be used to sol
 * 📁 `benchmarking`
 * 📁 `encodings`
   * 📁 `aux` files that describe the physics of Flatland environments
-  * 📁 `graph-translations` files that convert a given Flatland environment into an alternative graph representation
+  * 📁 `base` files with baseline encodings derived from the R&S paper
+  * 📁 `extensions` modular extensions for encodings such as collisions and optimization
+  * 📁 `mapf` files with mapf encodings derived from the R&S paper
   * 📁 `pathfinding` files that contain logic for finding paths within a given Flatland environment
+  * 📁 `translations` files that convert a given Flatland environment into an alternative graph representation
+  * 📁 `wip` files that are currently a work-in-progress
 * 📁 `envs`
   * 📁 `benchmarks` official benchmark environments from the Flatland challenge
 * 📝 `setting-*.lp` a clingo encoding that organizes various subprograms into a single file

@@ -1,3 +1,6 @@
+% under construction's
+% relative file paths must be adjusted to new reorg
+
 %#include "encodings/path2drive/pathfinding-subnodes.lp".
 #include "encodings/path2drive/pathfinding-hypergraph.lp".
 #include "encodings/path2drive/drive-collisions.lp".

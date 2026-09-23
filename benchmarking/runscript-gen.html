@@ -745,9 +745,9 @@ function renderBenchmarks() {
         </div>
         <div id="bm-dirpath-row-${bm.id}" style="display:none">
           <label style="font-size:12px;font-weight:500;color:var(--text-muted);display:block;margin-bottom:4px">
-            Path in runscript <span style="font-weight:400;color:var(--text-faint)">(relative to benchmarking root, e.g. envs/modified/Test_00)</span>
+            Path in runscript <span style="font-weight:400;color:var(--text-faint)">(relative to benchmarking root, e.g. envs/Test_00)</span>
           </label>
-          <input type="text" id="bm-dirpath-${bm.id}" placeholder="envs/modified/Test_00" spellcheck="false" style="font-family:var(--mono);font-size:12px">
+          <input type="text" id="bm-dirpath-${bm.id}" placeholder="envs/Test_00" spellcheck="false" style="font-family:var(--mono);font-size:12px">
         </div>
       </div>
     `;
@@ -851,7 +851,7 @@ function buildRunscript(name, timeout, memout, partition, bmGroups, expFilePath)
 
   const bmBlocks = bmGroups.map((bm, i) => {
     const bmName = `${name}-${i}`;
-    const dirPath = bm.dirPath || ('envs/modified/' + (bm.dirHandle ? bm.dirHandle.name : 'UNKNOWN'));
+    const dirPath = bm.dirPath || ('envs/' + (bm.dirHandle ? bm.dirHandle.name : 'UNKNOWN'));
     const addLines = bm.selectedFiles.map(f => `\t\t\t\t<add file="${f}" cmdline=""/>`).join('\n');
     const expEnc   = `\t\t\t<encoding file="${expFilePath}"/>`;
     return `\t<benchmark name="${bmName}">\n\t\t<files path="${dirPath}">\n${addLines}\n\n${expEnc}\n\t\t</files>\n\t</benchmark>`;
@@ -933,7 +933,7 @@ $('run-btn').addEventListener('click', async () => {
     }
     const selectedFiles = getCheckedFiles(bm.files).map(f => f.name);
     const pathInput = $(`bm-dirpath-${bm.id}`);
-    const dirPath = (pathInput && pathInput.value.trim()) || ('envs/modified/' + bm.dirHandle.name);
+    const dirPath = (pathInput && pathInput.value.trim()) || ('envs/' + bm.dirHandle.name);
     bmGroups.push({ selectedFiles, dirPath, dirHandle: bm.dirHandle });
   }
 

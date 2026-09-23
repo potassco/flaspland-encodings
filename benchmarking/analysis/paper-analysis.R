@@ -74,5 +74,9 @@ combined <- SUFFIXES |>
   mutate(instances = instances_for(trains)) |>
   select(trains, instances, everything())
 
+<<<<<<< HEAD
 write.csv(combined, file="averages-dc-configs.csv")
+=======
+write.csv(combined, file="averages-mc-verify")
+>>>>>>> 010550aafb6ff9bbd783930db5e189e7ef9a1dbd
 View(combined)
