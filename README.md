@@ -16,3 +16,41 @@ In this repository, we provide a collection of encodings that can be used to sol
 * 📁 `envs`
   * 📁 `benchmarks` official benchmark environments from the Flatland challenge
 * 📝 `setting-*.lp` a clingo encoding that organizes various subprograms into a single file
+
+---
+
+## How to use
+
+Flaspland encodings are designed to be modular -- this means that each program handles a specific task.
+The benefit of this is that you can swap out pieces of functionality without altering the rest of the code.
+
+The easiest way to run encodings is to create a `setting` file. Check out an example, `setting-sub.lp`:
+
+```
+% environment physics
+#include "encodings/aux/aux.lp".
+
+% specific approach
+#include "encodings/translations/subnodes.lp".
+#include "encodings/pathfinding/path2drive/pathfinding-subnodes.lp".
+#include "encodings/pathfinding/path2drive/drive-map.lp".
+#include "encodings/pathfinding/path2drive/drive-collisions.lp".
+```
+
+In this file, a few components are included:
+* `aux.lp` to account for the physics of the environment
+* `subnodes.lp` to translate the standard environment into a graph structure
+* `pathfinding-subnodes.lp` to find paths for trains in the environment
+* `drive-map.lp` to add waits to the found paths
+* `drive-collisions.lp` to handle collision avoidance
+
+The files in this repository may be used so that more interesting questions can be addressed.
+In most cases, `aux.lp` should always be included, unless the physics of the environment are to be implemented differently.
+In general, approaches need some way of finding trajectories for the agents and handling collisions.
+Translations to graphs are optional but recommended.
+Other potential modules include optimization, speed, graph compression, prioritization, etc.
+
+When you are ready to run your encoding, you can easily call the `setting` file along with an environment, for example:
+```
+$ clingo setting-custom.lp envs/example.lp
+```
