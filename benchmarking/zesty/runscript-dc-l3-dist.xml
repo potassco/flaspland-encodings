@@ -9,7 +9,7 @@
 
 	</system>
 
-	<distjob name="dist-generic" timeout="3000s" runs="1" memout="25000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
+	<distjob name="dist-generic" timeout="6000s" runs="1" memout="50000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
 
 	<benchmark name="dc-l3-0">
 		<folder path="envs/modified/Test_03/Level_0/" cmdline="--propagate=full --project">
