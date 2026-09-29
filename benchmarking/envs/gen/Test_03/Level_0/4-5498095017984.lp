@@ -1,3 +1,4 @@
+#const h=236.
 global(388).
 
 train(13). start(13,(28,17),75,w). end(13,(26,6),165). speed(13,4).
