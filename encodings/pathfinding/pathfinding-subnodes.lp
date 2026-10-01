@@ -1,4 +1,4 @@
-#const h = 3.
+#const h = 40. % change back to 3, later
 
 { path(Z,C,C',T) : edge(C,C') } = 1 :- start(Z,_,_,_), T = 1..h.
 
