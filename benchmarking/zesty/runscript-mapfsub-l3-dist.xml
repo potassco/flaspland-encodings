@@ -1,0 +1,31 @@
+<runscript output="output-mapfsub-l3">
+
+	<machine name="local" cpu="8xE5520@2.27GHz" memory="24GB"/>
+	<machine name="hpc" cpu="24x8xE5520@2.27GHz" memory="24GB"/>
+
+	<config name="dist-generic" template="templates/seq-generic.sh"/>
+	<system name="clingo" version="5.8.0" measures="clasp" config="dist-generic">
+		<setting name="one-as" tag="one-as" cmdline="--stats 1" dist_template="templates/single.dist" dist_options="#SBATCH --hint=compute_bound"/>
+
+	</system>
+
+	<distjob name="dist-generic" timeout="5000s" runs="1" memout="50000" template_options="--single" script_mode="timeout" walltime="23h 59m 59s" cpt="4" partition="long"/>
+
+	<benchmark name="mapfsub-l3-0">
+		<folder path="envs/gen/Test_03/Level_0/" cmdline="--propagate=full --project">
+		<encoding file="experiments/exp-mapfsub.lp"/>
+		</folder>
+	</benchmark>
+
+	<benchmark name="mapfsub-l3-1">
+		<folder path="envs/gen/Test_03/Level_1/" cmdline="--propagate=full --project">
+		<encoding file="experiments/exp-mapfsub.lp"/>
+		</folder>
+	</benchmark>
+
+	<project name="clingo-one-as" job="dist-generic">
+		<runspec machine="hpc" benchmark="mapfsub-l3-0" system="clingo" version="5.8.0" setting="one-as"/>
+		<runspec machine="hpc" benchmark="mapfsub-l3-1" system="clingo" version="5.8.0" setting="one-as"/>
+	</project>
+
+</runscript>

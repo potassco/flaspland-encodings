@@ -7,9 +7,9 @@ library(purrr)
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
-BASE_PATH   <- "~/git/flaspland-encodings/benchmarking/analysis/20260917"
-FILE_PREFIX <- "dc-configs-"
-SUFFIXES    <- c("crafty","frumpy","handy","jumpy","trendy","tweety")
+BASE_PATH   <- "~/git/flaspland-encodings/benchmarking/"
+FILE_PREFIX <- "experiments/2026-10-01/"
+SUFFIXES    <- c("results-dist-mapfsub")
 
 TRAINS_COL_IDX  <- 1
 TRAINS_CHAR_POS <- 9
@@ -74,9 +74,5 @@ combined <- SUFFIXES |>
   mutate(instances = instances_for(trains)) |>
   select(trains, instances, everything())
 
-<<<<<<< HEAD
-write.csv(combined, file="averages-dc-configs.csv")
-=======
-write.csv(combined, file="averages-mc-verify")
->>>>>>> 010550aafb6ff9bbd783930db5e189e7ef9a1dbd
+write.csv(combined, file="averages-mapfsub.csv")
 View(combined)
