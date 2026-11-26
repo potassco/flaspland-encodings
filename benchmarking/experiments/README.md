@@ -20,3 +20,8 @@
 
 ## Round 4
 1. `dc`: clingo-dl + constraint
+
+## Round 5
+1. `rac`: routing + resolve + acyclic
+2. `rdc`: routing + resolve + difcons
+3. `rb` : routing + resolve + boolean-asp

@@ -1,9 +1,16 @@
-{ move(A,U,V) : edge(U,V) } <= 1 :- agent(A), vertex(V).
-{ move(A,U,V) : edge(U,V) } <= 1 :- agent(A), vertex(U).
-:- move(A,U,_), not start(A,U), not move(A,_,U).
-:- move(A,_,U), not goal(A,U), not move(A,U,_).
+% need to account for directions inside of subnodes
+_start(Z,(X,Y,D)) :- start(Z,(X,Y),_,D).
+_end(Z,(X,Y,D))   :- end(Z,(X,Y),_), node((X,Y,D)).
+_arrived(Z)       :- _end(Z,C), path(Z,_,C).
 
-:- start(A,U), move(A,_,U).
-:- goal(A,U),  move(A,U,_).
-:- start(A,U), not goal(A,U), not move(A,U,_).
-:- goal(A,U),  not start(A,U), not move(A,_,U).
+% Listing 2
+{ path(Z,C,C') : edge(C,C') } <= 1 :- train(Z), node(C).
+{ path(Z,C,C') : edge(C,C') } <= 1 :- train(Z), node(C').
+
+:- path(Z,C,C'), not _start(Z,C), not path(Z,_,C).
+:- path(Z,C,C'), not _end(Z,C'),  not path(Z,C',_).
+
+:- path(Z,_,C), _start(Z,C).
+:- path(Z,C,_), _end(Z,C).
+:- _start(Z,C), not path(Z,C,_).
+:- train(Z), not _arrived(Z).
